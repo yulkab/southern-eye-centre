@@ -1,6 +1,11 @@
 {
-    "compilerOptions": {
-      "baseUrl": "src"
-    },
-    "include": ["src"]
+  "include": [
+      "src/*"
+  ],
+  "compilerOptions": {
+    "baseUrl": "src",
+    "target": "es5",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true
   }
+}
