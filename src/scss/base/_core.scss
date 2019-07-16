@@ -1,0 +1,21 @@
+html {
+    --maxWidth: 1284px;
+    overflow-x: hidden;
+    font-family: 'Mier B', -system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+body {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: $lightest;
+    color: $text;
+    font-family: $font-base;
+    font-size: $font-size-base;
+}
+
+//html,body {
+// font-size: 16px;
+// font-family: Roboto, Arial, sans-serif;
+// color: #333;    
+//}
