@@ -8,8 +8,19 @@
 @import 'scss/base/core';
 @import 'scss/base/typography';
 
-#root {
-    height: 100vh;    
+// *** Components ***
+@import 'scss/components/nav-menu';
+
+#root {    
+    display: flex;
+    flex-direction: column;
+    height: 100vh;  
+    header {
+        flex: 0 0 auto;
+    }
+    main {
+        flex: 1 1 auto;
+    }
 }
 
 /*

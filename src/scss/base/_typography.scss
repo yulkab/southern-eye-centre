@@ -1,3 +1,29 @@
+h1,
+h2,
+h3 {
+    font-family: $font-poppins;
+    font-weight: 700;
+}
+
+h1 {
+  font-size: 3.75rem;//60px
+}
+
+@media(max-width: 1200px) {
+  h1 {
+      font-size:42px;
+  }
+}
+
+@media(max-width: 800px) {
+  h1 {
+      font-size:32px;
+  }
+}
+
+a, a:hover, a:visited {
+  color: $text;
+}
 // target devices with min width of 768px (possibly tablets) and with wide screen
 
 $medium: 768px;
@@ -8,3 +34,5 @@ $screen-medium-wide: 'only screen and (min-width: #{$medium}) and (max-device-as
     font-size: 20px;
   }
 }
+
+

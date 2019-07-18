@@ -1,38 +1,28 @@
-import React from "react";
+//import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import './App.scss';
+import React, { Suspense, lazy } from 'react';
+
+import Header from './components/Header';
+const HomePage = lazy(() => import('./pages/Home'));
 
 function App() {
   return (
     <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/topics">Topics</Link>
-          </li>
-        </ul>
-
-        <hr />
-
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/topics" component={Topics} />
-      </div>
+      <Header/>    
+      <Route exact path="/" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/topics" component={Topics} />
     </Router>
   );
 }
 
 function Home() {
   return (
-    <div>
-      <h2>Home</h2>
-    </div>
+    <main>
+      <Suspense fallback={<div>Loading...</div>}>
+        <HomePage/>
+      </Suspense> 
+    </main>    
   );
 }
 

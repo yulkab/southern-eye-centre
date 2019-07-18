@@ -10,12 +10,29 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background: $lightest;
     color: $text;
-    font-family: $font-base;
+    font-family: $font-raleway;
     font-size: $font-size-base;
 }
 
-//html,body {
-// font-size: 16px;
-// font-family: Roboto, Arial, sans-serif;
-// color: #333;    
-//}
+
+// .topnav {
+//     display: flex;
+//     flex-direction: column;
+//     position: fixed;
+
+//     top: 0;
+//     right: 0;
+//     left: 0;
+//     z-index: 1030;
+//     background-color: rgb(146, 165, 100);
+
+//     transition: all 0.3s ease;
+
+//     // width: 100%;
+//     // height: 150px;
+//     // left: 0;
+//     // z-index: 1000;
+//     // overflow: hidden;
+//     // top: -150px;
+// }
+/* General styles for all menus */
