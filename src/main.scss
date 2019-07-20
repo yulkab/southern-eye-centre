@@ -1,36 +1,21 @@
-// *** Settings ***
+// *** Base ***//
+@import "scss/base/colors";
+@import 'scss/base/mixins';
 @import 'scss/base/normalize';
 @import 'scss/base/reset';
-@import "scss/base/variables";
-@import 'scss/base/settings';
-
-// *** Base ***
-@import 'scss/base/core';
 @import 'scss/base/typography';
+@import 'scss/base/_base';
 
-// *** Components ***
+// *** Layout *** //
+//@import 'scss/layout/header';
+
+// *** Components ***//
 @import 'scss/components/nav-menu';
 
-#root {    
-    display: flex;
-    flex-direction: column;
-    height: 100vh;  
-    header {
-        flex: 0 0 auto;
-    }
-    main {
-        flex: 1 1 auto;
-    }
-}
+
 
 /*
-h1, h2 {
-  color: $primaryColor;
-}
 
-a {
-    text-decoration: none
-}
 
 input[type="text"] {
     font-size: 1rem;
@@ -78,21 +63,3 @@ input:-webkit-autofill:active  {
     }
 }
 */
-
-/*
-Text meant only for screen readers.
-Provides support for themes that do not bundle this CSS yet.
-@see https://make.wordpress.org/accessibility/2015/02/09/hiding-text-for-screen-readers-with-wordpress-core/
-***********************************/
-.screen-reader-text {
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute ! important;
-    width: 1px;
-    word-wrap: normal ! important;
-}

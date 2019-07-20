@@ -12,17 +12,16 @@ function App() {
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/topics" component={Topics} />
+      <footer>Here goes footer</footer>
     </Router>
   );
 }
 
 function Home() {
-  return (
-    <main>
+  return (   
       <Suspense fallback={<div>Loading...</div>}>
         <HomePage/>
-      </Suspense> 
-    </main>    
+      </Suspense>      
   );
 }
 

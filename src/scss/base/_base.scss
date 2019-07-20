@@ -1,0 +1,87 @@
+html {
+    //--maxWidth: 1284px; -??
+    overflow-x: hidden;
+    font-family: 'Mier B', -system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+body {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: $lightest;
+    color: $text;
+    font-family: $font-raleway;
+}
+
+#root {    
+    display: flex;
+    flex-direction: column;
+    height: 100vh;  
+    >* {
+        flex: 1;
+    }
+    header, footer {
+        flex-grow: 0;
+    }
+}
+
+
+/*
+Text meant only for screen readers.
+Provides support for themes that do not bundle this CSS yet.
+@see https://make.wordpress.org/accessibility/2015/02/09/hiding-text-for-screen-readers-with-wordpress-core/
+***********************************/
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute ! important;
+    width: 1px;
+    word-wrap: normal ! important;
+}
+
+.logo {
+    display: block;
+    background-image: url('./assets/img/logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include for-size(tablet-portrait) {    
+        background-image: url('./assets/img/logo@2x.png');
+    }
+    @include for-size(desktop) {    
+       // background-image: url('./assets/img/logo@2x.png');
+       width: rem(191px);
+       height: rem(50px);
+       margin-left: rem(35px);
+    }
+}
+.menu-icon {
+    width: 15px;
+    height: 9px;
+}
+
+// .topnav {
+//     display: flex;
+//     flex-direction: column;
+//     position: fixed;
+
+//     top: 0;
+//     right: 0;
+//     left: 0;
+//     z-index: 1030;
+//     background-color: rgb(146, 165, 100);
+
+//     transition: all 0.3s ease;
+
+//     // width: 100%;
+//     // height: 150px;
+//     // left: 0;
+//     // z-index: 1000;
+//     // overflow: hidden;
+//     // top: -150px;
+// }
+/* General styles for all menus */

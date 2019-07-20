@@ -1,0 +1,143 @@
+// ***  Media Queries *** //
+
+@mixin for-size($size) {
+  @if $size == mobile-only {
+    @media (max-width: 599px) { @content; }
+  } @else if $size == tablet-portrait {
+    @media (min-width: 600px) { @content; }
+  } @else if $size == tablet-landscape {
+    @media (min-width: 900px) { @content; }
+  } @else if $size == desktop {
+    @media (min-width: 1200px) { @content; }
+  } @else if $size == big-desktop {
+    @media (min-width: 1800px) { @content; }
+  }
+}
+
+
+// // Predefined Break-points
+// $mediaMaxWidth: 1260px;
+// $mediaBp1Width: 960px;
+// $mediaMinWidth: 480px;
+
+// @function translate-media-condition($c) {
+//   $condMap: (
+//     "screen": "only screen",
+//     "print": "only print",
+//     "retina": "(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi)",
+//     ">maxWidth": "(min-width: #{$mediaMaxWidth + 1})",
+//     "<maxWidth": "(max-width: #{$mediaMaxWidth})", 		
+//     ">bp1Width": "(min-width: #{$mediaBp1Width + 1})",
+//     "<bp1Width": "(max-width: #{$mediaBp1Width})",
+//     ">minWidth": "(min-width: #{$mediaMinWidth + 1})",
+//     "<minWidth": "(max-width: #{$mediaMinWidth})"
+//   );
+//   @return map-get( $condMap, $c );
+// }
+
+// // The mdia mixin
+// @mixin media($args...) {
+//   $query: "";
+//   @each $arg in $args {
+//     $op: "";
+//     @if ( $query != "" ) {
+//       $op: " and ";
+//     }
+//     $query: $query + $op + translate-media-condition($arg);
+//   }
+//   @media #{$query}  { @content; }
+// }
+
+// .section {
+//   border: 2px solid #777;
+//   padding: 40px;
+//   background: silver;
+//   @include media( "retina" ){
+//     border: 2px dotted #000;
+//   };
+//   @include media( "screen", ">bp1Width", "<maxWidth" ){
+//     background: red;
+//     color: white;
+//   };
+// 	@include media( "screen", ">minWidth", "<bp1Width" ){
+//     background: green;
+//     color: white;
+//   };
+// 	@include media( "screen", "<minWidth" ){
+//     background: blue;
+//     color: white;
+//   };
+// }
+
+$rem-baseline: 16px !default;
+$rem-fallback: false !default;
+$rem-px-only: false !default;
+
+@function rem-separator($list, $separator: false) {
+  @if $separator == "comma" or $separator == "space" {
+    @return append($list, null, $separator);
+  } 
+  
+  @if function-exists("list-separator") == true {
+    @return list-separator($list);
+  }
+
+  // list-separator polyfill by Hugo Giraudel (https://sass-compatibility.github.io/#list_separator_function)
+  $test-list: ();
+  @each $item in $list {
+    $test-list: append($test-list, $item, space);
+  }
+
+  @return if($test-list == $list, space, comma);
+}
+
+@mixin rem-baseline($zoom: 100%) {
+  font-size: $zoom / 16px * $rem-baseline;
+}
+
+@function rem-convert($to, $values...) {
+  $result: ();
+  $separator: rem-separator($values);
+  
+  @each $value in $values {
+    @if type-of($value) == "number" and unit($value) == "rem" and $to == "px" {
+      $result: append($result, $value / 1rem * $rem-baseline + 0px, $separator);
+    } @else if type-of($value) == "number" and unit($value) == "px" and $to == "rem" {
+      $result: append($result, $value / $rem-baseline + 0rem, $separator);
+    } @else if type-of($value) == "list" {
+      $value-separator: rem-separator($value);
+      $value: rem-convert($to, $value...);
+      $value: rem-separator($value, $value-separator);
+      $result: append($result, $value, $separator);
+    } @else {
+      $result: append($result, $value, $separator);
+    }
+  }
+
+  @return if(length($result) == 1, nth($result, 1), $result);
+}
+
+@function rem($values...) {
+  @if $rem-px-only {
+    @return rem-convert(px, $values...);
+  } @else {
+    @return rem-convert(rem, $values...);
+  }
+}
+
+@mixin rem($properties, $values...) {
+  @if type-of($properties) == "map" {
+    @each $property in map-keys($properties) {
+      @include rem($property, map-get($properties, $property));
+    }
+  } @else {
+    @each $property in $properties {
+      @if $rem-fallback or $rem-px-only {
+        #{$property}: rem-convert(px, $values...);
+      }
+      @if not $rem-px-only {
+        #{$property}: rem-convert(rem, $values...);
+      }
+    }
+  }
+}

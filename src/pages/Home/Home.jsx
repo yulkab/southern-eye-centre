@@ -44,7 +44,7 @@ class Home extends PureComponent {
         <div>
        <h2>Home</h2>
        <Button>Click Here</Button>
-       <h1>See More, Do More</h1>
+       <h1 className="super-title">See More, Do More</h1>
      </div>
       </div>
     );
