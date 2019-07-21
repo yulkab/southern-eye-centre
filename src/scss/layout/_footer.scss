@@ -1,0 +1,12 @@
+.footer {
+    flex: 0 0 rem(106px);
+    display: flex;
+    background-color: $darkest;
+    color: $lightest;
+    @include for-size(tablet-landscape) {    
+        flex-basis: rem(49px);
+    }
+    @include for-size(desktop) {    
+        flex-basis: rem(60px);
+    }
+}

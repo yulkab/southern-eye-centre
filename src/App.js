@@ -8,11 +8,16 @@ const HomePage = lazy(() => import('./pages/Home'));
 function App() {
   return (
     <Router>
-      <Header/>    
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/topics" component={Topics} />
-      <footer>Here goes footer</footer>
+      <Header/>  
+      
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/news" component={Topics} />
+        <Route path="/reviews" component={Topics} />
+        <Route path="/gallery" component={Topics} />
+        <Route path="/contact" component={Topics} />
+           
+      <footer className="footer">Here goes footer</footer>
     </Router>
   );
 }

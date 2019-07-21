@@ -1,18 +1,38 @@
 // ***  Media Queries *** //
 
+$very-small: 320px;
+$small: 768px;
+$medium: 1024px;
+$large: 1366px;
+$very-large: 1620px;
+
 @mixin for-size($size) {
-  @if $size == mobile-only {
-    @media (max-width: 599px) { @content; }
-  } @else if $size == tablet-portrait {
-    @media (min-width: 600px) { @content; }
-  } @else if $size == tablet-landscape {
-    @media (min-width: 900px) { @content; }
-  } @else if $size == desktop {
-    @media (min-width: 1200px) { @content; }
-  } @else if $size == big-desktop {
-    @media (min-width: 1800px) { @content; }
+  @if $size == bp-mobile {
+    @media (max-width: $very-small) { @content; }
+  } @else if $size == bp-small {
+    @media (min-width: $small) { @content; }
+  } @else if $size == bp-medium {
+    @media (min-width: $medium) { @content; }
+  } @else if $size == bp-large {
+    @media (min-width: $large) { @content; }
+  } @else if $size == bp-xlarge{
+    @media (min-width: $very-large) { @content; }
   }
 }
+
+// @mixin for-size($size) {
+//   @if $size == mobile-only {
+//     @media (max-width: 599px) { @content; }
+//   } @else if $size == tablet-portrait {
+//     @media (min-width: 600px) { @content; }
+//   } @else if $size == tablet-landscape {
+//     @media (min-width: 900px) { @content; }
+//   } @else if $size == desktop {
+//     @media (min-width: 1200px) { @content; }
+//   } @else if $size == big-desktop {
+//     @media (min-width: 1800px) { @content; }
+//   }
+// }
 
 
 // // Predefined Break-points

@@ -1,20 +1,15 @@
 import React, { PureComponent } from 'react';
 import TopNavMenu from '../TopNav';
 import { Link } from 'react-router-dom';
-import { Image } from 'semantic-ui-react';
-
-// import logoS from '../../assets/img/logo.png';
-// import logoM from '../../assets/img/logo@2x.png';
-// import logoL from '../../assets/img/logo@3x.png';
-
-
+import { Button, Icon } from 'semantic-ui-react';
 
 class Header extends PureComponent { 
   constructor(props) {
     super(props);
 
     this.state = {
-      visible: false
+      topVisible: false,
+      sideVisible: false
     };
   }
 
@@ -42,26 +37,38 @@ class Header extends PureComponent {
     console.log('Header will unmount');
   }
   
-  toggleMenu = () => {
-    this.setState({ visible: !this.state.visible });
+  toggleTopMenu = () => {
+    this.setState({ topVisible: !this.state.topVisible });
   }
-//srcSet='img/logo@2x.png 2x, img/logo@3x.png 3x'
+  toggleSideMenu = () => {
+    this.setState({ sideVisible: !this.state.sideVisible });
+  }
+
   render () {
     //const { visible } = this.state;
     return (
-      <header>
-        <Link to="/" className="logo">          
-          {/* <Image
-            alt="Southern Eye Centre logo"
-            size='small'
-            src={logoS}
-            srcSet={`${logoS} 300w, ${logoM} 2x, ${logoL} 3x`}            
-          /> */}
+      <header className="header">
+        <Link to="/" className="logo" title="Southern Eye Centre">          
           <div className="screen-reader-text">Southern Eye Centre</div>
         </Link>
-        <TopNavMenu visible={this.state.visible} handler={this.toggleMenu}/> 
+        <TopNavMenu visible={this.state.topVisible} handler={this.toggleTopMenu}/> 
         This is a Header
-        <button onClick={this.toggleMenu}>Show Top Menu</button> 
+        <Button icon onClick={this.toggleTopMenu}>
+          <Icon name='world' />
+        </Button>
+        <Button icon onClick={this.toggleSideMenu}>
+          side menu
+        </Button>
+        {/* <div className={"navmenu navmenu--right " + (props.sideVisible ? 'active' : '')}> */}
+        <div className={"navmenu navmenu--right " + (this.state.sideVisible ? 'active' : '')}>
+          {/* <button onClick={props.handler}>Hide Top Slide Menu</button>  */}
+          <button onClick={this.toggleSideMenu}>Hide Side Menu</button> 
+          <h1>sidebar goes here</h1>
+        </div>
+        
+
+         
+        {/* <button onClick={this.toggleMenu}><Icon name='home' /></button>  */}
       </header>
     );
   }

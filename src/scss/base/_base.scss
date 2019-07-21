@@ -17,14 +17,44 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;  
-    >* {
-        flex: 1;
+    main {
+        flex: 1 1 auto;
+        display: flex;
     }
-    header, footer {
-        flex-grow: 0;
+    footer {
+       flex-grow: 0;
+       display: flex;
     }
 }
 
+header, main {
+    padding-left: rem(20px);
+    @include for-size(tablet-landscape) {    
+        padding-left: rem(40px);
+    }
+    @include for-size(desktop) {    
+        padding-left: rem(35px);
+    }
+}
+main {
+    //padding-top: rem(16px); 
+    @include for-size(tablet-landscape) {    
+        padding-left: rem(24px);
+    }
+    @include for-size(desktop) {    
+        padding-top: rem(32px);
+    }
+}
+
+
+    .page-content {
+        flex: 1;
+        border: 1px solid red;
+    }
+    .page-aside {
+        flex: 0 0 481px;
+        border: 1px solid blue;
+    }
 
 /*
 Text meant only for screen readers.
@@ -42,26 +72,6 @@ Provides support for themes that do not bundle this CSS yet.
     position: absolute ! important;
     width: 1px;
     word-wrap: normal ! important;
-}
-
-.logo {
-    display: block;
-    background-image: url('./assets/img/logo.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    @include for-size(tablet-portrait) {    
-        background-image: url('./assets/img/logo@2x.png');
-    }
-    @include for-size(desktop) {    
-       // background-image: url('./assets/img/logo@2x.png');
-       width: rem(191px);
-       height: rem(50px);
-       margin-left: rem(35px);
-    }
-}
-.menu-icon {
-    width: 15px;
-    height: 9px;
 }
 
 // .topnav {

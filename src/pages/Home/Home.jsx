@@ -39,14 +39,16 @@ class Home extends PureComponent {
       return <h1>Something went wrong.</h1>;
     }
     return (
-      <div className="HomeWrapper">
-        Test content
-        <div>
-       <h2>Home</h2>
-       <Button>Click Here</Button>
-       <h1 className="super-title">See More, Do More</h1>
-     </div>
-      </div>
+      <main role="main">
+        <div className="page-content">
+          <h2>Home</h2>          
+          <Button>Click Here</Button>
+          <h1 className="super-title">See More, Do More</h1>
+        </div>
+        <aside className="page-aside">
+          Test content for aside
+        </aside>
+      </main>  
     );
   }
 }

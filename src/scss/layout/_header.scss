@@ -1,0 +1,47 @@
+.header {
+    flex: 0 0 rem(66px);
+    display: flex;
+    @include for-size(bp-small) {    
+        flex-basis: rem(88px);
+    }
+    @include for-size(bp-medium) {    
+        flex-basis: rem(66px);
+    }
+    @include for-size(bp-large) {    
+        flex-basis: rem(88px);
+    }
+    @include for-size(bp-xlarge) {    
+        flex-basis: rem(100px);
+    }
+
+    .logo {
+        display: block;
+        background-image: url('./assets/img/logo.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: rem(47px);
+        height: rem(66px);
+        @include for-size(bp-small) {    
+           background-image: url('./assets/img/logo@2x.png');
+           width: rem(338px);
+           height: rem(88px);
+        }
+        @include for-size(bp-medium) {    
+           width: rem(293px);
+           height: rem(66px);
+        }
+        @include for-size(bp-large) {    
+            width: rem(338px);
+            height: rem(88px);
+        }
+        @include for-size(bp-xlarge) {    
+            width: rem(382px);
+            height: rem(100px);
+        }
+    }
+    .menu-icon {
+        width: 15px;
+        height: 9px;
+    }
+    
+}
