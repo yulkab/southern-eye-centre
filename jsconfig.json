@@ -1,0 +1,14 @@
+{
+  "include": [
+      "src/*"
+  ],
+  "compilerOptions": {
+    "baseUrl": "src",
+    "target": "es5",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": [
+    "node_modules/*"
+  ]
+}
