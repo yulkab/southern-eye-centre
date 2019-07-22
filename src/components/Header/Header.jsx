@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import TopNavMenu from '../TopNav';
 import { Link } from 'react-router-dom';
-import { Button, Icon } from 'semantic-ui-react';
+import { Button, Image } from 'semantic-ui-react';
 
 class Header extends PureComponent { 
   constructor(props) {
@@ -49,13 +49,14 @@ class Header extends PureComponent {
     return (
       <header className="header">
         <Link to="/" className="logo" title="Southern Eye Centre">          
-          <div className="screen-reader-text">Southern Eye Centre</div>
+          <div className="screen-reader-text">Southern Eye Centre Top Header Logo</div>
         </Link>
         <TopNavMenu visible={this.state.topVisible} handler={this.toggleTopMenu}/> 
-        This is a Header
-        <Button icon onClick={this.toggleTopMenu}>
-          <Icon name='world' />
-        </Button>
+
+        <button onClick={this.toggleTopMenu} className="icon-button" type="nav-button" aria-label="Open the Top Navigation">
+          <Image src='img/icons/menu-icon@2x.jpg' className="icon-burger" alt="Top Navigation button Icon" />
+          <div className="screen-reader-text">Button to open the Top Navigation</div>  
+        </button>
         <Button icon onClick={this.toggleSideMenu}>
           side menu
         </Button>
