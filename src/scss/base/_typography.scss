@@ -12,11 +12,28 @@ a, a:hover, a:visited {
   color: $text;
 }
 
-h1,
-h2,
-h3 {
-    font-family: $font-poppins;
-    font-weight: 700;
+h1,h2,h3,h4 {
+  font-family: $font-poppins;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: rem(40px);
+}
+h2 {
+  font-size: rem(36px);
+}
+h4 {
+  font-size: rem(20px);
+}
+h5 {
+  font-size: rem(18px);
+}
+
+p {
+  font-size: rem(16px);
+  font-weight: 500;
+  padding: 1rem 0;
 }
 
 .super-title {  

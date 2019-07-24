@@ -48,17 +48,20 @@
         position: absolute;
         height: 100%;
         right: rem(40px-10px);
-
+        
         @include for-size(bp-small) {    
             right: rem(85px-10px);
         }
         @include for-size(bp-medium) {    
             right: rem(102px-10px);
         }
-        @include for-size(bp-large) {    
+        @include for-size(bp-large) { 
+            height: rem(33px);
+            top: rem(40px);   
             right: rem(397px-10px+40px);
         }
         @include for-size(bp-xlarge) {    
+            top: rem(50px); 
             right: rem(481px-10px+46px);
         }
         .icon-burger {
@@ -67,5 +70,21 @@
         }
     }
     
+    .c-button {
+        display: none;
+        position: absolute;
+        @include for-size(bp-large) {  
+            display: initial;
+            top: rem(44px);
+            right: rem(114px);
+            width: rem(160px);
+            height: rem(33px);
+        }
+        @include for-size(bp-xlarge) {   
+            width: rem(227px);
+            top: rem(55px);  
+            right: rem(140px);
+        }
+    }
     
 }

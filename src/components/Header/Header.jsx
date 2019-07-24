@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import TopNavMenu from '../TopNav';
+import RightSlide from '../RightSlide';
 import { Link } from 'react-router-dom';
 import { Button, Image } from 'semantic-ui-react';
 
@@ -57,19 +58,14 @@ class Header extends PureComponent {
           <Image src='img/icons/menu-icon@2x.jpg' className="icon-burger" alt="Top Navigation button Icon" />
           <div className="screen-reader-text">Button to open the Top Navigation</div>  
         </button>
-        <Button icon onClick={this.toggleSideMenu}>
-          side menu
-        </Button>
-        {/* <div className={"navmenu navmenu--right " + (props.sideVisible ? 'active' : '')}> */}
-        <div className={"navmenu navmenu--right " + (this.state.sideVisible ? 'active' : '')}>
-          {/* <button onClick={props.handler}>Hide Top Slide Menu</button>  */}
-          <button onClick={this.toggleSideMenu}>Hide Side Menu</button> 
-          <h1>sidebar goes here</h1>
-        </div>
         
+        <Button onClick={this.toggleSideMenu} className="c-button" type="button" aria-label="Open the GPs &amp; Optoms">
+          GPs &amp; Optoms
+          <div className="screen-reader-text">Button to open the "GPs &amp; Optoms" Description of patient referral.</div>  
+        </Button>
 
-         
-        {/* <button onClick={this.toggleMenu}><Icon name='home' /></button>  */}
+        <RightSlide visible={this.state.sideVisible} handler={this.toggleSideMenu}/>
+
       </header>
     );
   }
