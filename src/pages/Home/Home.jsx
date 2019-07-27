@@ -36,10 +36,10 @@ class Home extends PureComponent {
 
   render () {
     if (this.state.hasError) {
-      return <h1>Something went wrong.</h1>;
+      return <h1>Oops... Something went wrong.</h1>;
     }
     return (
-      <main role="main">
+      <React.Fragment>
         <div className="page-content">
           <h2>Home</h2>          
           <Button>Click Here</Button>
@@ -48,7 +48,7 @@ class Home extends PureComponent {
         <aside className="page-aside">
           Test content for aside
         </aside>
-      </main>  
+      </React.Fragment>
     );
   }
 }

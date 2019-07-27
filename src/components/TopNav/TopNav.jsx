@@ -9,15 +9,17 @@ const TopNav = props => (
     <Grid stackable columns='equal'>
       <Grid.Column>
         <ul className="navmenu--list">
-          <li className="navmenu--list-header">What We Do</li>
-          <li className="navmenu--list-item">
-            <NavLink to="/what-we-do/consulting-and-treatments" activeClassName="active" onClick={props.handler}>Consulting &amp; Treatments</NavLink>
+          <li className="navmenu--list-header">
+            <NavLink to="/what-we-do" activeClassName="active" onClick={props.handler}> What We Do </NavLink>            
           </li>
           <li className="navmenu--list-item">
-            <NavLink to="/what-we-do/day-surgery" activeClassName="active" onClick={props.handler}>Day Surgery</NavLink>
+            <NavLink to="/what-we-do/consulting-and-treatments" activeClassName="active" onClick={props.handler}> Consulting &amp; Treatments </NavLink>
           </li>
           <li className="navmenu--list-item">
-            <NavLink to="/what-we-do/laser" activeClassName="active" onClick={props.handler}>Laser</NavLink>
+            <NavLink to="/what-we-do/day-surgery" activeClassName="active" onClick={props.handler} > Day Surgery </NavLink>
+          </li>
+          <li className="navmenu--list-item">
+            <NavLink to="/what-we-do/laser" activeClassName="active" onClick={props.handler}> Laser </NavLink>
           </li>
         </ul>
         

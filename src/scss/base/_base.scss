@@ -1,21 +1,44 @@
 html {
-    overflow-x: hidden;
-    font-family: 'Mier B', -system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    box-sizing: border-box;
+    cursor: default;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-family: $font-raleway, -system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 body {
     scroll-behavior: smooth;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background: $lightest;
-    color: $text;
-    font-family: $font-raleway;
 }
 
+html, body {   
+    height: 100%; 
+    font-size: 16px;
+    background: $lightest;
+    color: $text;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-width: 320px;
+    line-height: 1.4285em;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+// @media all and (max-width: 1000px) {
+//     html, body {
+//       font-size: 16px;
+//     }
+// }
 #root {    
     display: flex;
     flex-direction: column;
     height: 100vh;  
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow-x: hidden;
     main {
         flex: 1 1 auto;
         display: flex;
@@ -35,25 +58,6 @@ $header-H-xlarge: rem(100px);
 main {
     position: relative;
     z-index: 2;
-
-    // padding-top: $header-H;
-    // margin-top: - $header-H;
-    // @include for-size(bp-small) {  
-    //     padding-top: $header-H-small;
-    //     margin-top: - $header-H-small;
-    // }
-    // @include for-size(bp-medium) {   
-    //     padding-top: $header-H-medium;
-    //     margin-top: - $header-H-medium;
-    // }
-    // @include for-size(bp-large) { 
-    //     padding-top: $header-H-large;   
-    //     margin-top: - $header-H-large;
-    // }
-    // @include for-size(bp-xlarge) {   
-    //     padding-top: $header-H-xlarge; 
-    //     margin-top: - $header-H-xlarge;
-    // }
 }
 
 .page-aside {
@@ -75,35 +79,188 @@ main {
 
 // ***  General classes *** //
 .page-content {
+    width: 100%;
     flex: 1;
+    @extend .padding;
+    padding-top: 88px; 
 }
 
-.ui.button.c-button {
+.c-button {
     color: $offwhite;
     background-color: $orange;
     font-family: $font-poppins;
-    font-size: 1rem;
     font-weight: 600;
-    text-align: center;
     padding: .5rem 1rem;
 }
 
 .padding {
-    padding: 0 rem(40px);
+    padding-left: rem(40px);
+    padding-right: rem(40px);
     @include for-size(bp-small) {    
-       padding: 0 rem(85px);
+       padding-left: rem(85px);
+       padding-right: rem(85px);
     }
-    @include for-size(bp-medium) {  
-        padding: 0 rem(102px);        
+    @include for-size(bp-medium) {     
+        padding-left: rem(102px);
+        padding-right: rem(102px);    
     }
     @include for-size(bp-large) {    
-        padding: 0 rem(40px) 0 rem(80px); //???
+        padding-left: rem(80px);
+        padding-right: rem(40px);   
     }
     @include for-size(bp-xlarge) {    
-        padding: 0 rem(46px) 0 rem(70px); //???
+        padding-left: rem(70px);
+        padding-right: rem(46px);   
+    }
+}
+.padding-unset {
+    margin-left: rem(-40px);
+    margin-right: rem(-40px);
+    @include for-size(bp-small) {    
+        margin-left: rem(-85px);
+        margin-right: rem(-85px);
+    }
+    @include for-size(bp-medium) {     
+        margin-left: rem(-102px);
+        margin-right: rem(-102px);    
+    }
+    @include for-size(bp-large) {    
+        margin-left: rem(-80px);
+        margin-right: rem(-40px);   
+    }
+    @include for-size(bp-xlarge) {    
+        margin-left: rem(-70px);
+        margin-right: rem(-46px);   
+    }
+}
+  
+.c-tabs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    @extend .padding-unset;
+
+    &__navigation {
+        //@include for-size(bp-small) {    
+           // width: 80px;
+            //flex-shrink: 0; // make sure width is 80px
+            // box-shadow: inset -2px 0 3px var(--cd-color-shadow);
+         //}
+    }
+
+    &__list {
+        display: flex;
+        overflow-x: auto;
+        //overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+
+        @extend .padding;
+    }
+
+    &__item {
+        flex-shrink: 0;        
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding-right: 50px;
+        max-width: calc(152px + 50px);
+        @include for-size(bp-small) {  
+            padding-right: rem(53px); 
+            max-width: calc(152px + 53px);     
+        }
+        @include for-size(bp-medium) {  
+            padding-right: rem(97px);  
+            max-width: calc(152px + 97px);              
+        }
+        @include for-size(bp-large) {    
+            padding-right: 55px;   
+            max-width: calc(152px + 55px);         
+        }
+        @include for-size(bp-xlarge) {    
+            padding-right: 44px;
+            max-width: calc(293px + 44px);
+        }
+
+        a {
+            height: 100%;
+            font-family: Poppins;
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 5px solid transparent; 
+            &.active {  
+                border-bottom: 5px solid $orange;                           
+            }
+        }
+            
+        p {
+            display: none;
+            @include for-size(bp-xlarge) { 
+                display: initial;
+            }
+        }
+             
+        &:hover {
+          //color: var(--cd-color-1);
+          //background-color: hsla(var(--cd-color-2-h), var(--cd-color-2-s), calc(var(--cd-color-2-l)*0.89), 0.3);
+        }
+    }
+
+    .c-tabs__panel {
+        //@extend .padding;
+        height: 100%;
+        overflow: hidden;
+        --line-height-multiplier: 1.14;
+        --text-vspace-multiplier: 1.25;
+
+        padding-top: rem(65px); 
+    }
+    @supports (background: linear-gradient(to left, #000, #000)) { // if linear-gradient is supported
+        .c-tabs::after { // subtle gradient layer on top right of the tabbed navigation - used to indicate it's possible to scroll
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 60px;
+            width: 50px;
+            z-index: 1;
+            pointer-events: none;
+            background: linear-gradient(to left, red, red);
+            visibility: visible;
+            opacity: 1;
+            transition: opacity .3s 0s, visibility 0s 0s;
+        
+            // @include breakpoint(sm) {
+            // display: none;
+            // }
+        }        
+        // .cd-tabs--scroll-ended::after { // class added in JavaScript - remove the gradient layer when it's no longer possible to scroll
+        //     visibility: hidden;
+        //     opacity: 0;
+        //     transition: opacity .3s 0s, visibility 0s .3s;
+        // }
     }
 }
 
+.c-aside-section {
+    display: flex;
+    &_aside {
+        display: none;
+        @include for-size(bp-xlarge) { 
+            flex: 0 0 auto;
+            display: initial;
+            width: calc(293px + 44px + 4.375rem);
+            border: 1px solid red;
+        }
+    }
+    &_content {
+        flex: 1;
+        border-top: 2px solid $light;
+        @extend .padding;
+        @include for-size(bp-xlarge) { 
+            padding-left: 0 !important;
+        }
+    }
+}
 /*
 Text meant only for screen readers.
 Provides support for themes that do not bundle this CSS yet.
