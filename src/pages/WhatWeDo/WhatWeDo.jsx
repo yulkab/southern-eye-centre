@@ -3,6 +3,8 @@ import { Route, Switch , Redirect } from "react-router-dom";
 import { RoutedTabs, NavTab } from "react-router-tabs";
 
 import ConsultingAndTreatment from './ConsultingAndTreatment';
+import DaySurgery from './DaySurgery';
+
 import Stam from '../Stam';
 
 class WhatWeDo extends Component { 
@@ -73,7 +75,7 @@ class WhatWeDo extends Component {
               <Switch>
                 <Route exact path={`${this.props.match.path}`} render={() => <Redirect replace to={`${this.props.match.path}/consulting-and-treatment`} />} />
                 <Route path={`${this.props.match.path}/consulting-and-treatment`} component={ConsultingAndTreatment} />
-                <Route path={`${this.props.match.path}/day-surgery`} component={Stam} />
+                <Route path={`${this.props.match.path}/day-surgery`} component={DaySurgery} />
                 <Route path={`${this.props.match.path}/laser`} component={Stam} />
               </Switch>   
             </article>

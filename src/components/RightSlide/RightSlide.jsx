@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from "react-router-dom";
-import { Button, Image } from 'semantic-ui-react';
+import { Image, Button } from 'semantic-ui-react';
+import closemg from '../../assets/img/icons/close-icon@2x.png';
 
 const RightSlide = props => (
   <div className={"navmenu navmenu--right " + (props.visible ? 'active' : '')}>
     <button onClick={props.handler} className="close-button" type="nav-button" aria-label="Open the Top Navigation">
-      <Image src='img/icons/close-icon@2x.png' className="icon-close" alt="Top Navigation button Icon" />
+      <Image src={closemg} className="icon-close" alt="Top Navigation button Icon" />
       <div className="screen-reader-text">Button to open the Top Navigation</div>  
     </button>
     <section>
@@ -19,7 +19,10 @@ const RightSlide = props => (
         Duis fringilla vulputate sem eu pellentesque. Donec nec libero ac urna consectetur finibus. Nullam nisl justo, semper at laoreet at, blandit sed neque. Fusce eleifend velit ac sodales rhoncus. Nunc diam diam, tristique id lectus quis, fringilla blandit mi. Mauris vitae placerat eros. Donec lacinia nibh sit amet varius dignissim. Curabitur vitae semper leo.
       </p>
       <p>
-        <button className="c-button2">Download Registration Form</button>
+        <Button className="c-button" type="button" aria-label="Download Registration Form">
+          Download Registration Form
+          <div className="screen-reader-text">Button to Download Registration Form.</div>  
+        </Button>
       </p>
       <p>
           44 Cranbourne Rd<br/>

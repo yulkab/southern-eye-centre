@@ -70,15 +70,14 @@
         }
     }
     
-    .c-button {
+    >.c-button {
         display: none;
         position: absolute;
         @include for-size(bp-large) {  
             display: initial;
             top: rem(44px);
             right: rem(114px);
-            width: rem(160px);
-            height: rem(33px);
+            width: rem(160px);            
         }
         @include for-size(bp-xlarge) {   
             width: rem(227px);

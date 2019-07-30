@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from "react-router-dom";
-import { Grid } from 'semantic-ui-react'
+import { Grid,Image} from 'semantic-ui-react';
+import closemg from '../../assets/img/icons/close-icon@2x.png';
 
 const TopNav = props => (
   <nav className={"navmenu navmenu--top " + (props.visible ? 'active' : '')}>
-    <button onClick={props.handler}>Hide Top Slide Menu</button>
+    <button onClick={props.handler} className="close-button" type="nav-button" aria-label="Close the Top Navigation">
+      <Image src={closemg} className="icon-close" alt="Close button Icon" />
+      <div className="screen-reader-text">Button to close the Top Navigation menu.</div>
+    </button>
     <Grid stackable columns='equal'>
       <Grid.Column>
         <ul className="navmenu--list">

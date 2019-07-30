@@ -1,12 +1,12 @@
 import React from 'react';
 
-const ConsultingAndTreatment = props => (
+const DaySurgery = props => (
   <article>
     <div className="c-aside-section">
       <aside className="c-aside-section_aside"></aside>
       <div className="c-aside-section_content">
         <section className="wrapped">
-          <h4>Assessments and Evaluations</h4>
+          <h4>Introduction</h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed, ultrices faucibus augue. Maecenas vel arcu feugiat, rutrum sapien at, auctor arcu. Duis vitae pellentesque ligula. Nunc egestas velit sed lorem ultrices, imperdiet finibus leo tempor. Curabitur accumsan pellentesque placerat. Quisque gravida tortor ipsum. Suspendisse non turpis in ipsum accumsan scelerisque. In vulputate tellus vel quam tincidunt, sed placerat nibh pulvinar. Vivamus a viverra erat. Curabitur velit libero, maximus vel tellus in, molestie fermentum nisi. Fusce vitae nunc in tortor dictum commodo. Sed sagittis vestibulum elit, eu mattis quam tempus vitae. Quisque ultrices magna eu iaculis accumsan. Vivamus dictum a urna at luctus.
           </p>
@@ -20,12 +20,12 @@ const ConsultingAndTreatment = props => (
     <aside className="c-aside-section_aside">
       <p className="more-info">
         More Info
-        <span>Procedures &amp; Treatments</span>
+        <span>Equipments, Staffs &amp; Procedures</span>
       </p>
     </aside>
     <div className="c-aside-section_content">
       <section className="wrapped">
-        <h4>Injections</h4>
+        <h4>Equipments</h4>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed, ultrices faucibus augue. Maecenas vel arcu feugiat, rutrum sapien at, auctor arcu. Duis vitae pellentesque ligula. Nunc egestas velit sed lorem ultrices, imperdiet finibus leo tempor. Curabitur accumsan pellentesque placerat. Quisque gravida tortor ipsum. Suspendisse non turpis in ipsum accumsan scelerisque. In vulputate tellus vel quam tincidunt, sed placerat nibh pulvinar. Vivamus a viverra erat. Curabitur velit libero, maximus vel tellus in, molestie fermentum nisi. Fusce vitae nunc in tortor dictum commodo. Sed sagittis vestibulum elit, eu mattis quam tempus vitae. Quisque ultrices magna eu iaculis accumsan. Vivamus dictum a urna at luctus.
         </p>
@@ -41,12 +41,12 @@ const ConsultingAndTreatment = props => (
 </article>
 );
 
-ConsultingAndTreatment.propTypes = {
+DaySurgery.propTypes = {
   // bla: PropTypes.string,
 };
 
-ConsultingAndTreatment.defaultProps = {
+DaySurgery.defaultProps = {
   // bla: 'test',
 };
 
-export default ConsultingAndTreatment;
+export default DaySurgery;

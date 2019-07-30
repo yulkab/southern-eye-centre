@@ -50,20 +50,7 @@
 			@include for-size(bp-large) {
 				right: 0;
 			}
-		}
-		.close-button {			
-			border: 0;
-			background: transparent;
-			outline: none;
-			padding: 10px;
-			position: absolute;
-			top: rem(44px-10px);
-			right: rem(70px-10px);
-			.icon-close {
-				width: rem(23px);  
-				height: rem(23px);
-			}
-		}
+		}		
 	}	
 
 	&--list {
@@ -100,7 +87,19 @@
 		}
 	}
 }
-
+.close-button {			
+	border: 0;
+	background: transparent;
+	outline: none;
+	padding: 10px;
+	position: absolute;
+	top: rem(44px-10px);
+	right: rem(70px-10px);
+	.icon-close {
+		width: rem(23px);  
+		height: rem(23px);
+	}
+}
 // .ui.grid {
 // 	display: flex;
 //     flex-direction: row;

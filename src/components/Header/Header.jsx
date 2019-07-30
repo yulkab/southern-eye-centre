@@ -3,6 +3,7 @@ import TopNavMenu from '../TopNav';
 import RightSlide from '../RightSlide';
 import { Link } from 'react-router-dom';
 import { Button, Image } from 'semantic-ui-react';
+import logoImg from '../../assets/img/icons/menu-icon@2x.png';
 
 class Header extends PureComponent { 
   constructor(props) {
@@ -55,7 +56,7 @@ class Header extends PureComponent {
         <TopNavMenu visible={this.state.topVisible} handler={this.toggleTopMenu}/> 
 
         <button onClick={this.toggleTopMenu} className="icon-button" type="nav-button" aria-label="Open the Top Navigation">
-          <Image src='img/icons/menu-icon@2x.jpg' className="icon-burger" alt="Top Navigation button Icon" />
+          <Image src={logoImg} className="icon-burger" alt="Top Navigation button Icon" />
           <div className="screen-reader-text">Button to open the Top Navigation</div>  
         </button>
         

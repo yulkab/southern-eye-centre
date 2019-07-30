@@ -38,7 +38,7 @@ body {
     height: 100vh;  
     max-width: 1920px;
     margin: 0 auto;
-    overflow-x: hidden;
+    //overflow-x: hidden;
     main {
         flex: 1 1 auto;
         display: flex;
@@ -63,8 +63,7 @@ main {
 .page-aside {
     width: 0px;
     flex: 0 0 0px;
-    border: 1px solid blue;
-    padding-top: $header-H-large;   
+    //padding-top: $header-H-large;   
     margin-top: - $header-H-large;
 
     @include for-size(bp-large) {    
@@ -72,7 +71,7 @@ main {
     }
     @include for-size(bp-xlarge) {    
         flex-basis: rem(481px);
-        padding-top: $header-H-xlarge;   
+        //padding-top: $header-H-xlarge;   
         margin-top: - $header-H-xlarge;
     }
 }
@@ -91,6 +90,7 @@ main {
     font-family: $font-poppins;
     font-weight: 600;
     padding: .5rem 1rem;
+    height: rem(33px);
 }
 
 .padding {
@@ -196,6 +196,7 @@ main {
             display: none;
             @include for-size(bp-xlarge) { 
                 display: initial;
+                margin-top:  rem(12px); 
             }
         }
              
@@ -240,7 +241,38 @@ main {
         // }
     }
 }
-
+.more-info {
+    position: relative;
+    @extend .padding;
+    line-height: 1.25;
+    font-size: rem(22px);
+    color: $dark;
+    &:not(span){
+        font-family: $font-poppins;
+        font-weight: 700;    
+    }    
+    span {
+        display: block;
+        font-family: $font-raleway;
+        font-size: rem(14px);        
+    }
+    &:before {
+        // position: absolute;
+        // content: '';
+        // top: 50%;
+        // left: 50%;
+        //margin: -.64285714em 0 0 -.64285714em;
+       
+       
+        display: inline-block;
+        position: absolute;
+        content: '';
+        background:  url('./assets/img/icons/triangle-icon@2x.png') no-repeat 0 0 ;      
+        width: 13px;
+        height: 12px;
+    }
+   
+}
 .c-aside-section {
     display: flex;
     &_aside {
@@ -248,19 +280,24 @@ main {
         @include for-size(bp-xlarge) { 
             flex: 0 0 auto;
             display: initial;
-            width: calc(293px + 44px + 4.375rem);
-            border: 1px solid red;
+            width: calc(293px + 44px + 4.375rem);           
         }
     }
     &_content {
-        flex: 1;
-        border-top: 2px solid $light;
+        flex: 1;        
         @extend .padding;
         @include for-size(bp-xlarge) { 
             padding-left: 0 !important;
         }
+        .wrapped {
+            padding: 48px 0;
+            border-top: 2px solid $light;
+            max-width: 754px;
+        }
     }
+
 }
+
 /*
 Text meant only for screen readers.
 Provides support for themes that do not bundle this CSS yet.
