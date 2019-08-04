@@ -42,13 +42,16 @@
 		padding: rem(44px) rem(70px);
 		
 		@include for-size(bp-xlarge) {  
-			width: rem(481px);  
-			right: rem(-481px);
+			width: rem(486px);  
+			right: rem(-486px);			
 		}
 		&.active {
 			//opacity: 1;			
 			@include for-size(bp-large) {
 				right: 0;
+			}
+			@include for-size(bp-xlarge) {
+				right: calc(((100vw - 1938px)/2));
 			}
 		}		
 	}	

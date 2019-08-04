@@ -1,18 +1,24 @@
+
+:root {
+    --darkest:      #4B4B4B;
+    --dark:         #777777;
+    --light:        #B7B7B7;
+    --lightest:     #fcfaf0;
+    --offwhite:     #f4f4f4;
+    --orange:       #F7941D;
+}
+
+
+
 // *** Colors Names ***//
 $darkest: #4B4B4B;
 $dark: #777777;
 $light: #B7B7B7;
-$lightest: #f8f1e8;
+$lightest: #fcfaf0;
 $offwhite: #f4f4f4;
 $orange: #F7941D;
 
 
-//$black: #000;
-//$white: #fff;
-// $aquamarine: #7fffd4;
-// $alabaster: #f9f9f9;
-// $alto: #d9d9d9;
-// $mine-shaft: #333;
 
 // *** Roles ***//
 $text: $darkest;

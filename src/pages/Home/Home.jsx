@@ -1,5 +1,11 @@
 import React, { PureComponent } from 'react';
+import { Link } from 'react-router-dom';
+import { Card, Image, CardContent } from 'semantic-ui-react';
 import asideimg from '../../assets/img/home-side.jpg';
+import contImg1 from '../../assets/img/illustration-home-1m.png';
+import contImg2 from '../../assets/img/illustration-home-2m.png';
+import contImg3 from '../../assets/img/illustration-home-3m.png';
+import doctImg1m from '../../assets/img/doctor-photo@2x.png';
 
 class Home extends PureComponent { 
   constructor(props) {
@@ -41,7 +47,7 @@ class Home extends PureComponent {
     return (
       <React.Fragment>
         <div className="page-content">
-          <section className="centred-632">
+          <section className="c-centred c-centred--632">
             <h1 className="super-title">See More, Do More</h1>
             <p>
               Southern Eye Centre has been providing quality eye care for adults and children in the Frankston, Mornington Peninsula and South Gipplsand areas since 1997.      
@@ -49,26 +55,114 @@ class Home extends PureComponent {
             <p>
               With a fully accredited surgical theatre, state of the art diagnostic tools and a diverse range of eye specialists, all your eye care needs can be addressed at our centre.
             </p>
-            <a href="#"  className="c-button">Call For An Appointment</a>
-          </section>     
-
-          <div className="c-aside-section">
-            <div className="c-aside-section_content">
-              <section className="wrapped">
-                <h4>Assessments and Evaluations</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed, ultrices faucibus augue. Maecenas vel arcu feugiat, rutrum sapien at, auctor arcu. Duis vitae pellentesque ligula. Nunc egestas velit sed lorem ultrices, imperdiet finibus leo tempor. Curabitur accumsan pellentesque placerat. Quisque gravida tortor ipsum. Suspendisse non turpis in ipsum accumsan scelerisque. In vulputate tellus vel quam tincidunt, sed placerat nibh pulvinar. Vivamus a viverra erat. Curabitur velit libero, maximus vel tellus in, molestie fermentum nisi. Fusce vitae nunc in tortor dictum commodo. Sed sagittis vestibulum elit, eu mattis quam tempus vitae. Quisque ultrices magna eu iaculis accumsan. Vivamus dictum a urna at luctus.
-                </p>
-                <p>
-                  Morbi vestibulum odio elementum, commodo magna non, ornare ante. Donec iaculis diam convallis placerat vulputate. Suspendisse maximus, elit id efficitur elementum, quam risus viverra eros, eu consectetur magna nulla ac arcu. Fusce consequat maximus magna a fermentum. Proin viverra vel ipsum vitae consequat. Quisque euismod augue nunc, ut molestie leo molestie sed. Mauris pharetra, velit sed vestibulum venenatis, dolor enim molestie mauris, eget lacinia sem sapien in est. Curabitur venenatis elementum magna, sed mattis ante fermentum non.       
-                </p>
-              </section>     
-            </div>
-          </div> 
+            <p>
+              <a href="tel:1234567890" className="c-button">Call For An Appointment</a>
+            </p>            
+          </section>      
           
+          <section className="c-centred">
+          <hr></hr>
+            <h4>What We Do</h4>
+                <p>
+                  Our team of Ophthalmologists and doctors have been hand picked from amongst the best in Australia to provide you with a comprehensive and professional eye care service. With many of our specialists providing services across Melbourne’s public hospitals and participating in third world eye care. 
+                </p>
+                <p>
+                When making a booking at Southern Eye Centre, our support staff will be able to arrange an appointment with the Ophthalmologist who will best suit your eye care needs.
+                </p>
+          </section>
+
+          <section className="c-centred c-centred--img">
+            <div className="c-centred--img_left">
+              <img src={contImg1} alt="Consulting &amp; Treatment section"/>
+            </div>            
+            <div>
+              <h6>Consulting &amp; Treatment</h6>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget iaculis nisi. Donec mollis tristique maximus. Pellentesque suscipit velit eu cursus commodo. Phasellus vulputate sem vitae mollis vulputate. Quisque vulputate turpis quis orci cursus varius. Vestibulum a semper mi, vitae blandit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc cursus faucibus pellentesque. Vivamus vel dui ultrices, bibendum dolor eu, luctus lorem. Nam id molestie tortor.
+              </p>
+              <p>
+                Phasellus fringilla sagittis vulputate. Donec ornare, ex eget scelerisque sagittis, dolor quam elementum justo, in lobortis ligula mi sed diam. Fusce enim lectus, facilisis in eleifend vel, ornare sed lacus. Phasellus rhoncus, sapien eget tempor luctus, lectus diam ultricies augue, ut tempus lectus mi ac diam. Nullam felis leo, egestas at pulvinar sed, ullamcorper vel augue.
+              </p>
+              <Link to="/what-we-do/consulting-and-treatments" className="more-info" title="Read more info about Consulting &amp; Treatment">More Info<span>Consulting &amp; Treatment</span></Link>
+            </div>            
+          </section>
+
+          <section className="c-centred  c-centred--img">    
+            <div className="c-centred--img_right">
+              <img src={contImg2} alt="Day Surgery section"/>
+            </div>            
+            <div>
+              <h6>Day Surgery</h6>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget iaculis nisi. Donec mollis tristique maximus. Pellentesque suscipit velit eu cursus commodo. Phasellus vulputate sem vitae mollis vulputate. Quisque vulputate turpis quis orci cursus varius. Vestibulum a semper mi, vitae blandit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc cursus faucibus pellentesque. Vivamus vel dui ultrices, bibendum dolor eu, luctus lorem. Nam id molestie tortor.
+              </p>
+              <p>
+                Phasellus fringilla sagittis vulputate. Donec ornare, ex eget scelerisque sagittis, dolor quam elementum justo, in lobortis ligula mi sed diam. Fusce enim lectus, facilisis in eleifend vel, ornare sed lacus. 
+              </p>
+              <Link to="/what-we-do/day-surgery" className="more-info" title="Read more info about Day Surgery">More Info<span>Day Surgery</span></Link>              
+            </div>                    
+          </section>
+           
+          <section className="c-centred c-centred--img">
+            <div className="c-centred--img_left">
+              <img src={contImg3} alt="Laser section"/>
+            </div>            
+            <div>
+              <h6>Laser</h6>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget iaculis nisi. Donec mollis tristique maximus. Pellentesque suscipit velit eu cursus commodo. Phasellus vulputate sem vitae mollis vulputate. Quisque vulputate turpis quis orci cursus varius. Vestibulum a semper mi, vitae blandit dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc cursus faucibus pellentesque. Vivamus vel dui ultrices, bibendum dolor eu, luctus lorem. Nam id molestie tortor.
+                Phasellus fringilla sagittis vulputate. Donec ornare, ex eget scelerisque sagittis, dolor quam elementum justo, in lobortis ligula mi sed diam. Fusce enim lectus, facilisis in eleifend vel, ornare sed lacus. 
+              </p>
+              <Link to="/what-we-do/laser" className="more-info" title="Read more info about Laser Eye Surgery">More Info<span>Laser Eye Surgery</span></Link>                            
+            </div>            
+          </section>          
+
+          <section className="c-centred">
+          <hr></hr>
+            <h4>Our Doctors</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed.
+                </p>               
+          </section>
+
+          <Card.Group className="s-cards s-cards--doctors">  
+
+            <Card href='/what-we-do/laser'  title="Read more info about Dr. Damien Louis">
+              <Image src={doctImg1m}/>  
+              <CardContent>
+                <div className="doc-info">Dr. Damien Louis<span>MBBS, FRANZCO</span></div>
+              </CardContent>
+              <Card.Content extra/>
+            </Card>
+
+            <Card  href='/what-we-do/laser' >
+              <Image src={doctImg1m}/>  
+              <CardContent>
+                <div className="doc-info">Dr. Douglas Reinehr<span>MBBS, FRANZCO</span></div>
+              </CardContent>
+            </Card>
+
+            <Card  href='/what-we-do/laser' >
+              <Image src={contImg3} />
+              <CardContent>
+                <div className="doc-info">Dr. Jonathan Yeoh<span>MBBS, FRANZCO</span></div>
+              </CardContent>
+            </Card>
+
+            {/* <Card className="c-cards-">
+              <Image src={contImg3} />
+              <CardContent>
+              <Link to="/what-we-do/laser" className="more-info" title="Read more info about Laser Eye Surgery">More Info<span>Laser Eye Surgery</span></Link>                            
+              </CardContent>
+            </Card> */}
+
+
+          </Card.Group>
+
+
         </div>
         <aside className="page-aside">
-          <img src={asideimg} alt="background image"/>
+          <img src={asideimg} alt="aside background"/>
         </aside>
       </React.Fragment>
     );
