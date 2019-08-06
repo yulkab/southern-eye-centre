@@ -274,7 +274,27 @@ hr {
         height: 12px;
         transform: rotate(-90deg);
     }
-   
+   p & {
+        margin-top: rem(48px);
+   }
+}
+
+.icon {
+    &.quote {
+        font-size: 60px;
+        font-family: $font-poppins;
+        font-weight: 700;
+        line-height: 1.48;
+        font-style: italic;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: -60px;
+        left: -25px;
+        &:before {
+            content: ' " ';           
+        }
+    }
 }
 // .more-info {
 //     position: relative;

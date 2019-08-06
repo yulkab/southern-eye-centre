@@ -12868,20 +12868,14 @@
  */
  .ui.segment {
      position: relative;
-     background: #fff;
-     box-shadow: 0 1px 2px 0 rgba(34, 36, 38, .15);
      margin: 1rem 0;
      padding: 1em 1em;
-     border-radius: .28571429rem;
-     border: 1px solid rgba(34, 36, 38, .15)
- }
-
- .ui.segment:first-child {
-     margin-top: 0
- }
-
- .ui.segment:last-child {
-     margin-bottom: 0
+     &:first-child {
+        margin-top: 0;
+    }
+    &:last-child {
+        margin-bottom: 0
+    }
  }
 
  .ui.vertical.segment {
@@ -12892,7 +12886,6 @@
      border-radius: 0;
      box-shadow: none;
      border: none;
-     border-bottom: 1px solid rgba(34, 36, 38, .15)
  }
 
  .ui.vertical.segment:last-child {
@@ -12935,12 +12928,6 @@
      border-radius: .28571429rem
  }
 
- .ui.basic.table.segment {
-     background: #fff;
-     border: 1px solid rgba(34, 36, 38, .15);
-     box-shadow: 0 1px 2px 0 rgba(34, 36, 38, .15)
- }
-
  .ui[class*="very basic"].table.segment {
      padding: 1em 1em
  }
@@ -12955,9 +12942,6 @@
      overflow: visible;
      padding: 1em 1em;
      min-height: 18rem;
-     background: #f9fafb;
-     border-color: rgba(34, 36, 38, .15);
-     box-shadow: 0 2px 25px 0 rgba(34, 36, 38, .05) inset
  }
 
  .ui.placeholder.segment .button,
@@ -13090,14 +13074,6 @@
      bottom: 0
  }
 
- .ui.stacked.inverted.segment:after,
- .ui.stacked.inverted.segment:before,
- .ui.stacked.inverted.segments:after,
- .ui.stacked.inverted.segments:before {
-     background-color: rgba(0, 0, 0, .03);
-     border-top: 1px solid rgba(34, 36, 38, .35)
- }
-
  .ui.padded.segment {
      padding: 1.5em
  }
@@ -13143,17 +13119,12 @@
      flex-direction: column;
      position: relative;
      margin: 1rem 0;
-     border: 1px solid rgba(34, 36, 38, .15);
-     box-shadow: 0 1px 2px 0 rgba(34, 36, 38, .15);
-     border-radius: .28571429rem
- }
-
- .ui.segments:first-child {
-     margin-top: 0
- }
-
- .ui.segments:last-child {
-     margin-bottom: 0
+    &:first-child {
+        margin-top: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
  }
 
  .ui.segments>.segment {
@@ -13208,11 +13179,7 @@
      background-color: transparent;
      border-radius: 0;
      padding: 0;
-     background-color: #fff;
-     box-shadow: 0 1px 2px 0 rgba(34, 36, 38, .15);
      margin: 1rem 0;
-     border-radius: .28571429rem;
-     border: 1px solid rgba(34, 36, 38, .15)
  }
 
  .ui.segments>.horizontal.segments {
@@ -13314,123 +13281,6 @@
      visibility: hidden
  }
 
- .ui.red.segment:not(.inverted) {
-     border-top: 2px solid #db2828 !important
- }
-
- .ui.inverted.red.segment {
-     background-color: #db2828 !important;
-     color: #fff !important
- }
-
- .ui.orange.segment:not(.inverted) {
-     border-top: 2px solid #f2711c !important
- }
-
- .ui.inverted.orange.segment {
-     background-color: #f2711c !important;
-     color: #fff !important
- }
-
- .ui.yellow.segment:not(.inverted) {
-     border-top: 2px solid #fbbd08 !important
- }
-
- .ui.inverted.yellow.segment {
-     background-color: #fbbd08 !important;
-     color: #fff !important
- }
-
- .ui.olive.segment:not(.inverted) {
-     border-top: 2px solid #b5cc18 !important
- }
-
- .ui.inverted.olive.segment {
-     background-color: #b5cc18 !important;
-     color: #fff !important
- }
-
- .ui.green.segment:not(.inverted) {
-     border-top: 2px solid #21ba45 !important
- }
-
- .ui.inverted.green.segment {
-     background-color: #21ba45 !important;
-     color: #fff !important
- }
-
- .ui.teal.segment:not(.inverted) {
-     border-top: 2px solid #00b5ad !important
- }
-
- .ui.inverted.teal.segment {
-     background-color: #00b5ad !important;
-     color: #fff !important
- }
-
- .ui.blue.segment:not(.inverted) {
-     border-top: 2px solid #2185d0 !important
- }
-
- .ui.inverted.blue.segment {
-     background-color: #2185d0 !important;
-     color: #fff !important
- }
-
- .ui.violet.segment:not(.inverted) {
-     border-top: 2px solid #6435c9 !important
- }
-
- .ui.inverted.violet.segment {
-     background-color: #6435c9 !important;
-     color: #fff !important
- }
-
- .ui.purple.segment:not(.inverted) {
-     border-top: 2px solid #a333c8 !important
- }
-
- .ui.inverted.purple.segment {
-     background-color: #a333c8 !important;
-     color: #fff !important
- }
-
- .ui.pink.segment:not(.inverted) {
-     border-top: 2px solid #e03997 !important
- }
-
- .ui.inverted.pink.segment {
-     background-color: #e03997 !important;
-     color: #fff !important
- }
-
- .ui.brown.segment:not(.inverted) {
-     border-top: 2px solid #a5673f !important
- }
-
- .ui.inverted.brown.segment {
-     background-color: #a5673f !important;
-     color: #fff !important
- }
-
- .ui.grey.segment:not(.inverted) {
-     border-top: 2px solid #767676 !important
- }
-
- .ui.inverted.grey.segment {
-     background-color: #767676 !important;
-     color: #fff !important
- }
-
- .ui.black.segment:not(.inverted) {
-     border-top: 2px solid #1b1c1d !important
- }
-
- .ui.inverted.black.segment {
-     background-color: #1b1c1d !important;
-     color: #fff !important
- }
-
  .ui[class*="left aligned"].segment {
      text-align: left
  }
@@ -13459,44 +13309,6 @@
      box-shadow: none
  }
 
- .ui.inverted.segment,
- .ui.primary.inverted.segment {
-     background: #1b1c1d;
-     color: rgba(255, 255, 255, .9)
- }
-
- .ui.inverted.segment .segment {
-     color: rgba(0, 0, 0, .87)
- }
-
- .ui.inverted.segment .inverted.segment {
-     color: rgba(255, 255, 255, .9)
- }
-
- .ui.inverted.attached.segment {
-     border-color: #555
- }
-
- .ui.secondary.segment {
-     background: #f3f4f5;
-     color: rgba(0, 0, 0, .6)
- }
-
- .ui.secondary.inverted.segment {
-     background: #4c4f52 linear-gradient(rgba(255, 255, 255, .2) 0, rgba(255, 255, 255, .2) 100%);
-     color: rgba(255, 255, 255, .8)
- }
-
- .ui.tertiary.segment {
-     background: #dcddde;
-     color: rgba(0, 0, 0, .6)
- }
-
- .ui.tertiary.inverted.segment {
-     background: #717579 linear-gradient(rgba(255, 255, 255, .35) 0, rgba(255, 255, 255, .35) 100%);
-     color: rgba(255, 255, 255, .8)
- }
-
  .ui.attached.segment {
      top: 0;
      bottom: 0;
@@ -13505,7 +13317,6 @@
      width: calc(100% + 2px);
      max-width: calc(100% + 2px);
      box-shadow: none;
-     border: 1px solid #d4d4d5
  }
 
  .ui.attached:not(.message)+.ui.attached.segment:not(.top) {

@@ -1,11 +1,12 @@
 import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
-import { Card, Image, CardContent } from 'semantic-ui-react';
+import { Card, Image, CardContent, Grid} from 'semantic-ui-react';
 import asideimg from '../../assets/img/home-side.jpg';
 import contImg1 from '../../assets/img/illustration-home-1m.png';
 import contImg2 from '../../assets/img/illustration-home-2m.png';
 import contImg3 from '../../assets/img/illustration-home-3m.png';
 import doctImg1m from '../../assets/img/doctor-photo@2x.png';
+import photos1 from '../../assets/img/photos/centre-1.jpg';
 
 class Home extends PureComponent { 
   constructor(props) {
@@ -131,21 +132,24 @@ class Home extends PureComponent {
               <Image src={doctImg1m}/>  
               <CardContent>
                 <div className="doc-info">Dr. Damien Louis<span>MBBS, FRANZCO</span></div>
+                <div className="extra content"></div>
               </CardContent>
-              <Card.Content extra/>
+             
             </Card>
 
             <Card  href='/what-we-do/laser' >
               <Image src={doctImg1m}/>  
               <CardContent>
                 <div className="doc-info">Dr. Douglas Reinehr<span>MBBS, FRANZCO</span></div>
-              </CardContent>
+                <div className="extra content"></div>
+              </CardContent>              
             </Card>
 
             <Card  href='/what-we-do/laser' >
               <Image src={contImg3} />
               <CardContent>
                 <div className="doc-info">Dr. Jonathan Yeoh<span>MBBS, FRANZCO</span></div>
+                <div className="extra content"></div>
               </CardContent>
             </Card>
 
@@ -155,10 +159,46 @@ class Home extends PureComponent {
               <Link to="/what-we-do/laser" className="more-info" title="Read more info about Laser Eye Surgery">More Info<span>Laser Eye Surgery</span></Link>                            
               </CardContent>
             </Card> */}
-
-
           </Card.Group>
+            <p>
+              <Link to="/doctors" className="more-info" title="Read more info about Our Doctors">More Info<span>Our Doctors</span></Link>                            
+            </p>
 
+            <section className="c-centred">
+            <hr></hr>
+              <h4>PHOTOS</h4>                           
+            </section>
+
+            <Grid columns='equal' className="s-photos">
+              <Grid.Row stretched>
+                <Grid.Column width={8}>
+                  <Image src={photos1}/>
+                </Grid.Column>
+                <Grid.Column>
+                  <Image src='https://react.semantic-ui.com/images/wireframe/image.png' />
+                  <br/>
+                  <Image src='https://react.semantic-ui.com/images/wireframe/image.png' />
+                </Grid.Column>
+                <Grid.Column>
+                  <Image src='https://react.semantic-ui.com/images/wireframe/image.png' />
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+            <p>
+              <Link to="/photo" className="more-info" title="See more Facilities’ Photo">More Info<span>Facilities’ Photo</span></Link>                            
+            </p>
+
+            <div className="s-reviews">
+              <div className="c-centred">                           
+                <p>        
+                <i className="icon quote"></i>       
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed, ultrices faucibus augue. Pellentesque fermentum dui commodo lobortis suscipit. Etiam sed pellentesque turpis, quis convallis neque. In eu ante in augue imperdiet suscipit vel scelerisque nisl. Donec vitae vehicula augue, vel efficitur augue.-- Name, age.
+                </p>
+                <p>
+                  <Link to="/photo" className="more-info" title="Read more Reviews">More Info<span>Reviews</span></Link>                            
+                </p>
+              </div>              
+            </div>
 
         </div>
         <aside className="page-aside">

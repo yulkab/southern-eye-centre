@@ -84,63 +84,128 @@
 
 .s-cards {
 
-    &--doctors.ui.cards{
+    &--doctors.ui.cards {
         margin: 0;
         .ui.card {
             width: 100%;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
+            margin: 0 0 rem(24px);
+            background: url('./assets/img/bg/line-bg@2x.png') 0 0 ;    
+            border-top: 5px solid var(--orange);
+
+            @include for-size(bp-small) {
+                flex-direction: row;
+            }
             @include for-size(bp-xlarge) { 
                 flex-direction: column;
                 align-items: normal;
                 width: calc((100% - 90px) / 3);
-                margin: 0 0 0 45px;
+                margin: 0 0 0 rem(45px);
+                padding-bottom: rem(35px);
+                border-top: 5px solid transparent;
+
                 &:first-of-type {
                     margin-left: 0;
                 }
-            }
-            background: url('./assets/img/bg/line-bg@2x.png') 0 0 ;    
-            border-top: 5px solid transparent;
-            &:hover {
-                border-top-color: var(--orange);
-            }
+                &:hover {
+                    border-top-color: var(--orange);
+                }
+            }                       
            
             .content {
-                flex: 1;               
-                &.extra {
-                    flex: 1;
-                    height: 56px;
-                    background: url('./assets/img/eye-icon-small@2x.png') no-repeat 0 0 ;   
-                    padding: 0;
-                    margin:  1rem;
+                flex: 1;                     
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex-wrap: wrap;
+                padding: 0 rem(29px) 1rem;
+
+                @include for-size(bp-small) {
+                    padding: 1rem;
+                    align-items: flex-start;
+                }
+                @include for-size(bp-large) {
+                    flex-direction: row;
+                    align-items: center;
                 }
                 @include for-size(bp-xlarge) { 
-                    padding: 33px;
+                    padding: 33px 33px .5rem;
                 }
+
+                >* {
+                    flex: 1 0 auto;
+                }
+
+                &.extra {
+                    width: rem(196px);
+                    height: rem(28px);                                   
+                    padding: 0;
+                    margin: 1rem 0;
+                    background: url('./assets/img/eye-icon-small.png') no-repeat center 0 ;       
+                        
+                    @include for-size(bp-small) {
+                        background: url('./assets/img/eye-icon-small@2x.png') no-repeat center 0 ;   
+                        width: rem(260px);
+                        height: rem(56px);
+                    }
+                }                
             }           
 
             .ui.image {            
                 border-radius: 50%;
-                width: 166px;
-                margin: 2rem;
+                width: rem(97px);
+                margin: rem(21px);
+
+                @include for-size(bp-small) {
+                    width: rem(166px);
+                }
                 @include for-size(bp-xlarge) { 
-                    width: 225px;
-                    margin: 52px auto 0;
+                    width: rem(225px);
+                    margin: rem(48px) auto 0;
                 }
             }
 
             .doc-info {
                 @extend .more-info;
-                left: 25px;
-                font-size: 20px;
+                margin-left: rem(25px);
+                font-size: rem(20px);
                 color: var(--darkest);
                 line-height: 1.05;
+
                 span {
                     font-size: 1rem;
                     font-weight: 500;
                 }
             }
-        }
+        }        
+    }
+}
+
+.s-photos, .s-cards {
+    & + p {
+        text-align: right;
+    }
+}
+.s-reviews {
+    @extend .padding-unset;    
+    background: url('./assets/img/bg/line-bg@2x.png') 0 0 ; 
+    padding-top: rem(56px);
+    padding-bottom: rem(56px);
+
+    @include for-size(bp-large) { 
+        padding-left: 52px;
+        padding-right: 179px;
         
+    }
+    .c-centred {
+        @extend .padding;   
+        
+        p {
+            position: relative; 
+        }
+    }
+    .c-centred >p:last-child {
+        text-align: right;
     }
 }
