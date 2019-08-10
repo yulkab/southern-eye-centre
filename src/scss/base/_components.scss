@@ -1,0 +1,290 @@
+  // ***                              ***//
+ //     General c-components classes    //
+// ***                             *** //
+
+.c-button {
+    display: inline-flex;
+    align-items: center;
+    color: $offwhite;
+    background-color: $orange;
+    font-family: $font-poppins;
+    font-weight: 600;
+    padding: .32rem rem(22px);
+    min-height: rem(33px) !important;
+}
+
+
+.c-tabs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    @extend .padding-unset;
+
+    &__navigation {
+        //@include for-size(bp-small) {    
+           // width: 80px;
+            //flex-shrink: 0; // make sure width is 80px
+            // box-shadow: inset -2px 0 3px var(--cd-color-shadow);
+         //}
+    }
+
+    &__list {
+        @extend .padding;
+        display: flex;
+        //align-items: center;
+        scroll-snap-type: x mandatory;
+        overflow-x: auto;
+        overflow-wrap: break-word;
+        -webkit-overflow-scrolling: touch;
+
+        @include for-size(bp-large) {    
+            overflow: hidden;
+        }
+        
+    }
+
+    &__item {
+        scroll-snap-align: center;   
+        position: relative;
+        display: flex;    
+        flex-direction: column; 
+        flex-shrink: 0;   
+        padding-right: 50px;
+        flex: 1 0 calc(200px + 50px);
+        @include for-size(bp-small) {  
+            max-width: calc(180px + 50px);     
+        }
+        @include for-size(bp-medium) {  
+            padding-right: rem(55px);            
+        }
+        @include for-size(bp-large) {    
+            flex-shrink: 1;
+            max-width: none;
+            //padding-right: 55px;   
+            //max-width: calc(152px + 55px);         
+        }
+        //@include for-size(bp-xlarge) {    
+            //padding-right: 44px;
+            //max-width: calc(293px + 44px);
+        //}
+
+        a {
+            height: 100%;
+            font-family: Poppins;
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 5px solid transparent; 
+            padding-bottom: 1rem;
+            color: var(--dark, $dark);
+            &:visited, &:active {
+                color: var(--dark, $dark);
+            }
+            &.active {  
+                border-bottom: 5px solid $orange;                           
+            }
+        }
+            
+        p {
+            display: none;
+            @include for-size(bp-xlarge) { 
+                display: initial;
+                margin-top:  rem(12px); 
+            }
+        }
+             
+        &:hover {
+          //color: var(--cd-color-1);
+          //background-color: hsla(var(--cd-color-2-h), var(--cd-color-2-s), calc(var(--cd-color-2-l)*0.89), 0.3);
+        }
+    }
+
+    .c-tabs__panel {
+        //@extend .padding;
+        height: 100%;
+        overflow: hidden;
+        --line-height-multiplier: 1.14;
+        --text-vspace-multiplier: 1.25;
+
+        padding-top: rem(65px); 
+    }
+    @supports (background: linear-gradient(to left, #000, #000)) { // if linear-gradient is supported
+        .c-tabs::after { // subtle gradient layer on top right of the tabbed navigation - used to indicate it's possible to scroll
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 60px;
+            width: 50px;
+            z-index: 1;
+            pointer-events: none;
+            background: linear-gradient(to left, red, red);
+            visibility: visible;
+            opacity: 1;
+            transition: opacity .3s 0s, visibility 0s 0s;
+        
+            // @include breakpoint(sm) {
+            // display: none;
+            // }
+        }        
+        // .cd-tabs--scroll-ended::after { // class added in JavaScript - remove the gradient layer when it's no longer possible to scroll
+        //     visibility: hidden;
+        //     opacity: 0;
+        //     transition: opacity .3s 0s, visibility 0s .3s;
+        // }
+    }
+}
+
+
+.c-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: url('./assets/img/bg/line-bg@2x.png') 0 0 ; 
+    padding: calc(#{$header-H} + 46px) 75px 2rem 71px;
+    @include for-size(bp-small) {    
+        padding: calc(#{$header-H-small} + 46px) 75px 2rem 71px;
+    }
+    @include for-size(bp-medium) {    
+        padding: calc(#{$header-H-medium} + 46px) 75px 2rem 71px;          
+    }
+    @include for-size(bp-large) {    
+        padding: calc(#{$header-H-large} + 46px) 75px 2rem 71px;        
+    }
+    @include for-size(bp-xlarge) {    
+        padding: calc(#{$header-H-xlarge} + 46px) 75px 2rem 71px;
+    }    
+    // &--contact {
+
+    // }
+    &--news {
+        h5 {
+            margin-bottom: 0;
+        }
+        img {
+            margin-top: rem(23px);
+        }
+    }
+}
+
+.c-aside-section {
+    display: flex;
+    &_aside {
+        display: none;
+        @include for-size(bp-xlarge) { 
+            flex: 0 0 auto;
+            display: initial;
+            width: calc(293px + 44px + 4.375rem);           
+        }
+        .more-info {
+            @extend .padding-align-left;
+            &:before {
+                transform: none;
+            }
+        }
+    }
+    &_content {
+        flex: 1;        
+        @extend .padding;
+        @include for-size(bp-xlarge) { 
+            padding-left: 0 !important;
+        }
+        .wrapped {
+            padding: 48px 0;
+            border-top: 2px solid $light;
+            max-width: 754px;
+        }
+    }
+
+}
+
+.c-staff {
+   @extend .padding;    
+    max-width: rem(1316px);
+    padding-bottom: rem(42px);
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    >* {
+        text-align: center;        
+        .ui.image {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+        h4 {
+            margin-top: 1.25rem;
+            margin-bottom: 0;
+        }
+    }
+
+    @include for-size(bp-large) { 
+        >* {
+            width: calc(100% / 4);
+            .ui.image {
+                max-width: 90%;
+            }
+        }
+    }
+
+}
+.c-img-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: rem(734px);  
+    border-top: 2px solid var(--light, $light);  
+         
+    >* {
+        padding: rem(42px) 0;
+    }
+  
+    &_left {
+        text-align: center;
+        padding-bottom: 0;
+        img {            
+            width: 80%;
+        }
+    }
+    @include for-size(bp-medium) {
+        flex-direction: row;
+        align-items: start;
+        border-top: none;
+
+        >* {
+            padding: rem(48px) 0;
+        }
+
+        &_left {
+            flex-shrink: 0;
+            padding-top: rem(84px);
+            padding-right: rem(24px);
+
+            img {
+                position: relative;  
+                margin-top: 16px;
+                width: auto;   
+                max-width: rem(200px);                              
+            } 
+            &+ div {                
+                border-top: 2px solid var(--light, $light);
+            }
+        }
+    }
+    @include for-size(bp-xlarge) { 
+
+        &_left {
+            padding-right: 0; 
+            margin-left: -30%; 
+            img {
+                max-width: 100%; 
+                right: rem(42px); 
+            }
+        }
+                       
+    }               
+   
+}
+
+.b-top {
+    border-top: 2px solid var(--light, $light);
+}

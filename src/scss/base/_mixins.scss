@@ -1,11 +1,12 @@
-// ***  Media Queries *** //
-
+  // ***                               ***//
+ //            Media Queries             //
+// ***                              *** //
 $very-small: 480px;
 $small: 768px;
 $medium: 1024px;
 $large: 1366px;
 $very-large: 1620px;
-
+$max-W: 1920px;
 @mixin for-size($size) {
   @if $size == bp-mobile-only {
     @media (max-width: $very-small) { @content; }
@@ -17,6 +18,8 @@ $very-large: 1620px;
     @media (min-width:  #{$large - 1}) { @content; }
   } @else if $size == bp-xlarge {
     @media (min-width: #{$very-large - 1}) { @content; }
+  } @else if $size == bp-max-W {
+    @media (min-width: #{$max-W - 1}) { @content; }
   }
 }
 
@@ -33,6 +36,11 @@ $very-large: 1620px;
 //     @media (min-width: 1800px) { @content; }
 //   }
 // }
+
+
+  // ***                               ***//
+ //           Pixels to Rems             //
+// ***                              *** //
 
 $rem-baseline: 16px !default;
 $rem-fallback: false !default;

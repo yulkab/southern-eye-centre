@@ -50,15 +50,21 @@
 			@include for-size(bp-large) {
 				right: 0;
 			}
-			@include for-size(bp-xlarge) {
-				right: calc(((100vw - 1938px)/2));
+			@include for-size(bp-max-W) {
+				right: calc((100vw - #{$max-W})/2);
 			}
 		}		
 	}	
 
 	&--list {
 		font-family: $font-poppins;
-		font-weight: 600;		
+		font-weight: 600;	
+		a {
+			color: var(--dark, $dark);
+            &:visited, &:active {
+                color: var(--dark, $dark);
+            }
+		}	
 		&-header {
 			font-size: rem(22px);	
 			line-height: normal;	
@@ -71,7 +77,10 @@
 			a {
 				font-size: rem(18px);
 				line-height: 1.94;
-				color: $dark;
+				color: var(--dark, $dark);
+				&:visited, &:active {
+					color: var(--dark, $dark);
+				}
 			}
 		}
 		&+.navmenu--list {

@@ -1,4 +1,6 @@
-// *** Fonts ***//
+  // ***                           ***//
+ //          Fonts settings          //
+// ***                          *** //
 //@import url('https://fonts.googleapis.com/css?family=Poppins:600,700&display=swap');
 //@import url('https://fonts.googleapis.com/css?family=Raleway:400,500&display=swap');
 
@@ -35,9 +37,14 @@ h6 {
     margin-top: 1rem;
   }
 }
+
 p {
   font-size: rem(16px);
   font-weight: 500;  
+}
+
+small {
+  font-size: rem(12px);
 }
 
 .super-title {  
@@ -52,19 +59,12 @@ p {
 
 
 // target devices with min width of 768px (possibly tablets) and with wide screen
-$smedium: 768px;
-$screen-medium-wide: 'only screen and (min-width: #{$smedium}) and (max-device-aspect-ratio: 9 / 16)';
+// $smedium: 768px;
+// $screen-medium-wide: 'only screen and (min-width: #{$smedium}) and (max-device-aspect-ratio: 9 / 16)';
 
-@media #{$screen-medium-wide} {
-  body {
-    font-size: 20px;
-  }
-}
-
-// h1, h2 {
-//   color: $primaryColor;
+// @media #{$screen-medium-wide} {
+//   body {
+//     font-size: 20px;
+//   }
 // }
 
-// a {
-//     text-decoration: none
-// }

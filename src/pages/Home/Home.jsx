@@ -160,7 +160,7 @@ class Home extends PureComponent {
               </CardContent>
             </Card> */}
           </Card.Group>
-            <p>
+            <p className="text-right">
               <Link to="/doctors" className="more-info" title="Read more info about Our Doctors">More Info<span>Our Doctors</span></Link>                            
             </p>
 
@@ -184,7 +184,7 @@ class Home extends PureComponent {
                 </Grid.Column>
               </Grid.Row>
             </Grid>
-            <p>
+            <p className="text-right">
               <Link to="/photo" className="more-info" title="See more Facilities’ Photo">More Info<span>Facilities’ Photo</span></Link>                            
             </p>
 
@@ -194,7 +194,7 @@ class Home extends PureComponent {
                 <i className="icon quote"></i>       
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed, ultrices faucibus augue. Pellentesque fermentum dui commodo lobortis suscipit. Etiam sed pellentesque turpis, quis convallis neque. In eu ante in augue imperdiet suscipit vel scelerisque nisl. Donec vitae vehicula augue, vel efficitur augue.-- Name, age.
                 </p>
-                <p>
+                <p className="text-right">
                   <Link to="/photo" className="more-info" title="Read more Reviews">More Info<span>Reviews</span></Link>                            
                 </p>
               </div>              

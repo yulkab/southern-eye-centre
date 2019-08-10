@@ -1,4 +1,6 @@
-// ***  The Page level styles *** //
+  // ***                           ***//
+ //      HOME page level styles      //
+// ***                          *** //
 .c-centred {
     margin: 0 auto;
     padding: 42px 0;
@@ -50,7 +52,6 @@
             padding-top: rem(20px);
 
             &_left, &_right {
-                flex-shrink: 0;
                 padding-right: 0; 
                 img {
                     max-width: 100%;  
@@ -83,7 +84,6 @@
 }
 
 .s-cards {
-
     &--doctors.ui.cards {
         margin: 0;
         .ui.card {
@@ -182,11 +182,6 @@
     }
 }
 
-.s-photos, .s-cards {
-    & + p {
-        text-align: right;
-    }
-}
 .s-reviews {
     @extend .padding-unset;    
     background: url('./assets/img/bg/line-bg@2x.png') 0 0 ; 

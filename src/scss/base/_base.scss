@@ -1,3 +1,18 @@
+  // ***                              ***//
+ //               Variables             //
+// ***                             *** //
+
+$header-H: rem(66px);
+$header-H-small: rem(88px);
+$header-H-medium: rem(66px);
+$header-H-large: rem(88px);
+$header-H-xlarge: rem(100px);
+
+
+  // ***                              ***//
+ //         Elements Styling            //
+// ***                             *** //
+
 html {
     height: 100%;     
 }
@@ -25,6 +40,7 @@ body {
 //       font-size: 16px;
 //     }
 // }
+
 #root {    
     display: flex;
     flex-direction: column;
@@ -42,23 +58,38 @@ body {
     }
 }
 
-$header-H: rem(66px);
-$header-H-small: rem(88px);
-$header-H-medium: rem(66px);
-$header-H-large: rem(88px);
-$header-H-xlarge: rem(100px);
-
 main {
     position: relative;
     z-index: 2;
 }
-
 
 hr {
     border-top: 2px solid var(--light);
     margin: rem(42px) 0;
     & + h4 {
         margin-top: 0;
+    }
+}
+
+  // ***                              ***//
+ //       Common style classes          //
+// ***                             *** //
+
+.icon {
+    &.quote {
+        font-size: 60px;
+        font-family: $font-poppins;
+        font-weight: 700;
+        line-height: 1.48;
+        font-style: italic;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: -60px;
+        left: -25px;
+        &:before {
+            content: ' " ';           
+        }
     }
 }
 
@@ -79,23 +110,11 @@ hr {
     }
 }
 
-// ***  General classes *** //
 .page-content {
     width: 100%;
     flex: 1;
     @extend .padding;
     padding-top: rem(46px);
-}
-
-.c-button {
-    display: inline-flex;
-    align-items: center;
-    color: $offwhite;
-    background-color: $orange;
-    font-family: $font-poppins;
-    font-weight: 600;
-    padding: .32rem rem(22px);
-    min-height: rem(33px) !important;
 }
 
 .padding {
@@ -139,117 +158,24 @@ hr {
         margin-right: rem(-46px);   
     }
 }
-  
-.c-tabs {
+
+.padding-align-left {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    @extend .padding-unset;
-
-    &__navigation {
-        //@include for-size(bp-small) {    
-           // width: 80px;
-            //flex-shrink: 0; // make sure width is 80px
-            // box-shadow: inset -2px 0 3px var(--cd-color-shadow);
-         //}
+    left: rem(40px);
+    @include for-size(bp-small) {    
+        left: rem(85px);
     }
-
-    &__list {
-        display: flex;
-        align-items: center;
-        scroll-snap-type: x mandatory;
-        overflow-x: auto;
-        height: 80px;
-        -webkit-overflow-scrolling: touch;
-
-        @extend .padding;
+    @include for-size(bp-medium) {     
+        left: rem(102px);
     }
-
-    &__item {
-        scroll-snap-align: center;
-        flex-shrink: 0;        
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        padding-right: 50px;
-        max-width: calc(152px + 50px);
-        @include for-size(bp-small) {  
-            padding-right: rem(53px); 
-            max-width: calc(152px + 53px);     
-        }
-        @include for-size(bp-medium) {  
-            padding-right: rem(97px);  
-            max-width: calc(152px + 97px);              
-        }
-        @include for-size(bp-large) {    
-            padding-right: 55px;   
-            max-width: calc(152px + 55px);         
-        }
-        @include for-size(bp-xlarge) {    
-            padding-right: 44px;
-            max-width: calc(293px + 44px);
-        }
-
-        a {
-            height: 100%;
-            font-family: Poppins;
-            font-size: 18px;
-            font-weight: bold;
-            border-bottom: 5px solid transparent; 
-            &.active {  
-                border-bottom: 5px solid $orange;                           
-            }
-        }
-            
-        p {
-            display: none;
-            @include for-size(bp-xlarge) { 
-                display: initial;
-                margin-top:  rem(12px); 
-            }
-        }
-             
-        &:hover {
-          //color: var(--cd-color-1);
-          //background-color: hsla(var(--cd-color-2-h), var(--cd-color-2-s), calc(var(--cd-color-2-l)*0.89), 0.3);
-        }
+    @include for-size(bp-large) {    
+        left: rem(80px);
     }
-
-    .c-tabs__panel {
-        //@extend .padding;
-        height: 100%;
-        overflow: hidden;
-        --line-height-multiplier: 1.14;
-        --text-vspace-multiplier: 1.25;
-
-        padding-top: rem(65px); 
-    }
-    @supports (background: linear-gradient(to left, #000, #000)) { // if linear-gradient is supported
-        .c-tabs::after { // subtle gradient layer on top right of the tabbed navigation - used to indicate it's possible to scroll
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            height: 60px;
-            width: 50px;
-            z-index: 1;
-            pointer-events: none;
-            background: linear-gradient(to left, red, red);
-            visibility: visible;
-            opacity: 1;
-            transition: opacity .3s 0s, visibility 0s 0s;
-        
-            // @include breakpoint(sm) {
-            // display: none;
-            // }
-        }        
-        // .cd-tabs--scroll-ended::after { // class added in JavaScript - remove the gradient layer when it's no longer possible to scroll
-        //     visibility: hidden;
-        //     opacity: 0;
-        //     transition: opacity .3s 0s, visibility 0s .3s;
-        // }
+    @include for-size(bp-xlarge) {    
+        left: rem(70px);
     }
 }
+
 .more-info {
     position: relative;
     line-height: 1.375;
@@ -257,6 +183,7 @@ hr {
     font-family: $font-poppins;
     font-weight: 700;  
     display: inline-block;
+    text-align: left;
     cursor: pointer;  
     span {
         display: block;
@@ -279,78 +206,35 @@ hr {
    }
 }
 
-.icon {
-    &.quote {
-        font-size: 60px;
-        font-family: $font-poppins;
-        font-weight: 700;
-        line-height: 1.48;
-        font-style: italic;
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        top: -60px;
-        left: -25px;
-        &:before {
-            content: ' " ';           
-        }
+.text-right {
+    text-align: right;
+}
+
+  // ***                 ***//
+ //       Elements         //
+// ***                *** //
+.e-tabLink {
+    text-align: right;
+    margin: 0;
+    padding: rem(42px) 0;
+}
+
+.e-titleBlock {
+    @extend .padding-unset;
+    padding: rem(33px) rem(44px);
+    background-color: var(--orange,$orange);
+    h1 {
+        margin-top: 0;
     }
 }
-// .more-info {
-//     position: relative;
-//     @extend .padding;
-//     line-height: 1.25;
-//     font-size: rem(22px);
-//     color: $dark;
-//     &:not(span){
-//         font-family: $font-poppins;
-//         font-weight: 700;    
-//     }    
-//     span {
-//         display: block;
-//         font-family: $font-raleway;
-//         font-size: rem(14px);        
-//     }
-//     &:before {
-//         // position: absolute;
-//         // content: '';
-//         // top: 50%;
-//         // left: 50%;
-//         //margin: -.64285714em 0 0 -.64285714em;
-       
-       
-//         display: inline-block;
-//         position: absolute;
-//         content: '';
-//         background:  url('./assets/img/icons/triangle-icon@2x.png') no-repeat 0 0 ;      
-//         width: 13px;
-//         height: 12px;
-//     }
-   
-// }
-.c-aside-section {
-    display: flex;
-    &_aside {
-        display: none;
-        @include for-size(bp-xlarge) { 
-            flex: 0 0 auto;
-            display: initial;
-            width: calc(293px + 44px + 4.375rem);           
-        }
-    }
-    &_content {
-        flex: 1;        
-        @extend .padding;
-        @include for-size(bp-xlarge) { 
-            padding-left: 0 !important;
-        }
-        .wrapped {
-            padding: 48px 0;
-            border-top: 2px solid $light;
-            max-width: 754px;
-        }
-    }
 
+  // ***                 ***//
+ //        Castom          //
+// ***                *** //
+.d-half--xl {
+    @include for-size(bp-xlarge) {    
+        max-width: 50% !important;
+    }
 }
 
 /*
