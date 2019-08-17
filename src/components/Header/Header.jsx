@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
+import { Link } from 'react-router-dom';
+import { Image } from 'semantic-ui-react';
 import TopNavMenu from '../TopNav';
 import RightSlide from '../RightSlide';
-import { Link } from 'react-router-dom';
-import { Button, Image } from 'semantic-ui-react';
 import logoImg from '../../assets/img/icons/menu-icon@2x.png';
 
 class Header extends PureComponent { 
@@ -60,10 +60,10 @@ class Header extends PureComponent {
           <div className="screen-reader-text">Button to open the Top Navigation</div>  
         </button>
         
-        <Button onClick={this.toggleSideMenu} className="c-button" type="button" aria-label="Open the GPs &amp; Optoms">
+        <button onClick={this.toggleSideMenu} className="c-button" type="button" aria-label="Open the GPs &amp; Optoms">
           GPs &amp; Optoms
           <div className="screen-reader-text">Button to open the "GPs &amp; Optoms" Description of patient referral.</div>  
-        </Button>
+        </button>
 
         <RightSlide visible={this.state.sideVisible} handler={this.toggleSideMenu}/>
 

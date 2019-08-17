@@ -3,8 +3,7 @@
 // ***                             *** //
 
 .c-button {
-    display: inline-flex;
-    align-items: center;
+    @extend  .ui.button;
     color: $offwhite;
     background-color: $orange;
     font-family: $font-poppins;
@@ -20,13 +19,13 @@
     flex-direction: column;
     @extend .padding-unset;
 
-    &__navigation {
+   // &__navigation {
         //@include for-size(bp-small) {    
            // width: 80px;
             //flex-shrink: 0; // make sure width is 80px
             // box-shadow: inset -2px 0 3px var(--cd-color-shadow);
          //}
-    }
+    //}
 
     &__list {
         @extend .padding;

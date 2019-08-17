@@ -4,10 +4,10 @@ import { RoutedTabs, NavTab } from "react-router-tabs";
 
 import ConsultingAndTreatment from './ConsultingAndTreatment';
 import DaySurgery from './DaySurgery';
+import Laser from './Laser';
 
-import Stam from '../Stam';
-
-import contImg1 from '../../assets/img/contact.jpg';
+import News from '../../components/News';
+import Photos from '../../components/Photos';
 
 class WhatWeDo extends Component { 
   constructor(props) {
@@ -42,6 +42,8 @@ class WhatWeDo extends Component {
     console.log('WhatWeDo will unmount');
   }
 
+
+
   render () {
     if (this.state.hasError) {
       return <h1>Oops... Something went wrong.</h1>;
@@ -69,8 +71,7 @@ class WhatWeDo extends Component {
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac mauris sit amet metus cursus viverra. Etiam tincidunt jeraurna eu. 
                   </p>
-                </li>
-                
+                </li>              
               </RoutedTabs>
             </nav>
             <article className="c-tabs__panel">
@@ -78,7 +79,7 @@ class WhatWeDo extends Component {
                 <Route exact path={`${this.props.match.path}`} render={() => <Redirect replace to={`${this.props.match.path}/consulting-and-treatments`} />} />
                 <Route path={`${this.props.match.path}/consulting-and-treatments`} component={ConsultingAndTreatment} />
                 <Route path={`${this.props.match.path}/day-surgery`} component={DaySurgery} />
-                <Route path={`${this.props.match.path}/laser`} component={Stam} />
+                <Route path={`${this.props.match.path}/laser`} component={Laser} />
               </Switch>   
             </article>
           </div>
@@ -106,17 +107,11 @@ class WhatWeDo extends Component {
                 8.30am – 5.00pm
               </p>            
             </section>   
-            <hr></hr>
-            <section className="c-info--news">
-                <h5>News title</h5>
-                <small>NAME OF PERSON POSTED / 2019 - 02-25</small>
-                <img src={contImg1} alt="Contact Us section"/>
-                <p>
-                  <Link to="/news" className="more-info" title="Read more News">More Info<span>News</span></Link>                            
-                </p>
-            </section>     
+            <hr></hr>           
             <Switch>
-                <Route path={`${this.props.match.path}/laser`} component={Stam} />
+                <Route path={`${this.props.match.path}/consulting-and-treatments`} component={News} />
+                <Route path={`${this.props.match.path}/day-surgery`} component={Photos} />
+                <Route path={`${this.props.match.path}/laser`} component={News} />
               </Switch> 
           </div>  
         </aside>

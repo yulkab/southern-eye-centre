@@ -1,12 +1,72 @@
 .footer {
-    flex: 0 0 rem(106px);
-    display: flex;
-    background-color: $darkest;
-    color: $lightest;
-    @include for-size(tablet-landscape) {    
-        flex-basis: rem(49px);
+    flex: 0 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @include for-size(bp-small) {
+        flex-basis: rem(94px);
     }
-    @include for-size(desktop) {    
-        flex-basis: rem(60px);
+
+    @include for-size(bp-large) {
+        flex-direction: row;
+        flex-basis: rem(120px);
+        background-color: $darkest;
     }
+
+    >* {
+        @extend .padding;
+        width: 100%;
+
+        @include for-size(bp-large) {
+            width: auto;
+        }
+    }
+
+    .list {
+        padding-top: rem(21px);
+        padding-bottom: rem(21px);
+        background-color: $darkest;
+
+        @include for-size(bp-small) {
+            padding-top: rem(16px);
+            padding-bottom: rem(16px);
+        }
+
+        .item {
+            margin-right: rem(72px);
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+
+            @include for-size(bp-small) {
+                display: inline-block;
+            }
+
+            a {
+                font-family: $font-poppins;
+                font-weight: bold;
+                font-size: rem(14px);
+                line-height: 2;
+                color: var(--dark, $dark);
+
+                &.active,
+                &:hover {
+                    color: var(--white, $white);
+                }
+            }
+        }
+
+        &+p {
+            font-size: rem(12px);
+            margin-top: rem(9px);
+            margin-bottom: rem(18px);
+
+            @include for-size(bp-large) {
+                color: var(--white, $white);
+            }
+        }
+    }
+
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Image, Button } from 'semantic-ui-react';
+import { Image } from 'semantic-ui-react';
 import closemg from '../../assets/img/icons/close-icon@2x.png';
 
 const RightSlide = props => (
@@ -19,10 +19,10 @@ const RightSlide = props => (
         Duis fringilla vulputate sem eu pellentesque. Donec nec libero ac urna consectetur finibus. Nullam nisl justo, semper at laoreet at, blandit sed neque. Fusce eleifend velit ac sodales rhoncus. Nunc diam diam, tristique id lectus quis, fringilla blandit mi. Mauris vitae placerat eros. Donec lacinia nibh sit amet varius dignissim. Curabitur vitae semper leo.
       </p>
       <p>
-        <Button className="c-button" type="button" aria-label="Download Registration Form">
+        <button className="c-button" type="button" aria-label="Download Registration Form">
           Download Registration Form
           <div className="screen-reader-text">Button to Download Registration Form.</div>  
-        </Button>
+        </button>
       </p>
       <p>
           44 Cranbourne Rd<br/>

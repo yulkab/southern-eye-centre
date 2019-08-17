@@ -207,12 +207,10 @@ samp {
 }
 
 /* hand cursor on clickable elements */
-.clickable,
 label,
 input[type=button],
 input[type=submit],
-input[type=file],
-button {
+input[type=file] {
     cursor: pointer;
 }
 

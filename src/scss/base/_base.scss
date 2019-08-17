@@ -184,7 +184,10 @@ hr {
     font-weight: 700;  
     display: inline-block;
     text-align: left;
-    cursor: pointer;  
+    
+    & a {
+        cursor: pointer;  
+    }
     span {
         display: block;
         font-family: $font-raleway;
@@ -208,6 +211,10 @@ hr {
 
 .text-right {
     text-align: right;
+}
+
+.m32 {
+    margin: rem(32px) 0; 
 }
 
   // ***                 ***//

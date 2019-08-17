@@ -1,7 +1,7 @@
-//import React from "react";
-import { BrowserRouter as Router, Route, Redirect, Link, Switch} from "react-router-dom";
 import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Route, Redirect, Link, Switch} from "react-router-dom";
 import Header from './components/Header';
+import Footer from './components/Footer';
 import WhatWeDo from './pages/WhatWeDo';
 
 const HomePage = lazy(() => import('./pages/Home'));
@@ -11,28 +11,25 @@ function App() {
     <Router>
       <Header/>  
       <main role="main">
-      <Suspense fallback={<div>Loading...</div>}>
-        <Switch>
-          <Route exact path="/home" component={HomePage} />
-          <Route path="/what-we-do" render={match => <WhatWeDo {...match}/>}/>
-          <Route path="/about" component={About} />
-          <Route path="/news" component={Topics} />
-          <Route path="/reviews" component={Topics} />
-          <Route path="/gallery" component={Topics} />
-          <Route path="/contact" component={Topics} />
-          
+        <Suspense fallback={<div>Loading...</div>}>
+          <Switch>
+            <Route exact path="/home" component={HomePage} />
+            <Route path="/what-we-do" render={match => <WhatWeDo {...match}/>}/>
+            <Route path="/about" component={About} />
+            <Route path="/news" component={Topics} />
+            <Route path="/reviews" component={Topics} />
+            <Route path="/gallery" component={Topics} />
+            <Route path="/contact" component={Topics} />
+            
 
-          
-          <Route path={["/consulting-and-treatment", "/day-surgery", "/laser"]} render={match => <WhatWeDo {...match}/>}/>       
+            
+            <Route path={["/consulting-and-treatment", "/day-surgery", "/laser"]} render={match => <WhatWeDo {...match}/>}/>       
 
-          <Redirect from="/" to="/home" /> 
-        </Switch>
-      </Suspense>
-      </main>
-        
-
-      
-      <footer className="footer">Here goes footer</footer>
+            <Redirect from="/" to="/home" /> 
+          </Switch>
+        </Suspense>
+      </main>        
+      <Footer/>            
     </Router>
   );
 }
