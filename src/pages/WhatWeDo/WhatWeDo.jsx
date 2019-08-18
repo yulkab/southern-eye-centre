@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch , Redirect, Link } from "react-router-dom";
+import { Route, Switch , Redirect } from "react-router-dom";
 import { RoutedTabs, NavTab } from "react-router-tabs";
 
 import ConsultingAndTreatment from './ConsultingAndTreatment';

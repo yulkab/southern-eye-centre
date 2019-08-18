@@ -9,7 +9,7 @@ const DaySurgery = props => (
         <div className="c-aside-section">
           <aside className="c-aside-section_aside"></aside>
           <div className="c-aside-section_content">
-            <section className="wrapped">
+            <section className="wrapped top-line">
               <h4>Introduction</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed, ultrices faucibus augue. Maecenas vel arcu feugiat, rutrum sapien at, auctor arcu. Duis vitae pellentesque ligula. Nunc egestas velit sed lorem ultrices, imperdiet finibus leo tempor. Curabitur accumsan pellentesque placerat. Quisque gravida tortor ipsum. Suspendisse non turpis in ipsum accumsan scelerisque. In vulputate tellus vel quam tincidunt, sed placerat nibh pulvinar. Vivamus a viverra erat. Curabitur velit libero, maximus vel tellus in, molestie fermentum nisi. Fusce vitae nunc in tortor dictum commodo. Sed sagittis vestibulum elit, eu mattis quam tempus vitae. Quisque ultrices magna eu iaculis accumsan. Vivamus dictum a urna at luctus.
@@ -25,7 +25,7 @@ const DaySurgery = props => (
             <Link to="/what-we-do/rocedures-and-reatments" className="more-info" title="Read more about Equipments. Staff &amp; Procedures">More Info<span>Equipments. Staff &amp; Procedures</span></Link>
           </aside>
           <div className="c-aside-section_content">
-            <section className="wrapped">
+            <section className="wrapped top-line">
               <h4>Equipments</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed, ultrices faucibus augue. Maecenas vel arcu feugiat, rutrum sapien at, auctor arcu. Duis vitae pellentesque ligula. Nunc egestas velit sed lorem ultrices, imperdiet finibus leo tempor. Curabitur accumsan pellentesque placerat. Quisque gravida tortor ipsum. Suspendisse non turpis in ipsum accumsan scelerisque. In vulputate tellus vel quam tincidunt, sed placerat nibh pulvinar. Vivamus a viverra erat. Curabitur velit libero, maximus vel tellus in, molestie fermentum nisi. Fusce vitae nunc in tortor dictum commodo. Sed sagittis vestibulum elit, eu mattis quam tempus vitae. Quisque ultrices magna eu iaculis accumsan. Vivamus dictum a urna at luctus.
@@ -86,7 +86,7 @@ const DaySurgery = props => (
        <div className="c-aside-section">
           <aside className="c-aside-section_aside"></aside>
           <div className="c-aside-section_content">
-            <section className="wrapped">
+            <section className="wrapped top-line">
               <h4>Procedures</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed, ultrices faucibus augue. Maecenas vel arcu feugiat, rutrum sapien at, auctor arcu. Duis vitae pellentesque ligula. Nunc egestas velit sed lorem ultrices, imperdiet finibus leo tempor. Curabitur accumsan pellentesque placerat. Quisque gravida tortor ipsum. Suspendisse non turpis in ipsum accumsan scelerisque. In vulputate tellus vel quam tincidunt, sed placerat nibh pulvinar. Vivamus a viverra erat. Curabitur velit libero, maximus vel tellus in, molestie fermentum nisi. Fusce vitae nunc in tortor dictum commodo. Sed sagittis vestibulum elit, eu mattis quam tempus vitae. Quisque ultrices magna eu iaculis accumsan. Vivamus dictum a urna at luctus.
@@ -100,7 +100,7 @@ const DaySurgery = props => (
         <div className="c-aside-section">
           <aside className="c-aside-section_aside"></aside>
           <div className="c-aside-section_content">
-          <p class="e-tabLink">
+          <p className="e-tabLink">
             <Link to="/what-we-do/laser" className="more-info" title="Read more info about Laser Treatments">Laser Treatments</Link>
           </p>      
           </div>

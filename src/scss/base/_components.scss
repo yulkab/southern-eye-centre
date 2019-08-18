@@ -91,10 +91,10 @@
             }
         }
              
-        &:hover {
+        //&:hover {
           //color: var(--cd-color-1);
           //background-color: hsla(var(--cd-color-2-h), var(--cd-color-2-s), calc(var(--cd-color-2-l)*0.89), 0.3);
-        }
+        //}
     }
 
     .c-tabs__panel {
@@ -188,9 +188,11 @@
             padding-left: 0 !important;
         }
         .wrapped {
-            padding: 48px 0;
-            border-top: 2px solid $light;
+            padding: 48px 0;            
             max-width: 754px;
+        }
+        .top-line {
+            border-top: 2px solid $light;
         }
     }
 
@@ -286,4 +288,120 @@
 
 .b-top {
     border-top: 2px solid var(--light, $light);
+}
+
+.c-doctors {
+    &.ui.grid {
+        margin-bottom: 6rem;
+        @include for-size(bp-large) { 
+            margin-bottom: 10rem;
+        }
+    }
+
+    > .column {
+        padding-bottom: 0 !important;
+        
+        @include for-size(bp-large) { 
+            width: 50% !important;
+        }
+        @include for-size(bp-xlarge) { 
+           width: 25% !important;
+        }
+    }
+    .ui.card {
+        width: 100%;
+        background: url('./assets/img/bg/line-bg@2x.png') 0 0 ;    
+        border-top: 5px solid var(--orange);
+
+        @include for-size(bp-small) {
+            flex-direction: row;
+            align-items: center;
+        }
+        @include for-size(bp-xlarge) { 
+            flex-direction: column;
+            padding-bottom: rem(35px);
+            border-top: 5px solid transparent;
+
+            &:hover {
+                border-top-color: var(--orange);
+            }
+        }                       
+       
+        .content {
+            flex: 1;                     
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 1rem rem(32px) 1.5rem;
+
+            @include for-size(bp-small) {
+                padding: 1rem;
+                align-items: flex-start;
+            }
+            @include for-size(bp-large) {
+                flex-direction: row;
+                align-items: center;
+            }
+            @include for-size(bp-xlarge) { 
+                padding: 33px 33px .5rem;
+            }
+
+            >* {
+                flex: 1 0 auto;
+            }
+
+            &.extra {                              
+                padding: 0;
+                margin: 1rem 0;     
+                display: none;    
+
+                @include for-size(bp-small) {
+                   display: block;
+                   background: url('./assets/img/eye-icon-small@2x.png') no-repeat 0 0 ;   
+                   width: rem(260px);
+                   height: rem(56px);
+                }
+                @include for-size(bp-xlarge) { 
+                    background-position-x: center;
+                }
+            }                
+        }           
+
+        .ui.image {            
+            border-radius: 50%;
+            width: rem(166px);
+            margin: rem(21px);
+            display: none;  
+
+            @include for-size(bp-small) {
+                display: block;                
+            }
+            @include for-size(bp-xlarge) { 
+                width: rem(225px);
+                margin: rem(48px) auto 0;
+            }
+        }
+
+        .doc-info {
+            @extend .more-info;
+            width: 100%;
+            margin-left: rem(24px);
+            color: var(--darkest);
+            line-height: 1.05;
+            >* {
+                min-width: 170px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: inline-block;
+            }
+            h4 {
+                margin: 0;
+            }
+            span {
+                font-size: 1rem;
+                font-weight: 500;
+            }
+        }
+    }  
 }

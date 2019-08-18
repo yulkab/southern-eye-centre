@@ -6,12 +6,13 @@ import closemg from '../../assets/img/icons/close-icon@2x.png';
 
 const TopNav = props => (
   <nav className={"navmenu navmenu--top " + (props.visible ? 'active' : '')}>
+    <div className="navmenu-wrap">
     <button onClick={props.handler} className="close-button" type="nav-button" aria-label="Close the Top Navigation">
       <Image src={closemg} className="icon-close" alt="Close button Icon" />
       <div className="screen-reader-text">Button to close the Top Navigation menu.</div>
     </button>
     <Grid stackable columns='equal'>
-      <Grid.Column>
+      <Grid.Column mobile={16} computer={3}>
         <ul className="navmenu--list">
           <li className="navmenu--list-header">
             <NavLink to="/what-we-do" activeClassName="active" onClick={props.handler}> What We Do </NavLink>            
@@ -40,7 +41,7 @@ const TopNav = props => (
           </li>
         </ul>
       </Grid.Column>
-      <Grid.Column>
+      <Grid.Column mobile={16} computer={3}>
         <ul className="navmenu--list">
           <li className="navmenu--list-header">Eye Conditions</li>
           <li className="navmenu--list-item">
@@ -69,7 +70,7 @@ const TopNav = props => (
           </li>
         </ul>
       </Grid.Column>
-      <Grid.Column>
+      <Grid.Column mobile={16} computer={3}>
         <ul className="navmenu--list">
           <li className="navmenu--list-header"> </li>          
           <li className="navmenu--list-item">
@@ -87,9 +88,11 @@ const TopNav = props => (
         </ul>
       </Grid.Column>
       
-      <Grid.Column>
+      <Grid.Column mobile={16}  computer={3} >
         <ul className="navmenu--list">
-          <li className="navmenu--list-header">Doctors</li>          
+          <li className="navmenu--list-header">
+            <NavLink to="/doctors" activeClassName="active" onClick={props.handler}> Doctors </NavLink>            
+          </li>       
           <li className="navmenu--list-item">
             <NavLink to="/news" activeClassName="active" onClick={props.handler}>Dr. Damien Louis</NavLink>
           </li>
@@ -119,7 +122,7 @@ const TopNav = props => (
           </li>
         </ul>
       </Grid.Column>
-      <Grid.Column largeScreen={5} className="navmenu--list_last">
+      <Grid.Column  mobile={16}  computer={4}  className="navmenu--list_last">
       <ul className="navmenu--list">
           <li className="navmenu--list-header">
             <NavLink to="/about" activeClassName="active" onClick={props.handler}>About Us</NavLink>
@@ -139,10 +142,7 @@ const TopNav = props => (
         </ul>
       </Grid.Column>
     </Grid>
-
-
-
-
+    </div>
   </nav>
 
 );

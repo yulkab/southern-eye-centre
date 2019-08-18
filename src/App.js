@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Redirect, Link, Switch} from "react-rou
 import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatWeDo from './pages/WhatWeDo';
+import DoctorsPage from './pages/DoctorsPage';
+import Doctor from './pages/Doctor';
 
 const HomePage = lazy(() => import('./pages/Home'));
 
@@ -15,6 +17,10 @@ function App() {
           <Switch>
             <Route exact path="/home" component={HomePage} />
             <Route path="/what-we-do" render={match => <WhatWeDo {...match}/>}/>
+            <Route path="/doctors" component={DoctorsPage} />
+            <Route path="/doctor" component={Doctor} />
+            
+            
             <Route path="/about" component={About} />
             <Route path="/news" component={Topics} />
             <Route path="/reviews" component={Topics} />

@@ -204,3 +204,27 @@
         text-align: right;
     }
 }
+
+
+  // ***                           ***//
+ //      DOCTORS page level styles      //
+// ***                          *** //
+.p-doctors {
+    position: relative;
+
+    .c-button {
+        width: 242px;
+        position: absolute;
+        top: rem(124px);
+        display: none; 
+
+        @include for-size(bp-large) { 
+            display: flex;  
+            right: rem(397px-10px+40px);
+        }
+        @include for-size(bp-xlarge) {    
+            right: rem(481px-10px+46px);
+        }
+
+    }
+}

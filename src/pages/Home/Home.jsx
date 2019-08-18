@@ -128,7 +128,7 @@ class Home extends PureComponent {
 
           <Card.Group className="s-cards s-cards--doctors">  
 
-            <Card href='/what-we-do/laser'  title="Read more info about Dr. Damien Louis">
+            <Card href='/doctor'  title="Read more info about Dr. Damien Louis">
               <Image src={doctImg1m}/>  
               <CardContent>
                 <div className="doc-info">Dr. Damien Louis<span>MBBS, FRANZCO</span></div>
@@ -137,7 +137,7 @@ class Home extends PureComponent {
              
             </Card>
 
-            <Card  href='/what-we-do/laser' >
+            <Card  href='/doctor' >
               <Image src={doctImg1m}/>  
               <CardContent>
                 <div className="doc-info">Dr. Douglas Reinehr<span>MBBS, FRANZCO</span></div>
@@ -145,7 +145,7 @@ class Home extends PureComponent {
               </CardContent>              
             </Card>
 
-            <Card  href='/what-we-do/laser' >
+            <Card  href='/doctor' >
               <Image src={contImg3} />
               <CardContent>
                 <div className="doc-info">Dr. Jonathan Yeoh<span>MBBS, FRANZCO</span></div>
@@ -153,12 +153,6 @@ class Home extends PureComponent {
               </CardContent>
             </Card>
 
-            {/* <Card className="c-cards-">
-              <Image src={contImg3} />
-              <CardContent>
-              <Link to="/what-we-do/laser" className="more-info" title="Read more info about Laser Eye Surgery">More Info<span>Laser Eye Surgery</span></Link>                            
-              </CardContent>
-            </Card> */}
           </Card.Group>
             <p className="text-right">
               <Link to="/doctors" className="more-info" title="Read more info about Our Doctors">More Info<span>Our Doctors</span></Link>                            

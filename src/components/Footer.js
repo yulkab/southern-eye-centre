@@ -2,7 +2,6 @@ import React from 'react'
 import { NavLink } from "react-router-dom"
 import { List } from 'semantic-ui-react'
 
-//content={<a href='http://www.semantic-ui.com'>semantic-ui.com</a>} 
 const Footer = () => (
   <footer className="footer">
     <List as='ul'>
