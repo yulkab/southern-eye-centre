@@ -93,6 +93,10 @@ hr {
     }
 }
 
+.b-top {
+    border-top: 2px solid var(--light, $light);
+}
+
 .page-aside {
     width: 0px;
     flex: 0 0 0px;
@@ -235,6 +239,34 @@ hr {
     }
 }
 
+.e-call-button {
+    position: relative;
+
+    .c-button {
+        width: 242px;
+        position: absolute;
+        top: rem(124px);
+        display: none; 
+
+        @include for-size(bp-large) { 
+            display: flex;  
+            right: rem(397px-10px+40px);
+        }
+        @include for-size(bp-xlarge) {    
+            right: rem(481px-10px+46px);
+        }
+
+    }
+}
+
+.e-img-float {   
+    @extend .clearfix;     
+    &--right {
+        float: right; 
+        padding-left: rem(42px);       
+    }
+
+}
   // ***                 ***//
  //        Castom          //
 // ***                *** //
@@ -242,6 +274,10 @@ hr {
     @include for-size(bp-xlarge) {    
         max-width: 50% !important;
     }
+}
+.d-fx-bottom {
+    display: flex !important;
+    align-items: flex-end;
 }
 
 /*

@@ -43,7 +43,9 @@ const TopNav = props => (
       </Grid.Column>
       <Grid.Column mobile={16} computer={3}>
         <ul className="navmenu--list">
-          <li className="navmenu--list-header">Eye Conditions</li>
+          <li className="navmenu--list-header">
+            <NavLink to="/eye-conditions" activeClassName="active" onClick={props.handler}> Eye Conditions </NavLink>  
+          </li>
           <li className="navmenu--list-item">
             <NavLink to="/what-we-do/cataract" activeClassName="active" onClick={props.handler}>Cataract</NavLink>
           </li>
@@ -94,31 +96,31 @@ const TopNav = props => (
             <NavLink to="/doctors" activeClassName="active" onClick={props.handler}> Doctors </NavLink>            
           </li>       
           <li className="navmenu--list-item">
-            <NavLink to="/news" activeClassName="active" onClick={props.handler}>Dr. Damien Louis</NavLink>
+            <NavLink to="/doctor" activeClassName="active" onClick={props.handler}>Dr. Damien Louis</NavLink>
           </li>
           <li className="navmenu--list-item">
-            <NavLink to="/reviews" activeClassName="active" onClick={props.handler}>Dr. Douglas Reinehr</NavLink>
+            <NavLink to="/doctor" activeClassName="active" onClick={props.handler}>Dr. Douglas Reinehr</NavLink>
           </li>
           <li className="navmenu--list-item">
-            <NavLink to="/gallery" activeClassName="active" onClick={props.handler}>Dr. Jonathan Yeoh</NavLink>
+            <NavLink to="/doctor" activeClassName="active" onClick={props.handler}>Dr. Jonathan Yeoh</NavLink>
           </li>
           <li className="navmenu--list-item">
-            <NavLink to="/contact" activeClassName="active" onClick={props.handler}>Dr. Lei Liu</NavLink>
+            <NavLink to="/doctor" activeClassName="active" onClick={props.handler}>Dr. Lei Liu</NavLink>
           </li>
           <li className="navmenu--list-item">
-            <NavLink to="/contact" activeClassName="active" onClick={props.handler}>Dr. Stephen Bambery</NavLink>
+            <NavLink to="/doctor" activeClassName="active" onClick={props.handler}>Dr. Stephen Bambery</NavLink>
           </li>
           <li className="navmenu--list-item">
-            <NavLink to="/contact" activeClassName="active" onClick={props.handler}>Dr. Trevor Gin</NavLink>
+            <NavLink to="/doctor" activeClassName="active" onClick={props.handler}>Dr. Trevor Gin</NavLink>
           </li>
           <li className="navmenu--list-item">
-            <NavLink to="/contact" activeClassName="active" onClick={props.handler}>Dr. Walter Chang</NavLink>
+            <NavLink to="/doctor" activeClassName="active" onClick={props.handler}>Dr. Walter Chang</NavLink>
           </li>
           <li className="navmenu--list-item">
-            <NavLink to="/contact" activeClassName="active" onClick={props.handler}>Dr. Weng Ng</NavLink>
+            <NavLink to="/doctor" activeClassName="active" onClick={props.handler}>Dr. Weng Ng</NavLink>
           </li>
           <li className="navmenu--list-item">
-            <NavLink to="/contact" activeClassName="active" onClick={props.handler}>Dr. Ye Chen</NavLink>
+            <NavLink to="/doctor" activeClassName="active" onClick={props.handler}>Dr. Ye Chen</NavLink>
           </li>
         </ul>
       </Grid.Column>

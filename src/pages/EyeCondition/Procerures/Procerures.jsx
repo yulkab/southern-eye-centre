@@ -4,7 +4,7 @@ import { Image } from 'semantic-ui-react';
 import contImg1 from '../../../assets/img/stam.jpg';
 import doctImg1m from '../../../assets/img/doctor-photo@2x.png';
 
-const DaySurgery = props => (
+const Procerures = props => (
         <article>
         <div className="c-aside-section">
           <aside className="c-aside-section_aside"></aside>
@@ -117,12 +117,12 @@ const DaySurgery = props => (
     </article>
 );
 
-DaySurgery.propTypes = {
+Procerures.propTypes = {
   // bla: PropTypes.string,
 };
 
-DaySurgery.defaultProps = {
+Procerures.defaultProps = {
   // bla: 'test',
 };
 
-export default DaySurgery;
+export default Procerures;

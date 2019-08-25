@@ -4,7 +4,7 @@ import doctImg1m from '../../assets/img/doctor-photo@2x.png';
 
 
 const DoctorsPage = () => (
-  <div className="page-content p-doctors">
+  <div className="page-content e-call-button">
     <article className="padding-unset">
       <div className="c-aside-section">
         <aside className="c-aside-section_aside"></aside>

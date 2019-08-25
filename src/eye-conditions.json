@@ -1,0 +1,51 @@
+{
+    "eye_conditions": [
+        {
+            "route_name": "cataract",
+            "path": "/cataract",
+            "menu_title": "Cataract",
+            "data": "stam data for test"
+        },
+        {
+            "route_name": "diabetic-eye-diseases",
+            "path": "/diabetic-eye-diseases",
+            "menu_title": "Diabeticv Eye Diseases"
+        },
+        {
+            "route_name": "dry-eye",
+            "path": "/dry-eye",
+            "menu_title": "Dry Eye"
+        },
+        {
+            "route_name": "glaucoma",
+            "path": "/glaucoma",
+            "menu_title": "Glaucoma"
+        },
+        {
+            "route_name": "kerataconus",
+            "path": "/kerataconus",
+            "menu_title": "Kerataconus"
+        },
+        {
+            "route_name": "macular-degeneration",
+            "path": "/macular-degeneration",
+            "menu_title": "Macular Degeneration"
+        },
+        {
+            "route_name": "ocuplastic-issues",
+            "path": "/ocuplastic-issues",
+            "menu_title": "Ocuplastic Issues"
+        },
+        {
+            "route_name": "pterygium",
+            "path": "/pterygium",
+            "menu_title": "Pterygium"
+        },
+        {
+            "route_name": "foreign-bodies-and-acute-injuries",
+            "path": "/foreign-bodies-and-acute-injuries",
+            "menu_title": "Foreign Bodies & Acute Injuries"
+        }
+        
+    ]
+}

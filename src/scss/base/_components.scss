@@ -12,7 +12,6 @@
     min-height: rem(33px) !important;
 }
 
-
 .c-tabs {
     position: relative;
     display: flex;
@@ -133,7 +132,6 @@
     }
 }
 
-
 .c-info {
     display: flex;
     flex-direction: column;
@@ -164,133 +162,49 @@
         }
     }
 }
-
-.c-aside-section {
+.c-eye-conditions {
     display: flex;
-    &_aside {
-        display: none;
-        @include for-size(bp-xlarge) { 
-            flex: 0 0 auto;
-            display: initial;
-            width: calc(293px + 44px + 4.375rem);           
-        }
-        .more-info {
-            @extend .padding-align-left;
-            &:before {
-                transform: none;
-            }
-        }
-    }
-    &_content {
-        flex: 1;        
-        @extend .padding;
-        @include for-size(bp-xlarge) { 
-            padding-left: 0 !important;
-        }
-        .wrapped {
-            padding: 48px 0;            
-            max-width: 754px;
-        }
-        .top-line {
-            border-top: 2px solid $light;
-        }
-    }
-
-}
-
-.c-staff {
-   @extend .padding;    
-    max-width: rem(1316px);
-    padding-bottom: rem(42px);
-    display: flex;    
     flex-wrap: wrap;
-    justify-content: center;
-    
-    >* {
-        text-align: center;        
-        .ui.image {
-            max-width: 80%;
-            margin: 0 auto;
+    &--item {
+        flex: 0 rem(115px);
+        height: 135px;
+        text-align: center;       
+        font-size: rem(14px);
+        line-height: 1.2;
+        @include for-size(bp-xlarge) {    
+            margin-right: 45px;   
         }
-        h4 {
-            margin-top: 1.25rem;
-            margin-bottom: 0;
-        }
-    }
-
-    @include for-size(bp-large) { 
-        >* {
-            width: calc(100% / 4);
-            .ui.image {
-                max-width: 90%;
+        &-img {
+            //border: 1px solid red;
+            width: rem(115px);
+            height: rem(100px);
+            overflow: hidden;
+            margin: auto;
+            background: url('./assets/img/eye-icon-small@3x.png') no-repeat 0 0;
+            &.cataract {
+                background-position-x: 15px;
+                background-position-y: 10px;
+            }
+            &.macular-degeneration {
+                background-position-x: -90px;
+                background-position-y: 10px;
+            }
+            &.dry-eye {
+                background-position-x: -90px;
+                background-position-y: -90px;
+            }
+            &.stam {
+                background-position-x: -190px;
+                background-position-y: -195px;
             }
         }
     }
-
-}
-.c-img-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: rem(734px);  
-    border-top: 2px solid var(--light, $light);  
-         
-    >* {
-        padding: rem(42px) 0;
+    li:before {
+        content: attr(data-content);
     }
-  
-    &_left {
-        text-align: center;
-        padding-bottom: 0;
-        img {            
-            width: 80%;
-        }
-    }
-    @include for-size(bp-medium) {
-        flex-direction: row;
-        align-items: start;
-        border-top: none;
-
-        >* {
-            padding: rem(48px) 0;
-        }
-
-        &_left {
-            flex-shrink: 0;
-            padding-top: rem(84px);
-            padding-right: rem(24px);
-
-            img {
-                position: relative;  
-                margin-top: 16px;
-                width: auto;   
-                max-width: rem(200px);                              
-            } 
-            &+ div {                
-                border-top: 2px solid var(--light, $light);
-            }
-        }
-    }
-    @include for-size(bp-xlarge) { 
-
-        &_left {
-            padding-right: 0; 
-            margin-left: -30%; 
-            img {
-                max-width: 100%; 
-                right: rem(42px); 
-            }
-        }
-                       
-    }               
-   
 }
 
-.b-top {
-    border-top: 2px solid var(--light, $light);
-}
-
-.c-doctors {
+.c-cards-grid {
     &.ui.grid {
         margin-bottom: 6rem;
         @include for-size(bp-large) { 
@@ -331,24 +245,268 @@
             flex: 1;                     
             display: flex;
             flex-direction: column;
-            align-items: center;
+            //align-items: center;
             flex-wrap: wrap;
             padding: 1rem rem(32px) 1.5rem;
-
-            @include for-size(bp-small) {
-                padding: 1rem;
-                align-items: flex-start;
-            }
+           
             @include for-size(bp-large) {
                 flex-direction: row;
-                align-items: center;
+                //align-items: center;
             }
             @include for-size(bp-xlarge) { 
-                padding: 33px 33px .5rem;
+                padding: 33px 33px .5rem !important;
             }
 
             >* {
                 flex: 1 0 auto;
+            }                  
+        }           
+    }  
+}
+
+.c-eye-conditions-list {
+    @extend .c-cards-grid;
+        
+    .ui.card {  
+
+        @include for-size(bp-xlarge) {
+            height: calc(480px + 2.1875rem);
+        }  
+
+        .condition-img {  
+            flex: 0 0 auto;
+            width: rem(250px);
+            height: rem(220px);
+            overflow: hidden;
+            margin: 1rem auto;
+            display: none;    
+
+            @include for-size(bp-small) {
+                display: block;
+                background: url('./assets/img/eye-icon-xl@2x.png') no-repeat 0 0;
+                background-position-x: 10px;
+                background-position-y: 0px;
+            }           
+            
+            &.cataract {
+                background-position-x: 10px;
+                background-position-y: 0px;
+            }
+            &.macular-degeneration {
+                background-position-x: -240px;
+                background-position-y: 0;
+            }
+            &.dry-eye {
+                background-position-x: -240px;
+                background-position-y: -260px;
+            }
+            &.diabetic-eye-diseases {
+                background-position-x: 10px;
+                background-position-y: -750px;
+            }
+            &.glaucoma {
+                background-position-x: -240px;
+                background-position-y: -500px;
+            }
+            &.kerataconus {
+                background-position-x: -240px;
+                background-position-y: -750px;
+            }
+            &.ocuplastic-issues {
+                background-position-x: -490px;
+                background-position-y: -500px;
+            }
+            &.pterygium {
+                background-position-x: -490px;
+                background-position-y: -750px;
+            }
+            &.foreign-bodies-and-acute-injuries {
+                background-position-x: -490px;
+                background-position-y: -250px;
+            }
+                 
+        }                              
+
+        .condition-info {
+            @extend .more-info;
+            width: calc(100% - 2rem);
+            margin-left: rem(24px);
+            color: var(--darkest);
+            line-height: 1.05;    
+                        
+            h4 {
+                margin: 0;
+            }
+            p {                
+                margin-top: 1rem;              
+                display: none;
+
+                @include for-size(bp-small) {
+                    display: inline-block;
+                }
+            }
+        }
+    }  
+    .content {
+        @include for-size(bp-small) {
+            //padding-left: 2rem !important;
+            max-width: 50%;
+        }
+        @include for-size(bp-xlarge) {
+          max-width: unset;
+        }
+    }
+}
+
+.c-aside-section {
+    display: flex;
+    &_aside {
+        display: none;
+        @include for-size(bp-xlarge) { 
+            flex: 0 0 auto;
+            display: initial;
+            width: calc(293px + 44px + 4.375rem);           
+        }
+        .more-info {
+            @extend .padding-align-left;
+            &:before {
+                transform: none;
+            }
+        }
+    }
+    &_content {
+        flex: 1;        
+        @extend .padding;
+        @include for-size(bp-xlarge) { 
+            padding-left: 0 !important;
+        }
+        .wrapped {
+            padding: 48px 0;            
+            max-width: 754px;
+        }
+        .top-line {
+            border-top: 2px solid $light;
+        }
+    }
+
+}
+
+.c-staff {
+    @extend .c-img-content, .b-top;
+    max-width: rem(734px);  
+
+    .c-img-content_left {   
+       padding-bottom: 0;
+    }  
+    @include for-size(bp-medium) {
+
+        .c-img-content_left {   
+            padding-top: rem(84px);
+                &+ div {                
+                    border-top: 2px solid var(--light, $light);
+                }
+        }  
+    }
+    @include for-size(bp-xlarge) { 
+        .c-img-content_left {   
+            padding-right: 0; 
+            margin-left: -30%; 
+            img {
+                right: rem(42px); 
+            }
+        }  
+    }
+
+}
+
+.c-staff--list {
+   @extend .padding;    
+    max-width: rem(1316px);
+    padding-bottom: rem(42px);
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    >* {
+        text-align: center;        
+        .ui.image {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+        h4 {
+            margin-top: 1.25rem;
+            margin-bottom: 0;
+        }
+    }
+
+    @include for-size(bp-large) { 
+        >* {
+            width: calc(100% / 4);
+            .ui.image {
+                max-width: 90%;
+            }
+        }
+    }
+
+}
+
+.c-img-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+         
+    >* {
+        padding: rem(42px) 0;
+    }
+  
+    &_left {
+        text-align: center;                
+        img {            
+            width: 80%;
+        }
+    }
+    @include for-size(bp-medium) {
+        flex-direction: row;
+        align-items: start;
+        border-top: none;
+
+        >* {
+            padding: rem(48px) 0;
+        }
+
+        &_left {
+            flex-shrink: 0;           
+            padding-right: rem(45px) !important;
+
+            img {
+                position: relative;  
+                margin-top: 16px;
+                width: auto;   
+                max-width: rem(300px);                              
+            } 
+           
+        }
+    }
+    @include for-size(bp-xlarge) { 
+
+        &_left {
+            img {
+                max-width: 100%; 
+            }
+        }
+                       
+    }                  
+}
+
+.c-doctors {
+    @extend .c-cards-grid;
+
+    .ui.card {  
+
+        .content {
+
+            @include for-size(bp-small) {
+                padding: 1rem;
             }
 
             &.extra {                              
@@ -389,12 +547,13 @@
             margin-left: rem(24px);
             color: var(--darkest);
             line-height: 1.05;
-            >* {
-                min-width: 170px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: inline-block;
-            }
+            width: calc(100% - 2rem);
+            // >* {
+            //     //min-width: 170px;
+            //     overflow: hidden;
+            //     text-overflow: ellipsis;
+            //     display: inline-block;
+            // }
             h4 {
                 margin: 0;
             }
@@ -404,4 +563,22 @@
             }
         }
     }  
+}
+
+.c-doctor {
+    @extend .c-img-content;
+    
+    .c-img-content_left {
+        padding: 0;
+
+        &+ div {   
+            max-width: 761px;
+            h1 {
+                margin: 0;
+                & + span {
+                    text-transform: uppercase;
+                }
+            }
+        }  
+    }
 }

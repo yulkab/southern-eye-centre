@@ -5,10 +5,17 @@ import Footer from './components/Footer';
 import WhatWeDo from './pages/WhatWeDo';
 import DoctorsPage from './pages/DoctorsPage';
 import Doctor from './pages/Doctor';
+import EyeConditionsList from './pages/EyeConditionsList';
+import EyeCondition from './pages/EyeCondition';
+import jsonData from 'eye-conditions.json';
 
 const HomePage = lazy(() => import('./pages/Home'));
 
+const dataEyeConditions = JSON.parse(JSON.stringify(jsonData));
+
+
 function App() {
+
   return (
     <Router>
       <Header/>  
@@ -16,21 +23,26 @@ function App() {
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
             <Route exact path="/home" component={HomePage} />
+
             <Route path="/what-we-do" render={match => <WhatWeDo {...match}/>}/>
+            <Route path={["/consulting-and-treatment", "/day-surgery", "/laser"]} render={match => <WhatWeDo {...match}/>}/> 
+
             <Route path="/doctors" component={DoctorsPage} />
             <Route path="/doctor" component={Doctor} />
-            
-            
+            <Route path="/eye-conditions" component={EyeConditionsList} />
+        {
+          dataEyeConditions.eye_conditions.map(
+            ({path ,data}, key) => <Route key={key} path={path} render={match => <EyeCondition {...match} data={data} />}/>
+          )
+        }
+            <Route path={["/introduction", "/procerures", "/resources", "/faq"]} render={match => <EyeCondition {...match}/>}/>   
+
             <Route path="/about" component={About} />
             <Route path="/news" component={Topics} />
             <Route path="/reviews" component={Topics} />
             <Route path="/gallery" component={Topics} />
             <Route path="/contact" component={Topics} />
-            
-
-            
-            <Route path={["/consulting-and-treatment", "/day-surgery", "/laser"]} render={match => <WhatWeDo {...match}/>}/>       
-
+ 
             <Redirect from="/" to="/home" /> 
           </Switch>
         </Suspense>

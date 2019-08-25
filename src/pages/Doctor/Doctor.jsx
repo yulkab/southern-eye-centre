@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
-import { Card, Image, CardContent, Grid} from 'semantic-ui-react';
 import doctImg1m from '../../assets/img/doctor-photo@2x.png';
 
 
@@ -44,9 +43,8 @@ class Doctor extends PureComponent {
     return (
       <React.Fragment>
         <div className="page-content">
-
-          <section className="c-centred c-centred--img">
-            <div className="c-centred--img_left">
+          <section className="c-doctor">
+            <div className="c-img-content_left">
               <img src={doctImg1m} alt="Consulting &amp; Treatment section"/>
             </div>            
             <div>
@@ -61,21 +59,36 @@ class Doctor extends PureComponent {
                 Phasellus fringilla sagittis vulputate. Donec ornare, ex eget scelerisque sagittis, dolor quam elementum justo, in lobortis ligula mi sed diam. Fusce enim lectus, facilisis in eleifend vel, ornare sed lacus. Phasellus rhoncus, sapien eget tempor luctus, lectus diam ultricies augue, ut tempus lectus mi ac diam. Nullam felis leo, egestas at pulvinar sed, ullamcorper vel augue.
               </p>              
             </div>     
-
           </section>
           <p className="e-tabLink">
-          <Link to="/what-we-do/consulting-and-treatments" className="more-info" title="Read more info about Consulting &amp; Treatment">More Info<span>Consulting &amp; Treatment</span></Link>
-          </p>
-       
-
+            <Link to="/doctor" className="more-info" title="Read about Dr.Trevor Gin">Dr.Trevor Gin</Link>
+          </p>       
         </div>
         <aside className="page-aside">
-          <div className="c-info">
-            <section className="c-info--docSpec">
-             
+            <section className="c-info">
+              <h5>SPECIALTIES</h5>
+              <ul className="c-eye-conditions">
+                <li className="c-eye-conditions--item">
+                  <div className="c-eye-conditions--item-img cataract" data-content="cataract"></div>
+                  Cataract
+                </li>
+                <li className="c-eye-conditions--item">
+                  <div className="c-eye-conditions--item-img macular-degeneration" data-content="macular degenerationn"></div>
+                  Macular Degeneration
+                </li>
+                <li className="c-eye-conditions--item">
+                  <div className="c-eye-conditions--item-img dry-eye" data-content="dry eye"></div>
+                  Dry Eye
+                </li>
+                <li className="c-eye-conditions--item">
+                  <div className="c-eye-conditions--item-img stam" data-content="dry eye"></div>
+                  Stam
+                </li>
+              </ul>
+              <p>
+                <Link to="/eye-conditions" className="more-info" title="Read more Eye Conditions">More Info<span>Eye Conditions</span></Link>                            
+              </p>
             </section>        
-
-          </div>  
         </aside>
       </React.Fragment>
     );
