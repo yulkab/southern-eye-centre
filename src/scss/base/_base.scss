@@ -18,7 +18,7 @@ html {
 }
 
 html, body {   
-    background: var(--lightest);    
+    background: var(--lightest, $lightest);    
 }
 
 body {
@@ -267,6 +267,24 @@ hr {
     }
 
 }
+
+.e-bulleted {
+    padding-left: 1rem;
+    li {
+        line-height: 1;
+        padding: .335rem;
+        &:before {
+            content: "\2022";
+            color: var(--orange,$orange);
+            font-weight: bold; 
+            font-size: 1.5rem;
+            display: inline-block;
+            vertical-align: middle;
+            width: 1rem; /* Also needed for space (tweak if needed) */
+            margin-left: -1rem; /* Also needed for space (tweak if needed) */       
+        }
+    }
+}
   // ***                 ***//
  //        Castom          //
 // ***                *** //
@@ -278,6 +296,21 @@ hr {
 .d-fx-bottom {
     display: flex !important;
     align-items: flex-end;
+    &.c-aside-section_aside {        
+        @media (max-width: $very-large) {
+            display: none !important;
+        }      
+    }
+}
+
+.d-no-bg {
+    background: none !important;
+}
+
+.d-medium-none {
+    @media (max-width: $large) {
+        display: none !important;
+    }  
 }
 
 /*
