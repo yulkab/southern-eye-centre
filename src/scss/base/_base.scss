@@ -51,6 +51,9 @@ body {
     main {
         flex: 1 1 auto;
         display: flex;
+        @media (max-width: $large) { 
+            flex-direction: column;
+        }
     }
     footer {
        flex-grow: 0;
@@ -98,14 +101,14 @@ hr {
 }
 
 .page-aside {
-    width: 0px;
+    //width: 0px;
     flex: 0 0 0px;
     //padding-top: $header-H-large;   
-    margin-top: - $header-H-large;
-    display: none;
+        
     @include for-size(bp-large) {    
-        display: block;
+        //display: block;
         flex-basis: rem(397px);
+        margin-top: - $header-H-large;
     }
     @include for-size(bp-xlarge) {    
         flex-basis: rem(481px);
@@ -195,7 +198,8 @@ hr {
     span {
         display: block;
         font-family: $font-raleway;
-        font-size: rem(14px);        
+        font-size: rem(14px);  
+        font-weight: 500;      
     }
     &:before {
         display: inline-block;
@@ -231,11 +235,25 @@ hr {
 }
 
 .e-titleBlock {
+    position: relative;
     @extend .padding-unset;
     padding: rem(33px) rem(44px);
     background-color: var(--orange,$orange);
+    
+    @include for-max-size(bp-large) {
+        display: none;
+    }
+
     h1 {
         margin-top: 0;
+    }
+    .c-button {
+        width: 242px;
+        position: absolute;
+        top: calc(50% - 1rem);
+        right: rem(44px);
+        background-color: var(--darkest,$darkest);
+        color: var(--white,$white);
     }
 }
 
@@ -273,6 +291,8 @@ hr {
     li {
         line-height: 1;
         padding: .335rem;
+        font-weight: 500;
+
         &:before {
             content: "\2022";
             color: var(--orange,$orange);

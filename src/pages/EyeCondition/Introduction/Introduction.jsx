@@ -109,9 +109,10 @@ const Introduction = props => (
       <aside className="c-aside-section_aside"></aside>
       <div className="c-aside-section_content">
           <div className="e-titleBlock">
-            <small>What We Do</small>
-            <h1>Consulting &amp; Treatments</h1>
-          </div>
+            <small>Eye Conditions</small>
+            <h1>Cataract</h1>
+            <a href="tel:1234567890" className="c-button">Call for an appointment</a>
+          </div>          
       </div>
     </div>     
 </article>

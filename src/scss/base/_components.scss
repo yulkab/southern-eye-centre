@@ -171,6 +171,7 @@
         height: 135px;
         text-align: center;       
         font-size: rem(14px);
+        font-weight: 500;
         line-height: 1.2;
         @include for-size(bp-xlarge) {    
             margin-right: 45px;   
@@ -639,4 +640,41 @@
         font-weight: 600;
         text-align: center;
     } 
+}
+
+.c-info--reviews {
+    p {
+        position: relative;
+        &:first-of-type {
+            padding-top: 2rem;
+        }
+        .icon.quote {
+            top: -1rem;
+        }
+        small {
+            font-size: rem(14px);
+            font-style: italic;
+            font-weight: 500;
+        }
+    }
+}
+
+.c-left-113 >div {
+    @extend .clearfix;
+    & + img {
+        margin-top: 4rem;
+    }
+    @include for-size(bp-xlarge) {
+        float: left; 
+        margin-left: -113px;
+        width: 50%;
+        max-width: 410px;
+
+        & + img {
+            width: 60%;
+            margin-top: 8rem;
+            float: right;
+        }
+    }
+    
 }

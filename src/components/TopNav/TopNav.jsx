@@ -29,15 +29,17 @@ const TopNav = props => (
         </ul>
         
         <ul className="navmenu--list">
-          <li className="navmenu--list-header">When You Visit</li>
-          <li className="navmenu--list-item">
-            <NavLink to="/what-we-do/consulting-and-treatments" activeClassName="active" onClick={props.handler}>What To Bring</NavLink>
+          <li className="navmenu--list-header">           
+            <NavLink to="/visit" activeClassName="active" onClick={props.handler}>  When You Visit </NavLink>  
           </li>
           <li className="navmenu--list-item">
-            <NavLink to="/what-we-do/day-surgery" activeClassName="active" onClick={props.handler}>Getting Here</NavLink>
+            <NavLink to="/visit/what-to-bring" activeClassName="active" onClick={props.handler}>What To Bring</NavLink>
           </li>
           <li className="navmenu--list-item">
-            <NavLink to="/what-we-do/laser" activeClassName="active" onClick={props.handler}>FAQ</NavLink>
+            <NavLink to="/visit/getting-here" activeClassName="active" onClick={props.handler}>Getting Here</NavLink>
+          </li>
+          <li className="navmenu--list-item">
+            <NavLink to="/visit/faq" activeClassName="active" onClick={props.handler}>FAQ</NavLink>
           </li>
         </ul>
       </Grid.Column>
@@ -47,28 +49,28 @@ const TopNav = props => (
             <NavLink to="/eye-conditions" activeClassName="active" onClick={props.handler}> Eye Conditions </NavLink>  
           </li>
           <li className="navmenu--list-item">
-            <NavLink to="/what-we-do/cataract" activeClassName="active" onClick={props.handler}>Cataract</NavLink>
+            <NavLink to="/cataract" activeClassName="active" onClick={props.handler}>Cataract</NavLink>
           </li>
           <li className="navmenu--list-item">
-            <NavLink to="/what-we-do/corneal-conditions" activeClassName="active" onClick={props.handler}>Corneal Conditions</NavLink>
+            <NavLink to="/corneal-conditions" activeClassName="active" onClick={props.handler}>Corneal Conditions</NavLink>
           </li>
           <li className="navmenu--list-item">
-            <NavLink to="/what-we-do/diabetic-eye-diseases" activeClassName="active" onClick={props.handler}>Diabetic Eye Diseases</NavLink>
+            <NavLink to="/diabetic-eye-diseases" activeClassName="active" onClick={props.handler}>Diabetic Eye Diseases</NavLink>
           </li>
           <li className="navmenu--list-item">
-            <NavLink to="/what-we-do/dry-eyes" activeClassName="active" onClick={props.handler}>Dry Eyes</NavLink>
+            <NavLink to="/dry-eye" activeClassName="active" onClick={props.handler}>Dry Eyes</NavLink>
           </li>
           <li className="navmenu--list-item">
-            <NavLink to="/what-we-do/corneal-transplant" activeClassName="active" onClick={props.handler}>Foreign Bodies &amp; Acute Injuries</NavLink>
+            <NavLink to="/foreign-bodies-and-acute-injuries" activeClassName="active" onClick={props.handler}>Foreign Bodies &amp; Acute Injuries</NavLink>
           </li>
           <li className="navmenu--list-item">
-            <NavLink to="/what-we-do/glaucoma" activeClassName="active" onClick={props.handler}>Glaucoma</NavLink>
+            <NavLink to="/glaucoma" activeClassName="active" onClick={props.handler}>Glaucoma</NavLink>
           </li>
           <li className="navmenu--list-item">
-            <NavLink to="/what-we-do/kerataconus" activeClassName="active" onClick={props.handler}>Kerataconus</NavLink>
+            <NavLink to="/kerataconus" activeClassName="active" onClick={props.handler}>Kerataconus</NavLink>
           </li>
           <li className="navmenu--list-item">
-            <NavLink to="/what-we-do/kerataconus" activeClassName="active" onClick={props.handler}>Laser Eye Surgery</NavLink>
+            <NavLink to="/kerataconus" activeClassName="active" onClick={props.handler}>Laser Eye Surgery</NavLink>
           </li>
         </ul>
       </Grid.Column>

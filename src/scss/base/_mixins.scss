@@ -23,19 +23,21 @@ $max-W: 1920px;
   }
 }
 
-// @mixin for-size($size) {
-//   @if $size == mobile-only {
-//     @media (max-width: 599px) { @content; }
-//   } @else if $size == tablet-portrait {
-//     @media (min-width: 600px) { @content; }
-//   } @else if $size == tablet-landscape {
-//     @media (min-width: 900px) { @content; }
-//   } @else if $size == desktop {
-//     @media (min-width: 1200px) { @content; }
-//   } @else if $size == big-desktop {
-//     @media (min-width: 1800px) { @content; }
-//   }
-// }
+@mixin for-max-size($size) {
+  @if $size == bp-mobile-only {
+    @media (max-width: $very-small) { @content; }
+  } @else if $size == bp-small {
+    @media (max-width: #{$small - 1}) { @content; }
+  } @else if $size == bp-medium {
+    @media (max-width:  #{$medium - 1}) { @content; }
+  } @else if $size == bp-large {
+    @media (max-width:  #{$large - 1}) { @content; }
+  } @else if $size == bp-xlarge {
+    @media (max-width: #{$very-large - 1}) { @content; }
+  } @else if $size == bp-max-W {
+    @media (max-width: #{$max-W - 1}) { @content; }
+  }
+}
 
   // ***                        ***//
  //      RETINA-READY IMAGES      //

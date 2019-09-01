@@ -1,65 +1,70 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { Grid, Image } from 'semantic-ui-react'
 import RetinaImage from "react-retina-image";
 
 //var RetinaImage = require('react-retina-image');
 const Resources = () => (
   <article>
-    <div className="c-aside-section">
-      <aside className="c-aside-section_aside"></aside>
-      <div className="c-aside-section_content">
-        <section className="wrapped top-line">
-          <h4>Introduction</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed, ultrices faucibus augue. Maecenas vel arcu feugiat, rutrum sapien at, auctor arcu. Duis vitae pellentesque ligula. Nunc egestas velit sed lorem ultrices, imperdiet finibus leo tempor. Curabitur accumsan pellentesque placerat. Quisque gravida tortor ipsum. Suspendisse non turpis in ipsum accumsan scelerisque. In vulputate tellus vel quam tincidunt, sed placerat nibh pulvinar. Vivamus a viverra erat. Curabitur velit libero, maximus vel tellus in, molestie fermentum nisi. Fusce vitae nunc in tortor dictum commodo. Sed sagittis vestibulum elit, eu mattis quam tempus vitae. Quisque ultrices magna eu iaculis accumsan. Vivamus dictum a urna at luctus.
-          </p>
-          <p>
-            Morbi vestibulum odio elementum, commodo magna non, ornare ante. Donec iaculis diam convallis placerat vulputate. Suspendisse maximus, elit id efficitur elementum, quam risus viverra eros, eu consectetur magna nulla ac arcu. Fusce consequat maximus magna a fermentum. Proin viverra vel ipsum vitae consequat. Quisque euismod augue nunc, ut molestie leo molestie sed. Mauris pharetra, velit sed vestibulum venenatis, dolor enim molestie mauris, eget lacinia sem sapien in est. Curabitur venenatis elementum magna, sed mattis ante fermentum non.       
-          </p>
-        </section>     
-      </div>
-    </div> 
-    <div className="c-aside-section">
-      <aside className="c-aside-section_aside">
-        <p className="more-info">More Info<span>Pre-assessment</span></p>
-      </aside>
-      <div className="c-aside-section_content">
-        <section className="wrapped top-line">
-          <h4>Pre-assessment</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed, ultrices faucibus augue. Maecenas vel arcu feugiat, rutrum sapien at, auctor arcu. Duis vitae pellentesque ligula. Nunc egestas velit sed lorem ultrices, imperdiet finibus leo tempor. Curabitur accumsan pellentesque placerat. Quisque gravida tortor ipsum. Suspendisse non turpis in ipsum accumsan scelerisque. In vulputate tellus vel quam tincidunt, sed placerat nibh pulvinar. Vivamus a viverra erat. Curabitur velit libero, maximus vel tellus in, molestie fermentum nisi. Fusce vitae nunc in tortor dictum commodo. Sed sagittis vestibulum elit, eu mattis quam tempus vitae. Quisque ultrices magna eu iaculis accumsan. Vivamus dictum a urna at luctus.
-          </p>
-          <p>
-            Morbi vestibulum odio elementum, commodo magna non, ornare ante. Donec iaculis diam convallis placerat vulputate. Suspendisse maximus, elit id efficitur elementum, quam risus viverra eros, eu consectetur magna nulla ac arcu. Fusce consequat maximus magna a fermentum. Proin viverra vel ipsum vitae consequat. Quisque euismod augue nunc, ut molestie leo molestie sed. Mauris pharetra, velit sed vestibulum venenatis, dolor enim molestie mauris, eget lacinia sem sapien in est. Curabitur venenatis elementum magna, sed mattis ante fermentum non.       
-          </p>
-          <p>
-            In vulputate tellus vel quam tincidunt, sed placerat nibh pulvinar. Vivamus a viverra erat. Curabitur velit libero, maximus vel tellus in, molestie fermentum nisi. Fusce vitae nunc in tortor dictum commodo. Sed sagittis vestibulum elit, eu mattis quam tempus vitae. Quisque ultrices magna eu iaculis accumsan. Vivamus dictum a urna at luctus.
-          </p>
-          <p className="m32">
-            <RetinaImage src={['../img/laser-logo2.png', '../img/laser-logo3.png']}/>
-          </p>                    
-            <Link to="#" className="c-button" title="Go to Laser Sight">
-              Go to Laser Sight
-              <div className="screen-reader-text">Link to Go to Laser Sight</div>  
-            </Link>        
-        </section>     
-      </div>        
-    </div>  
+    <div className="padding">
+      <Grid relaxed>
+        <Grid.Row>              
+          <Grid.Column tablet={16} computer={4}>
+            <hr/>
+              <h4>Checklist</h4>
+              <p>
+                <ul className="e-bulleted">
+                  <li>Checklist 1</li>
+                  <li>Checklist 2</li>
+                  <li>Checklist 3</li>
+                  <li>Checklist 4</li>
+                </ul>  
+              </p>              
+              <p>
+                <a href="tel:1234567890" className="c-button">Send a copy to my mobile</a>
+              </p>
+              <p>
+                <a href="tel:1234567890" className="c-button">Send a copy to my email</a>  
+              </p>                  
+          </Grid.Column>
+          <Grid.Column tablet={16} computer={7}>
+            <hr/>
+              <h4>Brouchers</h4>
+              
+          </Grid.Column>
+          <Grid.Column tablet={16} computer={5}>
+            <hr/>
+              <h4>Useful Links</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed.
+              </p>
+              <ul className="e-bulleted">
+                <li>Link 1</li>
+                <li>Link 2</li>
+                <li>Link 3</li>
+                <li>Link 4</li>
+              </ul>     
+          </Grid.Column> 
+        </Grid.Row>
+      </Grid>           
+    </div>
+    
     <div className="c-aside-section">
       <aside className="c-aside-section_aside"></aside>
       <div className="c-aside-section_content">
       <p className="e-tabLink">
-        <Link to="/laser" className="more-info" title="Read more info about Procedures &amp; Treatments">More Info<span>Laser Eye Surgery</span></Link>
+        <Link to="/cataract/faq" className="more-info" title="Read more FAQ">More Info<span>FAQ</span></Link>
       </p>      
       </div>
     </div>     
     <div className="c-aside-section">
       <aside className="c-aside-section_aside"></aside>
       <div className="c-aside-section_content">
-          <div className="e-titleBlock">
-            <small>What We Do</small>
-            <h1>Laser Treatments</h1>
-          </div>
+        <div className="e-titleBlock">
+            <small>Eye Conditions</small>
+            <h1>Cataract</h1>
+            <a href="tel:1234567890" className="c-button">Call for an appointment</a>
+          </div> 
       </div>
     </div>     
 </article>

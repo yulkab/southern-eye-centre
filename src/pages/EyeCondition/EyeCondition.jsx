@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch , Redirect } from "react-router-dom";
+import { Route, Switch , Redirect, Link } from "react-router-dom";
 import { RoutedTabs, NavTab } from "react-router-tabs";
 
 import Introduction from './Introduction';
@@ -7,8 +7,6 @@ import Procerures from './Procerures';
 import Resources from './Resources';
 import Faq from './Faq';
 
-import News from '../../components/News';
-import Photos from '../../components/Photos';
 
 class EyeCondition extends Component { 
   constructor(props) {
@@ -95,32 +93,46 @@ class EyeCondition extends Component {
         </div>        
         <aside className="page-aside">
           <div className="c-info">
-            <section className="c-info--contact">
-              <h5>CONTACT US</h5>
+            <section className="c-info--doctors">
+              <h5>OUR CATARACT SPECIALISTS</h5>
               <p>            
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed, ultrices faucibus augue. 
               </p>
+              <ul className="c-eye-conditions">
+                  <li className="c-eye-conditions--item">
+                    <div className="c-eye-conditions--item-img cataract" data-content="Dr. Stephen Bambery"></div>
+                    Dr. Stephen Bambery
+                  </li>
+                  <li className="c-eye-conditions--item">
+                    <div className="c-eye-conditions--item-img macular-degeneration" data-content="Dr. Walter Chang"></div>
+                    Dr. Walter Chang
+                  </li>
+                  <li className="c-eye-conditions--item">
+                    <div className="c-eye-conditions--item-img dry-eye" data-content="Dr. Trevor Gin"></div>
+                    Dr. Trevor Gin
+                  </li>
+                  <li className="c-eye-conditions--item">
+                    <div className="c-eye-conditions--item-img stam" data-content=" Dr. Weng Ng"></div>
+                    Dr. Weng Ng
+                  </li>
+                </ul>
               <p>
-                44 Cranbourne Rd <br/>
-                Frankston VIC 3199
+                <Link to="/doctors" className="more-info" title="Read more about Our Doctors">More Info<span>Our Doctors</span></Link>                            
               </p>
-              <p>
-                Phone: 03 9783 5245 <br/>
-                Fax: 03 9783 9882
-              </p>
-              <p>Email: info@southerneye.com.au</p>
-              <p>
-                CENTRE HOURS
-                Monday – Friday
-                8.30am – 5.00pm
-              </p>            
             </section>   
-            <hr></hr>           
-            <Switch>
-                <Route path={`${this.props.match.path}/consulting-and-treatments`} component={News} />
-                <Route path={`${this.props.match.path}/day-surgery`} component={Photos} />
-                <Route path={`${this.props.match.path}/laser`} component={News} />
-              </Switch> 
+            <hr></hr>   
+            <section className="c-info--reviews">
+              <p>
+                <i className="icon quote"></i>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, 
+                feugiat et risus sed, ultrices faucibus augue. Pellentesque fermentum dui commodo lobortis suscipit. 
+                Etiam sed pellentesque turpis, quis convallis neque. In eu ante in augue imperdiet suscipit vel scelerisque nisl.
+                Donec vitae vehicula augue, vel efficitur augue.-- <small>Name, age</small>.
+              </p>
+              <p>
+                <Link to="/reviews" className="more-info" title="Read more reviews">More Info<span>Reviews</span></Link>                            
+              </p>
+            </section>    
           </div>  
         </aside>
       </React.Fragment>
