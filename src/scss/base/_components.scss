@@ -266,7 +266,7 @@
     }  
 }
 
-.c-eye-conditions-list {
+.c-cards-list {
     @extend .c-cards-grid;
         
     .ui.card {  
@@ -280,7 +280,7 @@
             width: rem(250px);
             height: rem(220px);
             overflow: hidden;
-            margin: 1rem auto;
+            margin: 1rem;
             display: none;    
 
             @include for-size(bp-small) {
@@ -327,9 +327,18 @@
                 background-position-y: -250px;
             }
                  
-        }                              
+        }                                      
+    }  
+    .content {
+        //@include for-size(bp-small) {
+            //padding-left: 2rem !important;
+            //max-width: 50%;
+        //}
+       // @include for-size(bp-xlarge) {
+         // max-width: unset;
+       // }
 
-        .condition-info {
+        >div {
             @extend .more-info;
             width: calc(100% - 2rem);
             margin-left: rem(24px);
@@ -348,14 +357,32 @@
                 }
             }
         }
-    }  
-    .content {
+    }
+    &.col-3 {
+        @include for-size(bp-xlarge) {
+            >* {                
+                width: 33.33333333% !important;
+            }
+        }
+    }
+
+    img {
+        display: none;
         @include for-size(bp-small) {
-            //padding-left: 2rem !important;
-            max-width: 50%;
+            display: block;
+            max-width: 20%;
+            margin: 1rem 1rem 1rem 2rem;
+        }
+        @include for-size(bp-medium) {
+            max-width: 10%;
+        }
+        @include for-size(bp-large) {
+            max-width: 25%;
+            margin: 1rem;
         }
         @include for-size(bp-xlarge) {
-          max-width: unset;
+            max-width: 100%;
+            margin: 1rem auto;
         }
     }
 }

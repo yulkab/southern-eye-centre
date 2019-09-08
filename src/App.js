@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Redirect, Link, Switch} from "react-rou
 import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatWeDo from './pages/WhatWeDo';
+import Visit from './pages/Visit';
 import DoctorsPage from './pages/DoctorsPage';
 import Doctor from './pages/Doctor';
 import EyeConditionsList from './pages/EyeConditionsList';
@@ -26,6 +27,9 @@ function App() {
 
             <Route path="/what-we-do" render={match => <WhatWeDo {...match}/>}/>
             <Route path={["/consulting-and-treatment", "/day-surgery", "/laser"]} render={match => <WhatWeDo {...match}/>}/> 
+
+            <Route path="/visit" render={match => <Visit {...match}/>}/>
+            <Route path={["/what-to-bring", "/getting-here", "/faq"]} render={match => <Visit {...match}/>}/> 
 
             <Route path="/doctors" component={DoctorsPage} />
             <Route path="/doctor" component={Doctor} />

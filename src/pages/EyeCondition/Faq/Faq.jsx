@@ -217,12 +217,9 @@ const Faq = () => (
         </section>     
       </div>
     </div> 
-    <div>   
-      <p className="e-tabLink">
-        <Link to="/eye-conditions" className="more-info" title="Read more about Eye Conditions">Eye Conditions</Link>
-        <Link to="/visit" className="more-info" title="Read more about When You Visit">When You Visit</Link>
-      </p>      
- 
+    <div className="page-content e-tabLink">         
+        <Link to="/eye-conditions" className="more-info left" title="Read more about Eye Conditions">Eye Conditions</Link>
+        <Link to="/visit" className="more-info" title="Read more about When You Visit">When You Visit</Link>    
     </div>     
     <div className="c-aside-section">
       <aside className="c-aside-section_aside"></aside>

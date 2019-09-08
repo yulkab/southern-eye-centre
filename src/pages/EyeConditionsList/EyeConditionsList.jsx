@@ -19,13 +19,13 @@ const EyeConditionsList = () => (
       </div>
     </article>
 
-    <Grid className="c-eye-conditions-list">
+    <Grid className="c-cards-list">
 
       <Grid.Column mobile={16}>
         <Card href='/cataract' title="Read more info Cataract">
 
           <CardContent>
-            <div className="condition-info">
+            <div>
               <h4>Cataract</h4>
               <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed.
@@ -42,7 +42,7 @@ const EyeConditionsList = () => (
         <Card href='/macular-degeneration' title="Read more Macular Degeneration">
 
           <CardContent>
-            <div className="condition-info">
+            <div>
               <h4>Macular Degeneration</h4>
               <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed.
@@ -59,7 +59,7 @@ const EyeConditionsList = () => (
         <Card href='/dry-eye' title="Read more Dry Eye">
 
           <CardContent>
-            <div className="condition-info">
+            <div>
               <h4>Dry Eye</h4>
               <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed.
@@ -75,7 +75,7 @@ const EyeConditionsList = () => (
       <Grid.Column mobile={16}>
         <Card href='/diabetic-eye-diseases' title="Read more Diabetic Eye Diseases">
           <CardContent>
-            <div className="condition-info">
+            <div>
               <h4>Diabetic Eye Diseases</h4>
               <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed.
@@ -91,7 +91,7 @@ const EyeConditionsList = () => (
       <Grid.Column mobile={16}>
         <Card href='/glaucoma' title="Read more about Glaucoma">
           <CardContent>
-            <div className="condition-info">
+            <div>
               <h4>Glaucoma</h4>
               <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed.
@@ -107,7 +107,7 @@ const EyeConditionsList = () => (
       <Grid.Column mobile={16}>
         <Card href='/kerataconus' title="Read more about Kerataconus">
           <CardContent>
-            <div className="condition-info">
+            <div>
               <h4>Kerataconus</h4>
               <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed.
@@ -123,7 +123,7 @@ const EyeConditionsList = () => (
       <Grid.Column mobile={16}>
         <Card href='/ocuplastic-issues' title="Read more about Ocuplastic issues">
           <CardContent>
-            <div className="condition-info">
+            <div>
               <h4>Ocuplastic issues (Eyelids, tear ducts &amp; skin conditions)</h4>
               <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed.
@@ -139,7 +139,7 @@ const EyeConditionsList = () => (
       <Grid.Column mobile={16}>
         <Card href='/pterygium' title="Read more about Pterygium">
           <CardContent>
-            <div className="condition-info">
+            <div>
               <h4>Pterygium</h4>
               <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed.
@@ -155,7 +155,7 @@ const EyeConditionsList = () => (
       <Grid.Column mobile={16}>
         <Card href='/foreign-bodies-and-acute-injuries' title="Read more about Foreign Bodies &amp; Acute Injuries">
           <CardContent>
-            <div className="condition-info">
+            <div>
               <h4>Foreign Bodies &amp; Acute Injuries</h4>
               <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed.

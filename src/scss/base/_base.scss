@@ -212,6 +212,9 @@ hr {
         height: 12px;
         transform: rotate(-90deg);
     }
+    &.left:before {
+        transform: rotate(90deg);
+    }
    p & {
         margin-top: rem(48px);
    }
@@ -228,10 +231,16 @@ hr {
   // ***                 ***//
  //       Elements         //
 // ***                *** //
+
 .e-tabLink {
-    text-align: right;
+    display: flex;
     margin: 0;
-    padding: rem(42px) 0;
+    padding-top: rem(42px);
+    padding-bottom: rem(42px);    
+    justify-content: space-between;
+    .more-info:last-of-type {
+        margin-left: auto;
+    }
 }
 
 .e-titleBlock {

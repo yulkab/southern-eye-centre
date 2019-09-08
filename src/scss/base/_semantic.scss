@@ -18471,15 +18471,15 @@
      clear: both;
  }
 
- .ui.card>.content p,
- .ui.cards>.card>.content p {
-     margin: 0 0 .5em
- }
+//  .ui.card>.content p,
+//  .ui.cards>.card>.content p {
+//      margin: 0 0 .5em
+//  }
 
- .ui.card>.content p:last-child,
- .ui.cards>.card>.content p:last-child {
-     margin-bottom: 0
- }
+//  .ui.card>.content p:last-child,
+//  .ui.cards>.card>.content p:last-child {
+//      margin-bottom: 0
+//  }
 
  .ui.card .meta *,
  .ui.cards>.card .meta * {
@@ -19955,24 +19955,34 @@
 
  .ui.accordion {
     max-width: 100%;
+    padding-left: 30px;
+    @include for-size(bp-large) {
+       // padding-left: 0;
+    }
+    @include for-size(bp-xlarge) {
+      padding-left: 0;
+    }
     .title {
         position: relative;
-        font-weight: 500;
+        font-weight: 600;
         display: flex;
         align-items: center;
         i.icon {
             width: 1em;
-            height: 1em;
-            margin-left: -45px;
+            height: 1em;            
             background:  url('./assets/img/icons/copy-6@3x.png') no-repeat 0 0 ;     
-            background-size: cover;     
+            background-size: cover;  
+            margin-left: -30px;
+            @include for-size(bp-xlarge) {
+                margin-left: -45px;
+            }                      
         }
 
         &.active {
             i.icon {
-                width: 1.625em;
-                height: 1.625em;
-                background-image:  url('./assets/img/icons/-@3x.png'); 
+                width: 1.25em;
+                height: 1.25em;
+                background-image:  url('./assets/img/icons/-@3x.png');   
             }
         }
     }
