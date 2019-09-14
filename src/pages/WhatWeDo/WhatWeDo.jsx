@@ -83,7 +83,6 @@ class WhatWeDo extends Component {
               </Switch>   
             </article>
           </div>
-
         </div>        
         <aside className="page-aside">
           <div className="c-info">

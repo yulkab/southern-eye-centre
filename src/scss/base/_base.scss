@@ -342,6 +342,9 @@ hr {
     }  
 }
 
+small + h1 {
+    margin: 0;
+}
 /*
 Text meant only for screen readers.
 Provides support for themes that do not bundle this CSS yet.

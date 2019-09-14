@@ -8,6 +8,9 @@ import DoctorsPage from './pages/DoctorsPage';
 import Doctor from './pages/Doctor';
 import EyeConditionsList from './pages/EyeConditionsList';
 import EyeCondition from './pages/EyeCondition';
+import AboutUs from './pages/AboutUs';
+
+
 import jsonData from 'eye-conditions.json';
 
 const HomePage = lazy(() => import('./pages/Home'));
@@ -41,7 +44,7 @@ function App() {
         }
             <Route path={["/introduction", "/procerures", "/resources", "/faq"]} render={match => <EyeCondition {...match}/>}/>   
 
-            <Route path="/about" component={About} />
+            <Route path="/about" component={AboutUs} />
             <Route path="/news" component={Topics} />
             <Route path="/reviews" component={Topics} />
             <Route path="/gallery" component={Topics} />
@@ -53,20 +56,6 @@ function App() {
       </main>        
       <Footer/>            
     </Router>
-  );
-}
-
-function About() {
-  return (
-    <main role="main">
-        <div className="page-content">
-          <h2>About</h2>
-        </div>
-        <aside className="page-aside">
-          Test content for aside
-        </aside>
-    </main>  
-    
   );
 }
 

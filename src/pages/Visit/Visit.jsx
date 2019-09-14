@@ -110,8 +110,8 @@ class Visit extends Component {
             <hr></hr>           
             <Switch>
                 <Route path={`${this.props.match.path}/what-to-bring`} component={News} />
-                <Route path={`${this.props.match.path}/day-surgery`} component={Photos} />
-                <Route path={`${this.props.match.path}/laser`} component={News} />
+                <Route path={`${this.props.match.path}/getting-here`} component={News} />
+                <Route path={`${this.props.match.path}/faq`} component={News} />
               </Switch> 
           </div>  
         </aside>

@@ -179,7 +179,7 @@ class Home extends PureComponent {
               </Grid.Row>
             </Grid>
             <p className="text-right">
-              <Link to="/photo" className="more-info" title="See more Facilities’ Photo">More Info<span>Facilities’ Photo</span></Link>                            
+              <Link to="/gallery" className="more-info" title="See more Facilities’ Photo">More Info<span>Facilities’ Photo</span></Link>                            
             </p>
 
             <div className="s-reviews">
@@ -189,7 +189,7 @@ class Home extends PureComponent {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed, ultrices faucibus augue. Pellentesque fermentum dui commodo lobortis suscipit. Etiam sed pellentesque turpis, quis convallis neque. In eu ante in augue imperdiet suscipit vel scelerisque nisl. Donec vitae vehicula augue, vel efficitur augue.-- Name, age.
                 </p>
                 <p className="text-right">
-                  <Link to="/photo" className="more-info" title="Read more Reviews">More Info<span>Reviews</span></Link>                            
+                  <Link to="/reviews" className="more-info" title="Read more Reviews">More Info<span>Reviews</span></Link>                            
                 </p>
               </div>              
             </div>

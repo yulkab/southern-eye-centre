@@ -100,15 +100,10 @@ const DaySurgery = props => (
         <div className="c-aside-section">
           <aside className="c-aside-section_aside"></aside>
           <div className="c-aside-section_content">
-          <p className="e-tabLink">
-            <Link to="/what-we-do/laser" className="more-info" title="Read more info about Laser Treatments">Laser Treatments</Link>
-          </p>      
-          </div>
-        </div>     
-        <div className="c-aside-section">
-          <aside className="c-aside-section_aside"></aside>
-          <div className="c-aside-section_content">
-              <div className="e-titleBlock">
+            <p className="e-tabLink">
+              <Link to="/what-we-do/laser" className="more-info" title="Read more info about Laser Treatments">Laser Treatments</Link>
+            </p>      
+            <div className="e-titleBlock">
                 <small>What We Do</small>
                 <h1>Day Surgery</h1>
               </div>
