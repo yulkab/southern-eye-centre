@@ -9,10 +9,10 @@ const Footer = () => (
         <NavLink to="/home" activeClassName="active"> Home </NavLink>   
       </List.Item>
       <List.Item as='li' className="item">
-        <NavLink to="/news" activeClassName="active"> News </NavLink>   
+        <NavLink to="/everything-about/news" activeClassName="active"> News </NavLink>   
       </List.Item>
       <List.Item as='li' className="item">
-        <NavLink to="/reviews" activeClassName="active"> Reviews </NavLink>   
+        <NavLink to="/everything-about/reviews" activeClassName="active"> Reviews </NavLink>   
       </List.Item>
       <List.Item as='li' className="item">
         <NavLink to="/privacy" activeClassName="active"> Privacy </NavLink>   

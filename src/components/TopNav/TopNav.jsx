@@ -132,13 +132,13 @@ const TopNav = props => (
             <NavLink to="/about" activeClassName="active" onClick={props.handler}>About Us</NavLink>
           </li>
           <li className="navmenu--list-header">
-            <NavLink to="/news" activeClassName="active" onClick={props.handler}>News</NavLink>
+            <NavLink to="/everything-about/news" activeClassName="active" onClick={props.handler}>News</NavLink>
           </li>
           <li className="navmenu--list-header">
-            <NavLink to="/reviews" activeClassName="active" onClick={props.handler}>Reviews</NavLink>
+            <NavLink to="/everything-about/reviews" activeClassName="active" onClick={props.handler}>Reviews</NavLink>
           </li>
           <li className="navmenu--list-header">
-            <NavLink to="/gallery" activeClassName="active" onClick={props.handler}>Gallery</NavLink>
+            <NavLink to="/everything-about/gallery" activeClassName="active" onClick={props.handler}>Gallery</NavLink>
           </li>
           <li className="navmenu--list-header">
             <NavLink to="/contact" activeClassName="active" onClick={props.handler}>Contact Us</NavLink>

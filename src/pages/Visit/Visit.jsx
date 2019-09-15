@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { Route, Switch , Redirect } from "react-router-dom";
 import { RoutedTabs, NavTab } from "react-router-tabs";
-
 import WhatToBring from './WhatToBring';
 import GettingHere from './GettingHere';
 import Faq from './Faq';
-
 import News from '../../components/News';
-import Photos from '../../components/Photos';
+
 
 class Visit extends Component { 
   constructor(props) {

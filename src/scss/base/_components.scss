@@ -690,8 +690,93 @@
     background-color: #fcfaf0;
     margin-right: rem(41px);   
    }  
+}
 
+.news {
+    //width: 100%;
+        background: url('./assets/img/bg/line-bg@2x.png') 0 0 ;    
 
+        @include for-size(bp-small) {
+            flex-direction: row;
+            align-items: center;
+        }
+        @include for-size(bp-xlarge) { 
+            flex-direction: column;
+            padding-bottom: rem(35px);
+            border-top: 5px solid transparent;
+
+            &:hover {
+                border-top-color:  $orange;
+            }
+        }                       
+       
+        .content {
+            
+            // flex: 1;                     
+            // display: flex;
+            // flex-direction: column;
+            // //align-items: center;
+            // flex-wrap: wrap;
+            // padding: 1rem rem(32px) 1.5rem;
+           
+            // @include for-size(bp-large) {
+            //     flex-direction: row;
+            //     //align-items: center;
+            // }
+            // @include for-size(bp-xlarge) { 
+            //     padding: 33px 33px .5rem !important;
+            // }
+
+            >* {
+                @extend .more-info;
+            }                  
+        }     
+}
+.c-topics-grid {
+    /* Prevent vertical gaps */
+   line-height: 0;
+   
+//    -webkit-column-count: 5;
+//    -webkit-column-gap:   0px;
+//    -moz-column-count:    5;
+//    -moz-column-gap:      0px;
+   column-count:         5;
+   column-gap:           0px;
+
+   >* {
+       /* Just in case there are inline attributes */
+        width: 100% !important;
+        height: auto !important;
+   }
+   @media (max-width: 1200px) {
+ 
+    // -moz-column-count:    4;
+    // -webkit-column-count: 4;
+    column-count:         4;
+    
+  }
+  @media (max-width: 1000px) {
+  
+    // -moz-column-count:    3;
+    // -webkit-column-count: 3;
+    column-count:         3;
+    
+  }
+  @media (max-width: 800px) {
+   
+    // -moz-column-count:    2;
+    // -webkit-column-count: 2;
+    column-count:         2;
+    
+  }
+  @media (max-width: 425px) {
+   
+    // -moz-column-count:    1;
+    // -webkit-column-count: 1;
+    column-count:         1;
+    
+  }
+  
 }
 
 .c-map {

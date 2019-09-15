@@ -169,6 +169,7 @@ const EyeConditionsList = () => (
       </Grid.Column>
 
     </Grid>
+  
   </div>
 );
 

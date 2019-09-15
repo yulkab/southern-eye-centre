@@ -21,6 +21,9 @@ h1,h2,h3,h4,h5,h6 {
 
 h1 {
   font-size: rem(40px);
+  @include for-max-size(bp-mobile-only) {
+    font-size: rem(36px);
+  }
 }
 h2 {
   font-size: rem(36px);

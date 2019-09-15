@@ -9,6 +9,8 @@ import Doctor from './pages/Doctor';
 import EyeConditionsList from './pages/EyeConditionsList';
 import EyeCondition from './pages/EyeCondition';
 import AboutUs from './pages/AboutUs';
+import EverythingAbout from './pages/EverythingAbout';
+
 
 
 import jsonData from 'eye-conditions.json';
@@ -45,9 +47,15 @@ function App() {
             <Route path={["/introduction", "/procerures", "/resources", "/faq"]} render={match => <EyeCondition {...match}/>}/>   
 
             <Route path="/about" component={AboutUs} />
-            <Route path="/news" component={Topics} />
+
+            {/* <Route path="/news" component={Topics} />
             <Route path="/reviews" component={Topics} />
-            <Route path="/gallery" component={Topics} />
+            <Route path="/gallery" component={Topics} /> */}
+
+            <Route path="/everything-about/:topic" render={match => <EverythingAbout {...match}/>}/>
+            <Route path={["/news", "/reviews", "/gallery"]} render={match => <EverythingAbout {...match}/>}/> 
+    
+
             <Route path="/contact" component={Topics} />
  
             <Redirect from="/" to="/home" /> 
@@ -76,10 +84,7 @@ function Topics({ match }) {
       </ul>
 
       <Route path={`${match.path}/:topicId`} component={Topic} />
-      <Route
-        exact
-        path={match.path}
-        render={() => <h3>Please select a topic.</h3>}
+      <Route exact path={match.path} render={() => <h3>Please select a topic.</h3>}
       />
     </div>
   );
