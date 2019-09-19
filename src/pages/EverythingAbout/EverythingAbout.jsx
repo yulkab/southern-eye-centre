@@ -10,7 +10,7 @@ const topicsOptions = [
 ]
 
 
-class EverythingAbout extends PureComponent { 
+class EverythingAbout extends PureComponent {
   constructor(props) {
     super(props);
 
@@ -27,9 +27,9 @@ class EverythingAbout extends PureComponent {
   componentDidMount = () => {
     console.log('EverythingAbout mounted');
 
-   this.setState({ selected: this.props.match.params.topic });
-    console.log('EverythingAbout mounted this.state.selected',  this.state.selected );
-    
+    this.setState({ selected: this.props.match.params.topic });
+    console.log('EverythingAbout mounted this.state.selected', this.state.selected);
+
   }
 
   componentWillReceiveProps = (nextProps) => {
@@ -41,7 +41,7 @@ class EverythingAbout extends PureComponent {
   }
 
   componentDidUpdate = () => {
-    console.log('EverythingAbout did update',  this.state);
+    console.log('EverythingAbout did update', this.state);
   }
 
   componentWillUnmount = () => {
@@ -49,12 +49,12 @@ class EverythingAbout extends PureComponent {
   }
 
   handleChange = (e, { value }) => {
-     this.setState({ selected: value });
+    this.setState({ selected: value });
     //   console.log('handleChange this.state.selected',  this.state.selected );
-       this.props.history.push('/everything-about/' + value);
+    this.props.history.push('/everything-about/' + value);
   }
 
-  render () {
+  render() {
     if (this.state.hasError) {
       return <h1>Something went wrong.</h1>;
     }
@@ -64,32 +64,32 @@ class EverythingAbout extends PureComponent {
           <div className="c-aside-section">
             <aside className="c-aside-section_aside"></aside>
             <section className="c-aside-section_content">
-              
-                <h1> 
-                  <Dropdown inline 
-                  options={topicsOptions} 
+
+              <h1>
+                <Dropdown inline
+                  options={topicsOptions}
                   value={this.props.match.params.topic}
                   onChange={this.handleChange}
-                  /> {' '} about Southern Eye Centre.</h1>
-            
+                /> {' '} about Southern Eye Centre.</h1>
+
             </section>
           </div>
         </article>
-        EverythingAbout Switch: 
-        
-        <article className="">{this.props.match.path} 
-        <h3>{this.props.match.params.topic}</h3>
-              {/* <Switch>
+        EverythingAbout Switch:
+
+        <article className="">
+          <h3>{this.props.match.params.topic}</h3>
+          {/* <Switch>
                 <Route exact path={`${this.props.match.path}`} render={() => <Redirect replace to={`${this.props.match.path}/what-to-bring`} />} />
                 <Route path={`${this.props.match.path}/news`} component={WhatToBring} />
                 <Route path={`${this.props.match.path}/getting-here`} component={GettingHere} />
                 <Route path={`${this.props.match.path}/faq`} component={Faq} />
               </Switch>    */}
-            </article>
-            <section id="topics" className="c-topics-grid">
-            New title that might go over 2 lines or more
+        </article>
+        <section id="topics" className="c-topics-grid">
 
-            <Card href='/cataract' className="news" title="Read more">
+          <div>
+            <Card href='/news' className="news" title="Read more">
               <CardContent>
                 <div>
                   <h4>New title that might go over 2 lines or more</h4>
@@ -97,34 +97,78 @@ class EverythingAbout extends PureComponent {
                     NAME OF PERSON POSTING / 25 - 02 - 2019
                   </p>
                   <Image src='https://react.semantic-ui.com/images/wireframe/image.png' />
-                </div>           
+                </div>
               </CardContent>
-              <div className="condition-img cataract">
-                <div className="screen-reader-text">Cataract image.</div>
-              </div>
             </Card>
+          </div>
 
-            <img src="https://placekitten.com/370/300" alt="pretty kitty"/>
-            <img src="https://placekitten.com/389/251" alt="pretty kitty"/>
-            <img src="https://placekitten.com/371/321" alt="pretty kitty"/>
-            <img src="https://placekitten.com/343/371" alt="pretty kitty"/>
+          <div>
+            <Image as='a' href='#' src='https://react.semantic-ui.com/images/wireframe/image.png'  />
+          </div>
+
+          <div>
+            <Card href='/news' className="news" title="Read more">
+              <CardContent>
+                <div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed, ultrices faucibus augue.
+                     -- Name, age.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div>
+            <Image as='a' href='#' src='https://react.semantic-ui.com/images/wireframe/image.png' />
+          </div>          
+          
+          <div>
+            <Image as='a'  href='#' src='https://react.semantic-ui.com/images/wireframe/image.png'/>
+          </div>
+
+          <div>
+            <Card href='/news' className="news" title="Read more">
+              <CardContent>
+                <div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed, ultrices faucibus augue.
+                     -- Name, age.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div>
+            <Image as='a' href='#' src='https://react.semantic-ui.com/images/wireframe/image.png' />
+          </div>          
+
+          <div>
+            <Card href='/news' className="news" title="Read more">
+              <CardContent>
+                <div>
+                  <h4>New title that might go over 2 lines or more</h4>
+                  <p>
+                    NAME OF PERSON POSTING / 25 - 02 - 2019
+                  </p>
+                  <Image src='https://react.semantic-ui.com/images/wireframe/image.png' />
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+ {/*
+          <img src="https://placekitten.com/495/437" alt="pretty kitty" />
+          <img src="https://placekitten.com/415/232" alt="pretty kitty"/>
+            <img src="https://placekitten.com/415/248" alt="pretty kitty"/>
+            <img src="https://placekitten.com/415/327" alt="pretty kitty"/>
             <img src="https://placekitten.com/372/287" alt="pretty kitty"/>
-            <img src="https://placekitten.com/275/390" alt="pretty kitty"/>
-            <img src="https://placekitten.com/292/361" alt="pretty kitty"/>
-            <img src="https://placekitten.com/256/228" alt="pretty kitty"/>
-            <img src="https://placekitten.com/278/308" alt="pretty kitty"/>
-            <img src="https://placekitten.com/283/205" alt="pretty kitty"/>
-            <img src="https://placekitten.com/207/364" alt="pretty kitty"/>
-            <img src="https://placekitten.com/397/220" alt="pretty kitty"/>
-            <img src="https://placekitten.com/348/325" alt="pretty kitty"/>
-            <img src="https://placekitten.com/282/397" alt="pretty kitty"/>
-            <img src="https://placekitten.com/344/250" alt="pretty kitty"/>
-            <img src="https://placekitten.com/371/328" alt="pretty kitty"/>
-            <img src="https://placekitten.com/248/214" alt="pretty kitty"/>
-            
-                
-              </section>      
-            
+            <img src="https://placekitten.com/150/120" alt="pretty kitty"/>
+            <img src="https://placekitten.com/395/327" alt="pretty kitty"/>
+            <img src="https://placekitten.com/395/232" alt="pretty kitty"/>            */}
+
+        </section>
+
       </div>
     );
   }
