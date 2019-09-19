@@ -4,6 +4,7 @@
   "description": "Southern Eye Centre - Day Surgery & Laser Clinic",
   "author": "yulkab <yulkab@gmail.com>",
   "private": true,
+  "homepage": "https://yulkab.github.io/southern-eye-centre",
   "dependencies": {
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
@@ -19,7 +20,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,5 +38,8 @@
       "last 2 firefox version",
       "last 2 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
   }
 }
