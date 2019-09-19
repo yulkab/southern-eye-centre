@@ -4,7 +4,7 @@
   "description": "Southern Eye Centre - Day Surgery & Laser Clinic",
   "author": "yulkab <yulkab@gmail.com>",
   "private": true,
-  "homepage": "https://yulkab.github.io/southern-eye-centre",
+  "homepage": "https://yulkab.github.io/southern-eye-centre/",
   "dependencies": {
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
