@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/southern-eye-centre/precache-manifest.1f9ec614d8b55758487c0aeb5964f723.js"
+  "/southern-eye-centre/precache-manifest.69ae0d1cd387f3cd32d1eeb8aed05861.js"
 );
 
 self.addEventListener('message', (event) => {
