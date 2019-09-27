@@ -80,10 +80,10 @@ class EverythingAbout extends PureComponent {
         <article className="">
           <h3>{this.props.match.params.topic}</h3>
           {/* <Switch>
-                <Route exact path={`${this.props.match.path}`} render={() => <Redirect replace to={`${this.props.match.path}/what-to-bring`} />} />
+                <Route exact path={`${this.props.match.path}`} render={() => <Redirect replace to={`${this.props.match.path}/everything-about`} />} />
                 <Route path={`${this.props.match.path}/news`} component={WhatToBring} />
-                <Route path={`${this.props.match.path}/getting-here`} component={GettingHere} />
-                <Route path={`${this.props.match.path}/faq`} component={Faq} />
+                <Route path={`${this.props.match.path}/reviews`} component={GettingHere} />
+                <Route path={`${this.props.match.path}/gallery`} component={Faq} />
               </Switch>    */}
         </article>
         <section id="topics" className="c-topics-grid">
