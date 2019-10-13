@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { Grid, Image } from 'semantic-ui-react'
-import RetinaImage from "react-retina-image";
+import { Grid } from 'semantic-ui-react'
+//import RetinaImage from "react-retina-image";
 
 //var RetinaImage = require('react-retina-image');
 const Resources = () => (
@@ -12,14 +12,14 @@ const Resources = () => (
           <Grid.Column tablet={16} computer={4}>
             <hr/>
               <h4>Checklist</h4>
-              <p>
+              
                 <ul className="e-bulleted">
                   <li>Checklist 1</li>
                   <li>Checklist 2</li>
                   <li>Checklist 3</li>
                   <li>Checklist 4</li>
                 </ul>  
-              </p>              
+                     
               <p>
                 <a href="tel:1234567890" className="c-button">Send a copy to my mobile</a>
               </p>

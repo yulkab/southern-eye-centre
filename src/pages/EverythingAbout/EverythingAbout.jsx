@@ -88,7 +88,7 @@ class EverythingAbout extends PureComponent {
         </article>
         <section id="topics" className="c-topics-grid">
 
-          <div>
+          <div data-groups="news">
             <Card href='/news' className="news" title="Read more">
               <CardContent>
                 <div>
@@ -107,7 +107,7 @@ class EverythingAbout extends PureComponent {
           </div>
 
           <div>
-            <Card href='/news' className="news" title="Read more">
+            <Card href='/review' className="news" title="Read more">
               <CardContent>
                 <div>
                   <p>
@@ -120,15 +120,15 @@ class EverythingAbout extends PureComponent {
           </div>
 
           <div>
-            <Image as='a' href='#' src='https://react.semantic-ui.com/images/wireframe/image.png' />
+            <Image as='a' href='/everything-about/gallery' src='https://react.semantic-ui.com/images/wireframe/image.png' />
           </div>          
           
           <div>
-            <Image as='a'  href='#' src='https://react.semantic-ui.com/images/wireframe/image.png'/>
+            <Image as='a'  href='/everything-about/gallery' src='https://react.semantic-ui.com/images/wireframe/image.png'/>
           </div>
 
           <div>
-            <Card href='/news' className="news" title="Read more">
+            <Card href='/review' className="news" title="Read more">
               <CardContent>
                 <div>
                   <p>
@@ -141,7 +141,7 @@ class EverythingAbout extends PureComponent {
           </div>
 
           <div>
-            <Image as='a' href='#' src='https://react.semantic-ui.com/images/wireframe/image.png' />
+            <Image as='a' href='/everything-about/gallery' src='https://react.semantic-ui.com/images/wireframe/image.png' />
           </div>          
 
           <div>

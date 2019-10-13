@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { Grid, Image } from 'semantic-ui-react'
+import { Image } from 'semantic-ui-react'
 import News from '../../components/News';
 
 
 import contImg12 from '../../assets/img/photos/centre-1.jpg';
-import contImg2 from '../../assets/img/photos/centre-1.jpg';
-import contImg3 from '../../assets/img/photos/centre-1.jpg';
-import contImg4 from '../../assets/img/photos/centre-1.jpg';
+// import contImg2 from '../../assets/img/photos/centre-1.jpg';
+// import contImg3 from '../../assets/img/photos/centre-1.jpg';
+// import contImg4 from '../../assets/img/photos/centre-1.jpg';
 import staffImg from '../../assets/img/staff.jpg';
 
 const AboutUs = props => (
@@ -40,7 +40,7 @@ const AboutUs = props => (
       </div> 
       <div className="padding">
         <p className="text-right">
-          <Link to="/gallery" className="more-info" title="Read more info about Procedures &amp; Treatments">More Info <span>Photos</span></Link>
+          <Link to="/everything-about/gallery" className="more-info" title="See more Photos">More Info <span>Photos</span></Link>
         </p> 
       </div>
 
@@ -145,7 +145,7 @@ const AboutUs = props => (
           </section>    
 
           <p className="e-tabLink">
-            <Link to="/facilities" className="more-info" title="Read more info about Our Facilities">Our Facilities</Link>
+            <Link to="/everything-about/gallery" className="more-info" title="Facilities Photo">Our Facilities</Link>
           </p>   
 
         </div>

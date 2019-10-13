@@ -130,7 +130,7 @@ class EyeCondition extends Component {
                 Donec vitae vehicula augue, vel efficitur augue.-- <small>Name, age</small>.
               </p>
               <p>
-                <Link to="/reviews" className="more-info" title="Read more reviews">More Info<span>Reviews</span></Link>                            
+                <Link to="/everything-about/reviews" className="more-info" title="Read more reviews">More Info<span>Reviews</span></Link>                            
               </p>
             </section>    
           </div>  

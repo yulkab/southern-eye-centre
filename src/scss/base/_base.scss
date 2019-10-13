@@ -95,6 +95,15 @@ hr {
     }
 }
 
+h1.quote {
+    position: relative;
+    padding-top: 52px;
+
+    i.guote {
+        top: 0;
+    }
+}
+
 .b-top {
     border-top: 2px solid var(--light, $light);
 }

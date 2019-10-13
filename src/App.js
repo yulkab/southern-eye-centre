@@ -9,6 +9,7 @@ import Doctor from './pages/Doctor';
 import EyeConditionsList from './pages/EyeConditionsList';
 import EyeCondition from './pages/EyeCondition';
 import AboutUs from './pages/AboutUs';
+import Review from './pages/Review';
 import EverythingAbout from './pages/EverythingAbout';
 
 
@@ -54,7 +55,8 @@ function App() {
 
             <Route path="/everything-about/:topic" render={match => <EverythingAbout {...match}/>}/>
             <Route path={["/news", "/reviews", "/gallery"]} render={match => <EverythingAbout {...match}/>}/> 
-    
+            
+            <Route path="/review" component={Review} />
 
             <Route path="/contact" component={Topics} />
  

@@ -8,7 +8,7 @@ const Photos = () => (
 
     <img src={contImg1} alt="Contact Us section"/>
     <p>
-      <Link to="/photos" className="more-info" title="Read more News">More Info<span>Facilities Photo</span></Link>                            
+      <Link to="/everything-about/gallery" className="more-info" title="Read more News">More Info<span>Facilities Photo</span></Link>                            
     </p>
 </section> 
 )
