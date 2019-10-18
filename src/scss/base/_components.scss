@@ -739,11 +739,22 @@
    margin: 0 -1.5rem;
    padding: 2rem 0;
 
+   
+   &.set-grid {
+    display: inline-grid;
+   }
+
+   grid-template-rows: auto;   
+
     >*{
         display: inline-block;
         width: 100%;
         height: auto;
         padding: 1.5rem;
+
+        &.hidden {
+            display: none;
+        } 
 
         > a.card, > a {
             margin: 0;
@@ -766,14 +777,17 @@
 
     @include for-size(bp-small) {
         column-count: 2;
+        grid-template-columns: 1fr 1fr;
     }
 
     @include for-size(bp-large) {
         column-count: 3;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     @include for-size(bp-xlarge) {
         column-count: 4;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
   
 }

@@ -33,15 +33,17 @@ class EverythingAbout extends PureComponent {
   }
 
   componentWillReceiveProps = (nextProps) => {
-    console.log('EverythingAbout will receive props', nextProps);
+    console.log('EverythingAbout will receive props', nextProps);    
   }
 
   componentWillUpdate = (nextProps, nextState) => {
     console.log('EverythingAbout will update', nextProps, nextState);
+    
   }
 
   componentDidUpdate = () => {
     console.log('EverythingAbout did update', this.state);
+    this.setState({ selected: this.props.match.params.topic });
   }
 
   componentWillUnmount = () => {
@@ -50,7 +52,6 @@ class EverythingAbout extends PureComponent {
 
   handleChange = (e, { value }) => {
     this.setState({ selected: value });
-    //   console.log('handleChange this.state.selected',  this.state.selected );
     this.props.history.push('/everything-about/' + value);
   }
 
@@ -74,21 +75,17 @@ class EverythingAbout extends PureComponent {
 
             </section>
           </div>
-        </article>
+        </article>        
+
+        {/* <article className="">
         EverythingAbout Switch:
-
-        <article className="">
           <h3>{this.props.match.params.topic}</h3>
-          {/* <Switch>
-                <Route exact path={`${this.props.match.path}`} render={() => <Redirect replace to={`${this.props.match.path}/everything-about`} />} />
-                <Route path={`${this.props.match.path}/news`} component={WhatToBring} />
-                <Route path={`${this.props.match.path}/reviews`} component={GettingHere} />
-                <Route path={`${this.props.match.path}/gallery`} component={Faq} />
-              </Switch>    */}
-        </article>
-        <section id="topics" className="c-topics-grid">
+          <h3>this.state.selected : {this.state.selected}</h3>
+        </article> */}
 
-          <div data-groups="news">
+        <section id="topics" className={`c-topics-grid ${this.state.selected ==='all' || this.state.selected ==='gallery' ? '' : 'set-grid'}`}>
+
+          <div data-groups="news" className={`${this.state.selected ==='news' || this.state.selected ==='all' ? '' : 'hidden'}`}>
             <Card href='/news' className="news" title="Read more">
               <CardContent>
                 <div>
@@ -102,11 +99,11 @@ class EverythingAbout extends PureComponent {
             </Card>
           </div>
 
-          <div>
-            <Image as='a' href='#' src='https://react.semantic-ui.com/images/wireframe/image.png'  />
+          <div data-groups="gallery" className={`${this.state.selected ==='gallery' || this.state.selected ==='all' ? '' : 'hidden'}`}>
+            <Image as='a' href='#' src='https://placekitten.com/372/287'/>
           </div>
 
-          <div>
+          <div data-groups="reviews" className={`${this.state.selected ==='reviews' || this.state.selected ==='all' ? '' : 'hidden'}`}>
             <Card href='/review' className="news" title="Read more">
               <CardContent>
                 <div>
@@ -119,15 +116,46 @@ class EverythingAbout extends PureComponent {
             </Card>
           </div>
 
-          <div>
+          <div data-groups="gallery" className={`${this.state.selected ==='gallery' || this.state.selected ==='all' ? '' : 'hidden'}`}>
             <Image as='a' href='/everything-about/gallery' src='https://react.semantic-ui.com/images/wireframe/image.png' />
-          </div>          
+          </div>  
+
+          <div data-groups="reviews" className={`${this.state.selected ==='reviews' || this.state.selected ==='all' ? '' : 'hidden'}`}>
+            <Card href='/review' className="news" title="Read more">
+              <CardContent>
+                <div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed, ultrices faucibus augue.
+                     -- Name, age.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div data-groups="gallery" className={`${this.state.selected ==='gallery' || this.state.selected ==='all' ? '' : 'hidden'}`}>
+            <Image as='a' href='/everything-about/gallery' src='https://placekitten.com/415/232'/>
+          </div>     
+
+          <div data-groups="news" className={`${this.state.selected ==='news' || this.state.selected ==='all' ? '' : 'hidden'}`}>
+            <Card href='/news' className="news" title="Read more">
+              <CardContent>
+                <div>
+                  <h4>New title that might go over 2 lines or more</h4>
+                  <p>
+                    NAME OF PERSON POSTING / 25 - 02 - 2019
+                  </p>
+                  <Image src='https://react.semantic-ui.com/images/wireframe/image.png' />
+                </div>
+              </CardContent>
+            </Card>
+          </div>
           
-          <div>
-            <Image as='a'  href='/everything-about/gallery' src='https://react.semantic-ui.com/images/wireframe/image.png'/>
+          <div data-groups="gallery" className={`${this.state.selected ==='gallery' || this.state.selected ==='all' ? '' : 'hidden'}`}>
+            <Image as='a'  href='/everything-about/gallery' src='https://placekitten.com/395/327'/>
           </div>
 
-          <div>
+          <div data-groups="reviews" className={`${this.state.selected ==='reviews' || this.state.selected ==='all' ? '' : 'hidden'}`}>
             <Card href='/review' className="news" title="Read more">
               <CardContent>
                 <div>
@@ -139,12 +167,12 @@ class EverythingAbout extends PureComponent {
               </CardContent>
             </Card>
           </div>
+         
+          <div data-groups="gallery" className={`${this.state.selected ==='gallery' || this.state.selected ==='all' ? '' : 'hidden'}`}>
+            <Image as='a' href='/everything-about/gallery' src='https://placekitten.com/372/287' />
+          </div>  
 
-          <div>
-            <Image as='a' href='/everything-about/gallery' src='https://react.semantic-ui.com/images/wireframe/image.png' />
-          </div>          
-
-          <div>
+          <div data-groups="news" className={`${this.state.selected ==='news' || this.state.selected ==='all' ? '' : 'hidden'}`}>
             <Card href='/news' className="news" title="Read more">
               <CardContent>
                 <div>
@@ -157,15 +185,29 @@ class EverythingAbout extends PureComponent {
               </CardContent>
             </Card>
           </div>
- {/*
-          <img src="https://placekitten.com/495/437" alt="pretty kitty" />
-          <img src="https://placekitten.com/415/232" alt="pretty kitty"/>
-            <img src="https://placekitten.com/415/248" alt="pretty kitty"/>
-            <img src="https://placekitten.com/415/327" alt="pretty kitty"/>
-            <img src="https://placekitten.com/372/287" alt="pretty kitty"/>
-            <img src="https://placekitten.com/150/120" alt="pretty kitty"/>
-            <img src="https://placekitten.com/395/327" alt="pretty kitty"/>
-            <img src="https://placekitten.com/395/232" alt="pretty kitty"/>            */}
+
+          <div data-groups="reviews" className={`${this.state.selected ==='reviews' || this.state.selected ==='all' ? '' : 'hidden'}`}>
+            <Card href='/review' className="news" title="Read more">
+              <CardContent>
+                <div>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra ullamcorper varius. Ut leo arcu, feugiat et risus sed, ultrices faucibus augue.
+                     -- Name, age.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div data-groups="gallery" className={`${this.state.selected ==='gallery' || this.state.selected ==='all' ? '' : 'hidden'}`}>
+            <Image as='a' href='/everything-about/gallery' src='https://react.semantic-ui.com/images/wireframe/image.png' />
+          </div>
+
+          {/* <img src="https://placekitten.com/495/437" className={`${this.state.selected ==='gallery' || this.state.selected ==='all' ? '' : 'hidden'}`} alt="pretty kitty" />
+          <img src="https://placekitten.com/415/248" className={`${this.state.selected ==='gallery' || this.state.selected ==='all' ? '' : 'hidden'}`} alt="pretty kitty"/>
+          <img src="https://placekitten.com/415/327" className={`${this.state.selected ==='gallery' || this.state.selected ==='all' ? '' : 'hidden'}`} alt="pretty kitty"/>
+          <img src="https://placekitten.com/150/120" className={`${this.state.selected ==='gallery' || this.state.selected ==='all' ? '' : 'hidden'}`} alt="pretty kitty"/>
+          <img src="https://placekitten.com/395/232" className={`${this.state.selected ==='gallery' || this.state.selected ==='all' ? '' : 'hidden'}`} alt="pretty kitty"/>      */}
 
         </section>
 
