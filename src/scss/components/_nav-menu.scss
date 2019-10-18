@@ -7,7 +7,14 @@
 	&-wrap {
 		position: relative;
 		max-width: 1920px;
-    	margin: 0 auto;
+		margin: 0 auto;
+		
+		@include for-max-size(bp-medium) {
+			.ui.stackable.grid > div.column {
+				padding: 0 !important;
+				
+			}
+		}	
 	}
 	&--top {
 		width: 100%;		
@@ -30,11 +37,15 @@
 		&.active {
 			//opacity: 1;
 			top: 0;
+			overflow-y: auto;
 		}
 		button {
 			position: absolute;
-			right: 26%;
+			right:0;
 			top: -40px;
+			@include for-size(bp-medium) {
+				right: 26%;
+			}
 		}
 	}
 
@@ -64,10 +75,14 @@
 	&--list {
 		font-family: $font-poppins;
 		font-weight: 600;			
-		&-header {
-			min-height: rem(33px);
-			font-size: rem(22px);	
-			line-height: normal;	
+		&-header {			
+			font-size: rem(22px);					
+			line-height: 2.5;
+			@include for-size(bp-medium) {
+				min-height: rem(33px);
+				line-height: normal;
+			}
+
 			a {
 				color: var(--darkest, $darkest);
 				&:visited, &:active {
@@ -90,7 +105,9 @@
 			}
 		}
 		&+.navmenu--list {
-			margin-top: rem(35px);
+			@include for-size(bp-medium) {  
+				margin-top: rem(35px);
+			}			
 		}
 		&_last {
 			//display: flex;
@@ -98,11 +115,16 @@
 			//align-items: center;
 			.navmenu--list {
 				//flex: 1 1 100%;
-				width: 50%;
-				margin: 0 auto;
-				.navmenu--list-header {
-					line-height: 2.95;
+				@include for-size(bp-medium) {
+					width: 50%;
+					margin: 0 auto;
+					.navmenu--list-header {
+						line-height: 2.95;
+					}
+					
 				}
+				
+				
 			}
 		}
 	}
