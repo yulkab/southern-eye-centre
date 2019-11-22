@@ -21,52 +21,58 @@ const HomePage = lazy(() => import('./pages/Home'));
 const dataEyeConditions = JSON.parse(JSON.stringify(jsonData));
 
 
-function App() {
+class App extends React.Component {
 
-  return (
-    <Router>
-      <Header/>  
-      <main role="main">
-        <Suspense fallback={<div>Loading...</div>}>
-          <Switch>
-            <Route exact path="/home" component={HomePage} />
+  closeNavs(){
+    this.refs.header.closeAllMenu();   
+  }
 
-            <Route path="/what-we-do" render={match => <WhatWeDo {...match}/>}/>
-            <Route path={["/consulting-and-treatment", "/day-surgery", "/laser"]} render={match => <WhatWeDo {...match}/>}/> 
+  render() {
+    return (
+      <Router>
+        <Header ref="header"/>  
+        <main role="main" onClick={this.closeNavs.bind(this)}>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Switch>
+              <Route exact path="/home" component={HomePage} />
 
-            <Route path="/visit" render={match => <Visit {...match}/>}/>
-            <Route path={["/what-to-bring", "/getting-here", "/faq"]} render={match => <Visit {...match}/>}/> 
+              <Route path="/what-we-do" render={match => <WhatWeDo {...match}/>}/>
+              <Route path={["/consulting-and-treatment", "/day-surgery", "/laser"]} render={match => <WhatWeDo {...match}/>}/> 
 
-            <Route path="/doctors" component={DoctorsPage} />
-            <Route path="/doctor" component={Doctor} />
-            <Route path="/eye-conditions" component={EyeConditionsList} />
-        {
-          dataEyeConditions.eye_conditions.map(
-            ({path ,data}, key) => <Route key={key} path={path} render={match => <EyeCondition {...match} data={data} />}/>
-          )
-        }
-            <Route path={["/introduction", "/procerures", "/resources", "/faq"]} render={match => <EyeCondition {...match}/>}/>   
+              <Route path="/visit" render={match => <Visit {...match}/>}/>
+              <Route path={["/what-to-bring", "/getting-here", "/faq"]} render={match => <Visit {...match}/>}/> 
 
-            <Route path="/about" component={AboutUs} />
+              <Route path="/doctors" component={DoctorsPage} />
+              <Route path="/doctor" component={Doctor} />
+              <Route path="/eye-conditions" component={EyeConditionsList} />
+          {
+            dataEyeConditions.eye_conditions.map(
+              ({path ,data}, key) => <Route key={key} path={path} render={match => <EyeCondition {...match} data={data} />}/>
+            )
+          }
+              <Route path={["/introduction", "/procerures", "/resources", "/faq"]} render={match => <EyeCondition {...match}/>}/>   
 
-            {/* <Route path="/news" component={Topics} />
-            <Route path="/reviews" component={Topics} />
-            <Route path="/gallery" component={Topics} /> */}
+              <Route path="/about" component={AboutUs} />
 
-            <Route path="/everything-about/:topic" render={match => <EverythingAbout {...match}/>}/>
-            <Route path={["/news", "/reviews", "/gallery"]} render={match => <EverythingAbout {...match}/>}/> 
-            
-            <Route path="/review" component={Review} />
+              {/* <Route path="/news" component={Topics} />
+              <Route path="/reviews" component={Topics} />
+              <Route path="/gallery" component={Topics} /> */}
 
-            <Route path="/contact" component={Topics} />
- 
-            <Redirect from="/" to="/home" /> 
-          </Switch>
-        </Suspense>
-      </main>        
-      <Footer/>            
-    </Router>
-  );
+              <Route path="/everything-about/:topic" render={match => <EverythingAbout {...match}/>}/>
+              <Route path={["/news", "/reviews", "/gallery"]} render={match => <EverythingAbout {...match}/>}/> 
+              
+              <Route path="/review" component={Review} />
+
+              <Route path="/contact" component={Topics} />
+  
+              <Redirect from="/" to="/home" /> 
+            </Switch>
+          </Suspense>
+        </main>        
+        <Footer/>            
+      </Router>
+    );
+  }
 }
 
 function Topics({ match }) {

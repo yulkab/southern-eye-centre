@@ -41,11 +41,16 @@ class Header extends PureComponent {
   
   toggleTopMenu = () => {
     this.setState({ topVisible: !this.state.topVisible });
-  }
+  }  
+
   toggleSideMenu = () => {
     this.setState({ sideVisible: !this.state.sideVisible });
   }
 
+  closeAllMenu = () => {
+    this.setState({ topVisible: false, sideVisible: false });
+  }
+  
   render () {
     //const { visible } = this.state;
     return (
