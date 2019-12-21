@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Redirect, Link, Switch} from "react-router-dom";
+import ScrollToTop from 'ScrollToTop';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatWeDo from './pages/WhatWeDo';
@@ -27,9 +28,10 @@ class App extends React.Component {
     this.refs.header.closeAllMenu();   
   }
 
-  render() {
+  render() {   
     return (
       <Router>
+        <ScrollToTop />
         <Header ref="header"/>  
         <main role="main" onClick={this.closeNavs.bind(this)}>
           <Suspense fallback={<div>Loading...</div>}>
