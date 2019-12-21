@@ -102,22 +102,18 @@ const DaySurgery = props => (
           <div className="c-aside-section_content">
             <p className="e-tabLink">
               <Link to="/what-we-do/laser" className="more-info" title="Read more info about Laser Treatments">Laser Treatments</Link>
-            </p>      
-            <div className="e-titleBlock">
-                <small>What We Do</small>
-                <h1>Day Surgery</h1>
-              </div>
+            </p>                  
           </div>
         </div>     
     </article>
 );
 
-DaySurgery.propTypes = {
-  // bla: PropTypes.string,
-};
+// DaySurgery.propTypes = {
+//   // bla: PropTypes.string,
+// };
 
-DaySurgery.defaultProps = {
-  // bla: 'test',
-};
+// DaySurgery.defaultProps = {
+//   // bla: 'test',
+// };
 
 export default DaySurgery;

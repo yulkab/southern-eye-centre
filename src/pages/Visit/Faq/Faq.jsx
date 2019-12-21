@@ -219,19 +219,12 @@ const Faq = () => (
     <div className="c-aside-section">
       <aside className="c-aside-section_aside"></aside>
       <div className="c-aside-section_content">
-
         <div className="page-content e-tabLink">
           <Link to="/eye-conditions" className="more-info" title="Read more about Eye Conditions">Eye Conditions</Link>
-        </div>
-
-        <div className="e-titleBlock">
-          <small>When You Visit</small>
-          <h1>FAQ</h1>
         </div>
       </div>
     </div>
   </article>
 );
-
 
 export default Faq;

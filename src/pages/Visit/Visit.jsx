@@ -3,9 +3,9 @@ import { Route, Switch , Redirect } from "react-router-dom";
 import { RoutedTabs, NavTab } from "react-router-tabs";
 import WhatToBring from './WhatToBring';
 import GettingHere from './GettingHere';
+import StickyBottomBox from "components/StickyBottomBox";
 import Faq from './Faq';
-import News from '../../components/News';
-
+import News from 'components/News';
 
 class Visit extends Component { 
   constructor(props) {
@@ -39,8 +39,6 @@ class Visit extends Component {
   componentWillUnmount = () => {
     console.log('WhatWeDo will unmount');
   }
-
-
 
   render () {
     if (this.state.hasError) {
@@ -80,8 +78,12 @@ class Visit extends Component {
                 <Route path={`${this.props.match.path}/faq`} component={Faq} />
               </Switch>   
             </article>
+            <Switch>
+              <Route path={`${this.props.match.path}/what-to-bring`} render={props => <StickyBottomBox title="When You Visit" heading="What To Bring" {...props} />} />
+              <Route path={`${this.props.match.path}/getting-here`} render={props => <StickyBottomBox title="When You Visit" heading="Getting Here" {...props} />} />
+              <Route path={`${this.props.match.path}/faq`} render={props => <StickyBottomBox title="When You Visit" heading="FAQ" {...props} />} />
+            </Switch>
           </div>
-
         </div>        
         <aside className="page-aside">
           <div className="c-info">
@@ -107,10 +109,10 @@ class Visit extends Component {
             </section>   
             <hr></hr>           
             <Switch>
-                <Route path={`${this.props.match.path}/what-to-bring`} component={News} />
-                <Route path={`${this.props.match.path}/getting-here`} component={News} />
-                <Route path={`${this.props.match.path}/faq`} component={News} />
-              </Switch> 
+              <Route path={`${this.props.match.path}/what-to-bring`} component={News} />
+              <Route path={`${this.props.match.path}/getting-here`} component={News} />
+              <Route path={`${this.props.match.path}/faq`} component={News} />
+            </Switch> 
           </div>  
         </aside>
       </React.Fragment>

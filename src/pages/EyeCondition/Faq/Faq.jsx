@@ -220,19 +220,8 @@ const Faq = () => (
     <div className="page-content e-tabLink">         
         <Link to="/eye-conditions" className="more-info left" title="Read more about Eye Conditions">Eye Conditions</Link>
         <Link to="/visit" className="more-info" title="Read more about When You Visit">When You Visit</Link>    
-    </div>     
-    <div className="c-aside-section">
-      <aside className="c-aside-section_aside"></aside>
-      <div className="c-aside-section_content">
-        <div className="e-titleBlock">
-            <small>Eye Conditions</small>
-            <h1>Cataract</h1>
-            <a href="tel:1234567890" className="c-button">Call for an appointment</a>
-          </div> 
-      </div>
-    </div>     
+    </div>         
   </article>
 );
-
 
 export default Faq;

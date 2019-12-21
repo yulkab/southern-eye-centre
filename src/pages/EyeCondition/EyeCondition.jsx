@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Route, Switch , Redirect, Link } from "react-router-dom";
 import { RoutedTabs, NavTab } from "react-router-tabs";
-
+import { Route, Switch , Redirect, Link } from "react-router-dom";
+import StickyBottomBox from "components/StickyBottomBox";
 import Introduction from './Introduction';
 import Procerures from './Procerures';
 import Resources from './Resources';
@@ -40,8 +40,6 @@ class EyeCondition extends Component {
   componentWillUnmount = () => {
     console.log('EyeCondition will unmount');
   }
-
-
 
   render () {
     if (this.state.hasError) {
@@ -88,8 +86,8 @@ class EyeCondition extends Component {
                 <Route path={`${this.props.match.path}/faq`} component={Faq} />
               </Switch>   
             </article>
+            <StickyBottomBox title="Eye Conditions" heading="Cataract" appointment="true"/>
           </div>
-
         </div>        
         <aside className="page-aside">
           <div className="c-info">

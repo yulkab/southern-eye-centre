@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { Route, Switch , Redirect } from "react-router-dom";
 import { RoutedTabs, NavTab } from "react-router-tabs";
-
 import ConsultingAndTreatment from './ConsultingAndTreatment';
 import DaySurgery from './DaySurgery';
 import Laser from './Laser';
-
-import News from '../../components/News';
-import Photos from '../../components/Photos';
+import StickyBottomBox from "components/StickyBottomBox"
+import News from 'components/News';
+import Photos from 'components/Photos';
 
 class WhatWeDo extends Component { 
   constructor(props) {
@@ -41,8 +40,6 @@ class WhatWeDo extends Component {
   componentWillUnmount = () => {
     console.log('WhatWeDo will unmount');
   }
-
-
 
   render () {
     if (this.state.hasError) {
@@ -82,6 +79,11 @@ class WhatWeDo extends Component {
                 <Route path={`${this.props.match.path}/laser`} component={Laser} />
               </Switch>   
             </article>
+            <Switch>
+              <Route path={`${this.props.match.path}/consulting-and-treatments`} render={props => <StickyBottomBox title="What We Do" heading="Consulting &amp; Treatments" {...props} />} />
+              <Route path={`${this.props.match.path}/day-surgery`} render={props => <StickyBottomBox title="What We Do" heading="Day Surgery" {...props} />} />
+              <Route path={`${this.props.match.path}/laser`} render={props => <StickyBottomBox title="What We Do" heading="Laser Treatments" {...props} />} />
+            </Switch>
           </div>
         </div>        
         <aside className="page-aside">

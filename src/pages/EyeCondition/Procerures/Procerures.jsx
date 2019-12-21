@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import contImg1 from '../../../assets/img/stam.jpg';
-import contImg2 from '../../../assets/img/eye-conditions/cataract/surgery@2x.png';
+import contImg1 from 'assets/img/stam.jpg';
+import contImg2 from 'assets/img/eye-conditions/cataract/surgery@2x.png';
 
 const Procerures = props => (
         <article>
@@ -49,8 +49,7 @@ const Procerures = props => (
        </div>               
        <div className="c-aside-section">
           <aside className="c-aside-section_aside"></aside>
-          <div className="c-aside-section_content">
-          
+          <div className="c-aside-section_content">          
             <section className="c-left-113">            
               <div>
               <hr/>
@@ -67,7 +66,6 @@ const Procerures = props => (
 
           </div>
         </div>        
-
         <div className="c-aside-section">
           <aside className="c-aside-section_aside"></aside>
           <div className="c-aside-section_content">
@@ -75,26 +73,16 @@ const Procerures = props => (
             <Link to="/cataract/resources" className="more-info" title="Read more info about Procedures &amp; Treatments"> RESOURCES </Link>
           </p>      
           </div>
-        </div>     
-        <div className="c-aside-section">
-          <aside className="c-aside-section_aside"></aside>
-          <div className="c-aside-section_content">
-              <div className="e-titleBlock">
-                <small>Eye Conditions</small>
-                <h1>Cataract</h1>
-                <a href="tel:1234567890" className="c-button">Call for an appointment</a>
-              </div>          
-          </div>
-        </div>        
+        </div>                
     </article>
 );
 
-Procerures.propTypes = {
-  // bla: PropTypes.string,
-};
+// Procerures.propTypes = {
+//   // bla: PropTypes.string,
+// };
 
-Procerures.defaultProps = {
-  // bla: 'test',
-};
+// Procerures.defaultProps = {
+//   // bla: 'test',
+// };
 
 export default Procerures;

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { Grid, Image } from 'semantic-ui-react'
-import contImg1 from '../../../assets/img/eye-conditions/cataract/cataract-anatomy@2x.png';
-import contImg12 from '../../../assets/img/eye-conditions/cataract/cataract-anatomy.png';
-import contImg2 from '../../../assets/img/eye-conditions/cataract/1.jpg';
-import contImg3 from '../../../assets/img/eye-conditions/cataract/2.jpg';
-import contImg4 from '../../../assets/img/eye-conditions/cataract/3.jpg';
+import contImg1 from 'assets/img/eye-conditions/cataract/cataract-anatomy@2x.png';
+import contImg12 from 'assets/img/eye-conditions/cataract/cataract-anatomy.png';
+import contImg2 from 'assets/img/eye-conditions/cataract/1.jpg';
+import contImg3 from 'assets/img/eye-conditions/cataract/2.jpg';
+import contImg4 from 'assets/img/eye-conditions/cataract/3.jpg';
 
 const Introduction = props => (
   <article>
@@ -104,26 +104,16 @@ const Introduction = props => (
         <Link to="/cataract/procerures" className="more-info" title="Read more info about Procedures &amp; Treatments">PROCEDURES</Link>
       </p>      
       </div>
-    </div>     
-    <div className="c-aside-section">
-      <aside className="c-aside-section_aside"></aside>
-      <div className="c-aside-section_content">
-          <div className="e-titleBlock">
-            <small>Eye Conditions</small>
-            <h1>Cataract</h1>
-            <a href="tel:1234567890" className="c-button">Call for an appointment</a>
-          </div>          
-      </div>
-    </div>     
+    </div>        
 </article>
 );
 
-Introduction.propTypes = {
-  // bla: PropTypes.string,
-};
+// Introduction.propTypes = {
+//   // bla: PropTypes.string,
+// };
 
-Introduction.defaultProps = {
-  // bla: 'test',
-};
+// Introduction.defaultProps = {
+//   // bla: 'test',
+// };
 
 export default Introduction;

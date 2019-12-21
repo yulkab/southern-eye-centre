@@ -1,17 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, Grid } from 'semantic-ui-react';
-import contImg1 from '../../../assets/img/referral-image@2x.png';
-import contImg2 from '../../../assets/img/registration-image@2x.png';
-import contImg3 from '../../../assets/img/personal-image2.png';
-import contImg4 from '../../../assets/img/family-image@2x.png';
-import contImg5 from '../../../assets/img/referral-image@2x.png';
-import contImg6 from '../../../assets/img/allergies-image2.png';
+import contImg1 from 'assets/img/referral-image@2x.png';
+import contImg2 from 'assets/img/registration-image@2x.png';
+import contImg3 from 'assets/img/personal-image2.png';
+import contImg4 from 'assets/img/family-image@2x.png';
+import contImg5 from 'assets/img/referral-image@2x.png';
+import contImg6 from 'assets/img/allergies-image2.png';
 
 const WhatToBring = props => (
   <article>
     <div className="page-content">
-
       <Grid stackable columns={3} className="c-cards-list col-3">
         <Grid.Column mobile={16}>
           <Card href='#' title="Referrals">
@@ -96,9 +95,7 @@ const WhatToBring = props => (
             <img src={contImg6} alt="Allergies" />
           </Card>
         </Grid.Column>
-
       </Grid>
-
     </div>
     <div className="c-aside-section">
       <aside className="c-aside-section_aside"></aside>
@@ -106,22 +103,17 @@ const WhatToBring = props => (
         <p className="e-tabLink">
           <Link to="/visit/getting-here" className="more-info" title="Read more info about getting here">GETTING HERE</Link>
         </p>
-        <div className="e-titleBlock">
-          <small>When You Visit</small>
-          <h1>What To Bring</h1>
-        </div>
       </div>
     </div>
   </article>
-
 );
 
-WhatToBring.propTypes = {
-  // bla: PropTypes.string,
-};
+// WhatToBring.propTypes = {
+//   // bla: PropTypes.string,
+// };
 
-WhatToBring.defaultProps = {
-  // bla: 'test',
-};
+// WhatToBring.defaultProps = {
+//   // bla: 'test',
+// };
 
 export default WhatToBring;

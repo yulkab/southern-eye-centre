@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { Image } from 'semantic-ui-react';
-import mapImg from '../../../assets/img/map.jpg';
+import mapImg from 'assets/img/map.jpg';
 
 const GettingHere = props => (
   <article>
@@ -56,21 +56,17 @@ const GettingHere = props => (
         <p className="e-tabLink">
           <Link to="/visit/faq" className="more-info" title="Read more info about Laser Treatments">FAQ</Link>
         </p>
-        <div className="e-titleBlock">
-          <small>When You Visit</small>
-          <h1>Getting Here</h1>
-        </div>
       </div>
     </div>
   </article>
 );
 
-GettingHere.propTypes = {
-  // bla: PropTypes.string,
-};
+// GettingHere.propTypes = {
+//   // bla: PropTypes.string,
+// };
 
-GettingHere.defaultProps = {
-  // bla: 'test',
-};
+// GettingHere.defaultProps = {
+//   // bla: 'test',
+// };
 
 export default GettingHere;

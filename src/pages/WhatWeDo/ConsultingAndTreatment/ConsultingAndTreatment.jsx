@@ -77,25 +77,16 @@ const ConsultingAndTreatment = props => (
         <Link to="/what-we-do/day-surgery" className="more-info" title="Read more info about Procedures &amp; Treatments">Day Surgery</Link>
       </p>      
       </div>
-    </div>     
-    <div className="c-aside-section">
-      <aside className="c-aside-section_aside"></aside>
-      <div className="c-aside-section_content">
-          <div className="e-titleBlock">
-            <small>What We Do</small>
-            <h1>Consulting &amp; Treatments</h1>
-          </div>
-      </div>
-    </div>     
+    </div>         
 </article>
 );
 
-ConsultingAndTreatment.propTypes = {
-  // bla: PropTypes.string,
-};
+// ConsultingAndTreatment.propTypes = {
+//   // bla: PropTypes.string,
+// };
 
-ConsultingAndTreatment.defaultProps = {
-  // bla: 'test',
-};
+// ConsultingAndTreatment.defaultProps = {
+//   // bla: 'test',
+// };
 
 export default ConsultingAndTreatment;
