@@ -13,7 +13,7 @@ const WhatToBring = props => (
     <div className="page-content">
       <Grid stackable columns={3} className="c-cards-list col-3">
         <Grid.Column mobile={16}>
-          <Card href='#' title="Referrals">
+          <Card>
             <CardContent>
               <div>
                 <h4>Referrals</h4>
@@ -27,7 +27,7 @@ const WhatToBring = props => (
         </Grid.Column>
 
         <Grid.Column mobile={16}>
-          <Card href='#' title="Registration Form">
+          <Card>
             <CardContent>
               <div>
                 <h4>Dry Eye</h4>
@@ -41,7 +41,7 @@ const WhatToBring = props => (
         </Grid.Column>
 
         <Grid.Column mobile={16}>
-          <Card href='#' title="Personal History">
+          <Card>
             <CardContent>
               <div>
                 <h4>Personal History</h4>
@@ -55,7 +55,7 @@ const WhatToBring = props => (
         </Grid.Column>
 
         <Grid.Column mobile={16}>
-          <Card href='#' title="Family History">
+          <Card>
             <CardContent>
               <div>
                 <h4>Family History</h4>
@@ -69,7 +69,7 @@ const WhatToBring = props => (
         </Grid.Column>
 
         <Grid.Column mobile={16}>
-          <Card href='#' title="Medication List">
+          <Card>
             <CardContent>
               <div>
                 <h4>Medication List</h4>
@@ -83,7 +83,7 @@ const WhatToBring = props => (
         </Grid.Column>
 
         <Grid.Column mobile={16}>
-          <Card href='#' title="Allergies">
+          <Card>
             <CardContent>
               <div>
                 <h4>Allergies</h4>

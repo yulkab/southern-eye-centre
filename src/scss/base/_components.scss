@@ -228,7 +228,7 @@
     .ui.card {
         width: 100%;
         background: url('./assets/img/bg/line-bg@2x.png') 0 0 ;    
-        border-top: 5px solid var(--orange);
+        //border-top: 5px solid var(--orange);
 
         @include for-size(bp-small) {
             flex-direction: row;
@@ -237,11 +237,10 @@
         @include for-size(bp-xlarge) { 
             flex-direction: column;
             padding-bottom: rem(35px);
-            border-top: 5px solid transparent;
-
-            &:hover {
-                border-top-color: var(--orange);
-            }
+            //border-top: 5px solid transparent;
+            // &:hover {
+            //     border-top-color: var(--orange);
+            // }
         }                       
        
         .content {
@@ -264,7 +263,14 @@
                 flex: 1 0 auto;
             }                  
         }           
-    }  
+    } 
+    
+    a.ui.card {
+        border-top: 5px solid var(--orange);
+        &:hover {
+            border-top-color: var(--orange);
+        }
+    }
 }
 
 .c-cards-list {
@@ -330,6 +336,7 @@
                  
         }                                      
     }  
+
     .content {
         //@include for-size(bp-small) {
             //padding-left: 2rem !important;
@@ -359,6 +366,7 @@
             }
         }
     }
+
     &.col-3 {
         @include for-size(bp-xlarge) {
             >* {                
@@ -386,6 +394,12 @@
             margin: 1rem auto;
         }
     }
+
+    // a.ui.card {
+    //     .content > div {
+    //         @extend .more-info;
+    //     }
+    // }
 }
 
 .c-aside-section {
