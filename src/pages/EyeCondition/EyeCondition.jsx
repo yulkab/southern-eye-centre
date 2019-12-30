@@ -98,20 +98,28 @@ class EyeCondition extends Component {
               </p>
               <ul className="c-eye-conditions">
                   <li className="c-eye-conditions--item">
-                    <div className="c-eye-conditions--item-img cataract" data-content="Dr. Stephen Bambery"></div>
-                    Dr. Stephen Bambery
+                    <a href="/doctor" title="Dr. Stephen Bambery">
+                      <div className="c-eye-conditions--item-img cataract" data-content="Dr. Stephen Bambery"></div>
+                       Dr. Stephen Bambery
+                    </a>                   
                   </li>
                   <li className="c-eye-conditions--item">
-                    <div className="c-eye-conditions--item-img macular-degeneration" data-content="Dr. Walter Chang"></div>
-                    Dr. Walter Chang
+                    <a href="/doctor" title="Dr. Walter Chang">
+                      <div className="c-eye-conditions--item-img macular-degeneration" data-content="Dr. Walter Chang"></div>
+                      Dr. Walter Chang
+                    </a>                       
                   </li>
                   <li className="c-eye-conditions--item">
-                    <div className="c-eye-conditions--item-img dry-eye" data-content="Dr. Trevor Gin"></div>
-                    Dr. Trevor Gin
+                    <a href="/doctor" title="Dr. Trevor Gin">
+                      <div className="c-eye-conditions--item-img dry-eye" data-content="Dr. Trevor Gin"></div>
+                      Dr. Trevor Gin
+                    </a>                           
                   </li>
                   <li className="c-eye-conditions--item">
-                    <div className="c-eye-conditions--item-img stam" data-content=" Dr. Weng Ng"></div>
-                    Dr. Weng Ng
+                    <a href="/doctor" title="Dr. Weng Ng">
+                      <div className="c-eye-conditions--item-img stam" data-content=" Dr. Weng Ng"></div>
+                      Dr. Weng Ng
+                    </a>                     
                   </li>
                 </ul>
               <p>

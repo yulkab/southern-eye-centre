@@ -201,6 +201,9 @@
                 background-position-y: -195px;
             }
         }
+        a, a:visited, a:active {
+            color: inherit;
+        }
     }
     li:before {
         content: attr(data-content);
