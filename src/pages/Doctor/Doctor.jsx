@@ -69,20 +69,28 @@ class Doctor extends PureComponent {
               <h5>SPECIALTIES</h5>
               <ul className="c-eye-conditions">
                 <li className="c-eye-conditions--item">
-                  <div className="c-eye-conditions--item-img cataract" data-content="cataract"></div>
-                  Cataract
+                  <a href="/cataract" title="Cataract">
+                    <div className="c-eye-conditions--item-img cataract" data-content="cataract"></div>
+                    Cataract
+                  </a>                    
                 </li>
                 <li className="c-eye-conditions--item">
-                  <div className="c-eye-conditions--item-img macular-degeneration" data-content="macular degenerationn"></div>
-                  Macular Degeneration
+                  <a href="/cataract" title="Macular Degeneration">
+                    <div className="c-eye-conditions--item-img macular-degeneration" data-content="macular degenerationn"></div>
+                    Macular Degeneration
+                  </a>                       
                 </li>
                 <li className="c-eye-conditions--item">
-                  <div className="c-eye-conditions--item-img dry-eye" data-content="dry eye"></div>
-                  Dry Eye
+                  <a href="/cataract" title="Dry Eye">
+                    <div className="c-eye-conditions--item-img dry-eye" data-content="dry eye"></div>
+                    Dry Eye
+                  </a>                     
                 </li>
                 <li className="c-eye-conditions--item">
-                  <div className="c-eye-conditions--item-img stam" data-content="dry eye"></div>
-                  Stam
+                  <a href="/cataract" title="Dry Eye">
+                    <div className="c-eye-conditions--item-img stam" data-content="dry eye"></div>
+                    Stam
+                  </a>                     
                 </li>
               </ul>
               <p>
