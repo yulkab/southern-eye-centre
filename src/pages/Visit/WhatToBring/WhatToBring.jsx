@@ -27,7 +27,7 @@ const WhatToBring = props => (
         </Grid.Column>
 
         <Grid.Column mobile={16}>
-          <Card>
+          <Card href='../RegistrationForm.pdf' title="Download Registration Form">
             <CardContent>
               <div>
                 <h4>Dry Eye</h4>
