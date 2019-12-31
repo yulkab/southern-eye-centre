@@ -20,11 +20,11 @@ class Header extends PureComponent {
   }
 
   componentDidMount = () => {
-    console.log('Header mounted');
+    console.log('Header mounted');    
   }
 
   componentWillReceiveProps = (nextProps) => {
-    console.log('Header will receive props', nextProps);
+    console.log('Header will receive props', nextProps);    
   }
 
   componentWillUpdate = (nextProps, nextState) => {
@@ -52,13 +52,14 @@ class Header extends PureComponent {
   }
   
   render () {
+    //const { isLoading, doctors, error } = this.state;
     //const { visible } = this.state;
     return (
       <header className="header">
         <Link to="/" className="logo" title="Southern Eye Centre">          
           <div className="screen-reader-text">Southern Eye Centre Top Header Logo</div>
         </Link>
-        <TopNavMenu visible={this.state.topVisible} handler={this.toggleTopMenu}/> 
+        <TopNavMenu visible={this.state.topVisible} handler={this.toggleTopMenu}  doctors={this.props.doctors}/> 
 
         <button onClick={this.toggleTopMenu} className="icon-button" type="nav-button" aria-label="Open the Top Navigation">
           <Image src={logoImg} className="icon-burger" alt="Top Navigation button Icon" />
@@ -71,6 +72,22 @@ class Header extends PureComponent {
         </button>
 
         <RightSlide visible={this.state.sideVisible} handler={this.toggleSideMenu}/>
+ 
+        {/* {!isLoading ? (
+        doctors.map(user => {
+          const { id, name , title } = user;
+          return (
+            <div key={id}>
+              <p>Name: {name}</p>
+              <p>title: {title}</p>
+              <hr />
+            </div>
+          );
+        })
+      // If there is a delay in data, let's let the user know it's loading
+      ) : (
+        <h3>Loading...</h3>
+      )} */}
 
       </header>
     );

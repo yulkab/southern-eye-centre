@@ -13,9 +13,7 @@ import AboutUs from './pages/AboutUs';
 import Review from './pages/Review';
 import EverythingAbout from './pages/EverythingAbout';
 
-
-
-import jsonData from 'eye-conditions.json';
+import jsonData from './data/eye-conditions.json';
 
 const HomePage = lazy(() => import('./pages/Home'));
 
@@ -23,16 +21,38 @@ const dataEyeConditions = JSON.parse(JSON.stringify(jsonData));
 
 
 class App extends React.Component {
+  state = {
+    isLoading: true,
+    doctors: [],
+    error: null
+  };
+
+  fetchDoctors() {
+    fetch('./data/doctors.json')
+    .then((res) => res.json())
+    .then((data) => {
+      this.setState({
+        doctors: data,
+        isLoading: false,
+      })
+    })
+    .catch(error => this.setState({ error, isLoading: false }));
+  }
+
+  componentDidMount() {
+    this.fetchDoctors();    
+  }
 
   closeNavs(){
     this.refs.header.closeAllMenu();   
   }
 
   render() {   
+
     return (
       <Router>
         <ScrollToTop />
-        <Header ref="header"/>  
+        <Header ref="header" doctors={this.state.doctors}/>  
         <main role="main" onClick={this.closeNavs.bind(this)}>
           <Suspense fallback={<div>Loading...</div>}>
             <Switch>
