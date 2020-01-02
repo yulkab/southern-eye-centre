@@ -8,12 +8,13 @@ class TopNav extends PureComponent {
     super(props);
 
     this.state = {
-      doctors: this.props.doctors
+      isLoading: true,
+      doctorsData: []
     };
   }
 
   componentWillMount = () => {
-    console.log('TopNav will mount');
+    console.log('TopNav will mount');    
   }
 
   componentDidMount = () => {
@@ -21,14 +22,16 @@ class TopNav extends PureComponent {
   }
 
   componentWillReceiveProps = (nextProps) => {
-    console.log('TopNav will receive props', nextProps);   
+    console.log('TopNav will receive props', nextProps);    
     this.setState({
-      doctors: this.props.doctors
-    }) 
+      isLoading: this.props.loaded,
+      doctorsData: this.props.doctors
+    });   
   }
 
   componentWillUpdate = (nextProps, nextState) => {
     console.log('TopNav will update', nextProps, nextState);
+   
   }
 
   componentDidUpdate = () => {
@@ -40,7 +43,7 @@ class TopNav extends PureComponent {
   }
   
   render () {
-    const { doctors } = this.state;
+    const { isLoading, doctorsData } = this.state;
     const {visible, handler} = this.props;
     return (
       <nav className={"navmenu navmenu--top " + (visible ? 'active' : '')}>
@@ -129,48 +132,22 @@ class TopNav extends PureComponent {
               </li>
             </ul>
           </Grid.Column>
-          
           <Grid.Column mobile={16}  computer={3} >
-    
-
-        {
-        // Object.keys(doctors).map(key => {     
-        //    console.log("Entered");                 
-        //    // Return the element. Also pass key     
-        //    return ( <NavLink to="/doctor" key={key} onClick={handler} >Dr. Douglas Reinehr {key} </NavLink>) 
-        // }) 
-        }
             <ul className="navmenu--list">
               <li className="navmenu--list-header">
                 <NavLink to="/doctors" activeClassName="active" onClick={handler}> Doctors </NavLink>            
-              </li>       
-              <li className="navmenu--list-item">
-                <NavLink to="/doctor" activeClassName="active" onClick={handler}>Dr. Damien Louis</NavLink>
-              </li>
-              <li className="navmenu--list-item">
-                <NavLink to="/doctor" activeClassName="active" onClick={handler}>Dr. Douglas Reinehr</NavLink>
-              </li>
-              <li className="navmenu--list-item">
-                <NavLink to="/doctor" activeClassName="active" onClick={handler}>Dr. Jonathan Yeoh</NavLink>
-              </li>
-              <li className="navmenu--list-item">
-                <NavLink to="/doctor" activeClassName="active" onClick={handler}>Dr. Lei Liu</NavLink>
-              </li>
-              <li className="navmenu--list-item">
-                <NavLink to="/doctor" activeClassName="active" onClick={handler}>Dr. Stephen Bambery</NavLink>
-              </li>
-              <li className="navmenu--list-item">
-                <NavLink to="/doctor" activeClassName="active" onClick={handler}>Dr. Trevor Gin</NavLink>
-              </li>
-              <li className="navmenu--list-item">
-                <NavLink to="/doctor" activeClassName="active" onClick={handler}>Dr. Walter Chang</NavLink>
-              </li>
-              <li className="navmenu--list-item">
-                <NavLink to="/doctor" activeClassName="active" onClick={handler}>Dr. Weng Ng</NavLink>
-              </li>
-              <li className="navmenu--list-item">
-                <NavLink to="/doctor" activeClassName="active" onClick={handler}>Dr. Ye Chen</NavLink>
-              </li>
+              </li> 
+
+              { !isLoading ? (
+                  doctorsData.map(doctor => {
+                    const { name, id } = doctor;
+                    return (
+                      <li key={id} className="navmenu--list-item">
+                        <NavLink to={`/doctor/${id}`} onClick={handler}> {name} </NavLink>            
+                      </li>  
+                    );
+                  }) ) : (<li>Loading...</li>)                    
+              }
             </ul>
           </Grid.Column>
           <Grid.Column  mobile={16}  computer={4}  className="navmenu--list_last">

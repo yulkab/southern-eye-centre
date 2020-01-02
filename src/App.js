@@ -23,7 +23,7 @@ const dataEyeConditions = JSON.parse(JSON.stringify(jsonData));
 class App extends React.Component {
   state = {
     isLoading: true,
-    doctors: [],
+    doctorsData: [],
     error: null
   };
 
@@ -32,8 +32,8 @@ class App extends React.Component {
     .then((res) => res.json())
     .then((data) => {
       this.setState({
-        doctors: data,
-        isLoading: false,
+        doctorsData: data,
+        isLoading: false
       })
     })
     .catch(error => this.setState({ error, isLoading: false }));
@@ -52,7 +52,7 @@ class App extends React.Component {
     return (
       <Router>
         <ScrollToTop />
-        <Header ref="header" doctors={this.state.doctors}/>  
+        <Header ref="header" doctors={this.state.doctorsData.doctors} loaded={this.state.isLoading}/>  
         <main role="main" onClick={this.closeNavs.bind(this)}>
           <Suspense fallback={<div>Loading...</div>}>
             <Switch>
@@ -65,7 +65,7 @@ class App extends React.Component {
               <Route path={["/what-to-bring", "/getting-here", "/faq"]} render={match => <Visit {...match}/>}/> 
 
               <Route path="/doctors" component={DoctorsPage} />
-              <Route path="/doctor" component={Doctor} />
+              <Route path="/doctor/:id" component={FindDoctor} />
               <Route path="/eye-conditions" component={EyeConditionsList} />
           {
             dataEyeConditions.eye_conditions.map(
@@ -95,6 +95,14 @@ class App extends React.Component {
       </Router>
     );
   }
+}
+
+function FindDoctor({ match }) {
+  console.log('Doctor ID: ', match.params.id);
+  //console.log('Doctor: ', this.state.doctorsData.doctors.find(x => x.id === match.params.id));
+  return (    
+    <Doctor/>
+  );
 }
 
 function Topics({ match }) {

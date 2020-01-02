@@ -8,7 +8,10 @@ class Doctor extends PureComponent {
     super(props);
 
     this.state = {
+      doctorId: null,
       hasError: false,
+      isLoading: true,
+      doctorsData: []
     };
   }
 
@@ -18,10 +21,18 @@ class Doctor extends PureComponent {
 
   componentDidMount = () => {
     console.log('Doctor mounted');
+    // this.setState({
+    //   doctorId: this.props.match.params
+    // });  
+    //const { id } = this.props.match.params;
   }
 
   componentWillReceiveProps = (nextProps) => {
     console.log('Doctor will receive props', nextProps);
+    // this.setState({
+    //   isLoading: this.props.loaded,
+    //   doctorsData: this.props.doctors
+    // });      
   }
 
   componentWillUpdate = (nextProps, nextState) => {
@@ -30,6 +41,7 @@ class Doctor extends PureComponent {
 
   componentDidUpdate = () => {
     console.log('Doctor did update');
+    //if (!this.state.isLoading) console.log('Doctor: ', this.state.doctorsData.find(x => x.id === this.state.doctorId)); 
   }
 
   componentWillUnmount = () => {
