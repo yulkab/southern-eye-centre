@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Image } from 'semantic-ui-react';
 import TopNavMenu from '../TopNav';
 import RightSlide from '../RightSlide';
-import logoImg from '../../assets/img/icons/menu-icon@2x.png';
+import logoImg from 'assets/img/icons/menu-icon@2x.png';
 
 class Header extends PureComponent { 
   constructor(props) {

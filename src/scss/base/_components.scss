@@ -137,7 +137,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    background: url('./assets/img/bg/line-bg@2x.png') 0 0 ; 
+    background: url('/img/bg/line-bg@2x.png') 0 0 ; 
     padding: calc(#{$header-H} + 46px) 75px 2rem 71px;
     @include for-size(bp-small) {    
         padding: calc(#{$header-H-small} + 46px) 75px 2rem 71px;
@@ -183,7 +183,7 @@
             height: rem(100px);
             overflow: hidden;
             margin: auto;
-            background: url('./assets/img/eye-icon-small@3x.png') no-repeat 0 0;
+            background: url('/img/eye-icon-small@3x.png') no-repeat 0 0;
             &.cataract {
                 background-position-x: 15px;
                 background-position-y: 10px;
@@ -230,7 +230,7 @@
     }
     .ui.card {
         width: 100%;
-        background: url('./assets/img/bg/line-bg@2x.png') 0 0 ;    
+        background: url('/img/bg/line-bg@2x.png') 0 0 ;    
         //border-top: 5px solid var(--orange);
 
         @include for-size(bp-small) {
@@ -295,7 +295,7 @@
 
             @include for-size(bp-small) {
                 display: block;
-                background: url('./assets/img/eye-icon-xl@2x.png') no-repeat 0 0;
+                background: url('/img/eye-icon-xl@2x.png') no-repeat 0 0;
                 background-position-x: 10px;
                 background-position-y: 0px;
             }           
@@ -570,7 +570,7 @@
 
                 @include for-size(bp-small) {
                    display: block;
-                   background: url('./assets/img/eye-icon-small@2x.png') no-repeat 0 0 ;   
+                   background: url('/img/eye-icon-small@2x.png') no-repeat 0 0 ;   
                    width: rem(260px);
                    height: rem(56px);
                 }
@@ -712,7 +712,7 @@
 
 .news {
     //width: 100%;
-        background: url('./assets/img/bg/line-bg@2x.png') 0 0 ;    
+        background: url('/img/bg/line-bg@2x.png') 0 0 ;    
 
         @include for-size(bp-small) {
             flex-direction: row;

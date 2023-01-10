@@ -19965,7 +19965,7 @@
         i.icon {
             width: 1em;
             height: 1em;            
-            background:  url('./assets/img/icons/copy-6@3x.png') no-repeat 0 0 ;     
+            background:  url('/img/icons/copy-6@3x.png') no-repeat 0 0 ;     
             background-size: cover;  
             margin-left: -30px;
             @include for-size(bp-xlarge) {
@@ -19977,7 +19977,7 @@
             i.icon {
                 width: 1.25em;
                 height: 1.25em;
-                background-image:  url('./assets/img/icons/-@3x.png');   
+                background-image:  url('/img/icons/-@3x.png');   
             }
         }
     }
@@ -20986,7 +20986,7 @@
             position: absolute;        
             top: .75rem;
             left: .5rem;                  
-            background:  url('./assets/img/icons/triangle-icon@2x.png') no-repeat 0 0 ;              
+            background:  url('/img/icons/triangle-icon@2x.png') no-repeat 0 0 ;              
         }
     
      }

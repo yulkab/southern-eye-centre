@@ -91,7 +91,7 @@
             flex-direction: column;
             align-items: center;
             margin: 0 0 rem(24px);
-            background: url('./assets/img/bg/line-bg@2x.png') 0 0 ;    
+            background: url('/img/bg/line-bg@2x.png') 0 0 ;    
             border-top: 5px solid var(--orange);
 
             @include for-size(bp-small) {
@@ -142,10 +142,10 @@
                     height: rem(28px);                                   
                     padding: 0;
                     margin: 1rem 0;
-                    background: url('./assets/img/eye-icon-small.png') no-repeat center 0 ;       
+                    background: url('/img/eye-icon-small.png') no-repeat center 0 ;       
                         
                     @include for-size(bp-small) {
-                        background: url('./assets/img/eye-icon-small@2x.png') no-repeat center 0 ;   
+                        background: url('/img/eye-icon-small@2x.png') no-repeat center 0 ;   
                         width: rem(260px);
                         height: rem(56px);
                     }
@@ -184,7 +184,7 @@
 
 .s-reviews {
     @extend .padding-unset;    
-    background: url('./assets/img/bg/line-bg@2x.png') 0 0 ; 
+    background: url('/img/bg/line-bg@2x.png') 0 0 ; 
     padding-top: rem(56px);
     padding-bottom: rem(56px);
 

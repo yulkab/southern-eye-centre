@@ -23,10 +23,10 @@ class TopNav extends PureComponent {
 
   componentWillReceiveProps = (nextProps) => {
     console.log('TopNav will receive props', nextProps);    
-    this.setState({
-      isLoading: this.props.loaded,
-      doctorsData: this.props.doctors
-    });   
+    // this.setState({
+    //   isLoading: this.props.loaded,
+    //   doctorsData: this.props.doctors
+    // });   
   }
 
   componentWillUpdate = (nextProps, nextState) => {
